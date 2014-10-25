@@ -317,6 +317,16 @@
       "version": "0.2.3",
       "resolved": "https://registry.npmjs.org/grunt-banner/-/grunt-banner-0.2.3.tgz"
     },
+    "grunt-combine-media-queries": {
+      "version": "1.0.19",
+      "resolved": "https://registry.npmjs.org/grunt-combine-media-queries/-/grunt-combine-media-queries-1.0.19.tgz",
+      "dependencies": {
+        "css-parse": {
+          "version": "1.7.0",
+          "resolved": "https://registry.npmjs.org/css-parse/-/css-parse-1.7.0.tgz"
+        }
+      }
+    },
     "grunt-contrib-clean": {
       "version": "0.6.0",
       "resolved": "https://registry.npmjs.org/grunt-contrib-clean/-/grunt-contrib-clean-0.6.0.tgz",

@@ -149,7 +149,7 @@ module.exports = function (grunt) {
         ],
         dest: 'docs/assets/js/customize.min.js'
       },
-      docsJs: {
+      docs: {
         // NOTE: This src list is duplicated in footer.html; if making changes here, be sure to update the other copy too.
         src: [
           'docs/assets/js/vendor/holder.js',
@@ -168,7 +168,7 @@ module.exports = function (grunt) {
     },
 
     less: {
-      compileCore: {
+      core: {
         options: {
           strictMath: true,
           sourceMap: true,
@@ -179,7 +179,7 @@ module.exports = function (grunt) {
         src: 'less/bootstrap.less',
         dest: 'dist/css/<%= pkg.name %>.css'
       },
-      compileTheme: {
+      theme: {
         options: {
           strictMath: true,
           sourceMap: true,
@@ -228,13 +228,34 @@ module.exports = function (grunt) {
       }
     },
 
+    cmq: {
+      core: {
+        src: 'dist/css/<%= pkg.name %>.css',
+        dest: 'dist/css/<%= pkg.name %>.css'
+      },
+      theme: {
+        src: 'dist/css/<%= pkg.name %>-theme.css',
+        dest: 'dist/css/<%= pkg.name %>-theme.css'
+      },
+      docs: {
+        src: 'docs/assets/css/src/docs.css',
+        dest: 'docs/assets/css/src/docs.css'
+      },
+      examples: {
+        expand: true,
+        cwd: 'docs/examples/',
+        src: ['**/*.css'],
+        dest: 'docs/examples/'
+      }
+    },
+
     csslint: {
       options: {
         csslintrc: 'less/.csslintrc'
       },
-      dist: [
-        'dist/css/bootstrap.css',
-        'dist/css/bootstrap-theme.css'
+      core: [
+        'dist/css/<%= pkg.name %>.css',
+        'dist/css/<%= pkg.name %>-theme.css'
       ],
       examples: [
         'docs/examples/**/*.css'
@@ -254,11 +275,11 @@ module.exports = function (grunt) {
         keepSpecialComments: '*',
         noAdvanced: true
       },
-      minifyCore: {
+      core: {
         src: 'dist/css/<%= pkg.name %>.css',
         dest: 'dist/css/<%= pkg.name %>.min.css'
       },
-      minifyTheme: {
+      theme: {
         src: 'dist/css/<%= pkg.name %>-theme.css',
         dest: 'dist/css/<%= pkg.name %>-theme.min.css'
       },
@@ -285,7 +306,7 @@ module.exports = function (grunt) {
       options: {
         config: 'less/.csscomb.json'
       },
-      dist: {
+      core: {
         expand: true,
         cwd: 'dist/css/',
         src: ['*.css', '!*.min.css'],
@@ -424,7 +445,7 @@ module.exports = function (grunt) {
   var testSubtasks = [];
   // Skip core tests if running a different subset of the test suite
   if (runSubset('core')) {
-    testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'csslint:dist', 'test-js', 'docs']);
+    testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'csslint:core', 'test-js', 'docs']);
   }
   // Skip HTML validation if running a different subset of the test suite
   if (runSubset('validate-html') &&
@@ -448,8 +469,8 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify:core', 'commonjs']);
 
   // CSS distribution task.
-  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme']);
-  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'usebanner', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyTheme']);
+  grunt.registerTask('less-compile', ['less:core', 'less:theme']);
+  grunt.registerTask('dist-css', ['less-compile', 'cmq:core', 'cmq:theme', 'autoprefixer:core', 'autoprefixer:theme', 'usebanner', 'csscomb:core', 'cssmin:core', 'cssmin:theme']);
 
   // Full distribution task.
   grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'dist-js']);
@@ -477,9 +498,9 @@ module.exports = function (grunt) {
   });
 
   // Docs task.
-  grunt.registerTask('docs-css', ['autoprefixer:docs', 'autoprefixer:examples', 'csscomb:docs', 'csscomb:examples', 'cssmin:docs']);
+  grunt.registerTask('docs-css', ['cmq:docs', 'cmq:examples', 'autoprefixer:docs', 'autoprefixer:examples', 'csscomb:docs', 'csscomb:examples', 'cssmin:docs']);
   grunt.registerTask('lint-docs-css', ['csslint:docs', 'csslint:examples']);
-  grunt.registerTask('docs-js', ['uglify:docsJs', 'uglify:customize']);
+  grunt.registerTask('docs-js', ['uglify:docs', 'uglify:customize']);
   grunt.registerTask('lint-docs-js', ['jshint:assets', 'jscs:assets']);
   grunt.registerTask('docs', ['docs-css', 'lint-docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'build-customizer']);
 
