@@ -1,17 +1,17 @@
 <div class="bs-docs-section">
-  <h1 id="tables" class="page-header">Таблиці</h1>
+  <h1 id="tables" class="page-header">Tables</h1>
 
-  <h2 id="tables-example">Базовий приклад</h2>
-  <p>Для базового стилю — невеликих відступів та лише горизонтальних роздільних ліній — додайте базовий клас <code>.table</code> до будь-яких таблиць <code>&lt;table&gt;</code>. Це може здатись надлишковим, але з огляду на широке використання таблиць для інших плагінів, таких, наприклад, як "календар" та "вибір дати", ми вирішили ізолювати наші користувацькі стилі.</p>
+  <h2 id="tables-example">Basic example</h2>
+  <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>. It may seem super redundant, but given the widespread use of tables for other plugins like calendars and date pickers, we've opted to isolate our custom table styles.</p>
   <div class="bs-example">
     <table class="table">
-      <caption>Додатковий заголовок таблиці.</caption>
+      <caption>Optional table caption.</caption>
       <thead>
         <tr>
           <th>#</th>
-          <th>Ім'я</th>
-          <th>Прізвище</th>
-          <th>Нік</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
         </tr>
       </thead>
       <tbody>
@@ -43,20 +43,20 @@
 {% endhighlight %}
 
 
-  <h2 id="tables-striped">Смугаста таблиця</h2>
-  <p>Використовуйте <code>.table-striped</code> щоб додати "смуги-зебри" до будь-яких рядків таблиці, котрі містять <code>&lt;tbody&gt;</code>.</p>
+  <h2 id="tables-striped">Striped rows</h2>
+  <p>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.</p>
   <div class="bs-callout bs-callout-danger">
-    <h4>Крос-браузерна сумісність</h4>
-    <p>Смугасті таблиці стилізовано за допомогою CSS-селектора <code>:nth-child</code>, який не підтримується Internet Explorer 8.</p>
+    <h4>Cross-browser compatibility</h4>
+    <p>Striped tables are styled via the <code>:nth-child</code> CSS selector, which is not available in Internet Explorer 8.</p>
   </div>
   <div class="bs-example">
     <table class="table table-striped">
       <thead>
         <tr>
           <th>#</th>
-          <th>Ім'я</th>
-          <th>Прізвище</th>
-          <th>Нік</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
         </tr>
       </thead>
       <tbody>
@@ -88,16 +88,16 @@
 {% endhighlight %}
 
 
-  <h2 id="tables-bordered">Розмежована таблиця</h2>
-  <p>Додайте <code>.table-bordered</code> для розмежування всіх сторін таблиці, а також її комірок.</p>
+  <h2 id="tables-bordered">Bordered table</h2>
+  <p>Add <code>.table-bordered</code> for borders on all sides of the table and cells.</p>
   <div class="bs-example">
     <table class="table table-bordered">
       <thead>
         <tr>
           <th>#</th>
-          <th>Ім'я</th>
-          <th>Прізвище</th>
-          <th>Нік</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
         </tr>
       </thead>
       <tbody>
@@ -133,16 +133,16 @@
 {% endhighlight %}
 
 
-  <h2 id="tables-hover-rows">Наведені рядки</h2>
-  <p>Додайте <code>.table-hover</code> щоб задіяти оголошення hover при наведенні на рядки таблиці в межах <code>&lt;tbody&gt;</code>.</p>
+  <h2 id="tables-hover-rows">Hover rows</h2>
+  <p>Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</p>
   <div class="bs-example">
     <table class="table table-hover">
       <thead>
         <tr>
           <th>#</th>
-          <th>Ім'я</th>
-          <th>Прізвище</th>
-          <th>Нік</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
         </tr>
       </thead>
       <tbody>
@@ -173,16 +173,16 @@
 {% endhighlight %}
 
 
-  <h2 id="tables-condensed">Скорочена таблиця</h2>
-  <p>Додайте <code>.table-condensed</code> щоб зробити таблицю компактнішою шляхом скорочення відступів (padding) в комірках на половину.</p>
+  <h2 id="tables-condensed">Condensed table</h2>
+  <p>Add <code>.table-condensed</code> to make tables more compact by cutting cell padding in half.</p>
   <div class="bs-example">
     <table class="table table-condensed">
       <thead>
         <tr>
           <th>#</th>
-          <th>Ім'я</th>
-          <th>Прізвище</th>
-          <th>Нік</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
         </tr>
       </thead>
       <tbody>
@@ -213,8 +213,8 @@
 {% endhighlight %}
 
 
-  <h2 id="tables-contextual-classes">Контекстні класи</h2>
-  <p>Використовуйте контекстні класи для зафарбовування рядків таблиці, чи окремих її комірок.</p>
+  <h2 id="tables-contextual-classes">Contextual classes</h2>
+  <p>Use contextual classes to color table rows or individual cells.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <colgroup>
@@ -223,8 +223,8 @@
       </colgroup>
       <thead>
         <tr>
-          <th>Клас</th>
-          <th>Опис</th>
+          <th>Class</th>
+          <th>Description</th>
         </tr>
       </thead>
       <tbody>
@@ -232,31 +232,31 @@
           <td>
             <code>.active</code>
           </td>
-          <td>Застосовує колір при наведенні на окремі рядки чи комірки</td>
+          <td>Applies the hover color to a particular row or cell</td>
         </tr>
         <tr>
           <td>
             <code>.success</code>
           </td>
-          <td>Вказує на успішну чи позитивну дію</td>
+          <td>Indicates a successful or positive action</td>
         </tr>
         <tr>
           <td>
             <code>.info</code>
           </td>
-          <td>Вказує на попередження, що може потребувати уваги</td>
+          <td>Indicates a neutral informative change or action</td>
         </tr>
         <tr>
           <td>
             <code>.warning</code>
           </td>
-          <td>Вказує на небезпеку або потенційно негативну дію</td>
+          <td>Indicates a warning that might need attention</td>
         </tr>
         <tr>
           <td>
             <code>.danger</code>
           </td>
-          <td>Вказує на звичайну інформативну зміну чи дію</td>
+          <td>Indicates a dangerous or potentially negative action</td>
         </tr>
       </tbody>
     </table>
@@ -266,78 +266,78 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Заголовок колонки</th>
-          <th>Заголовок колонки</th>
-          <th>Заголовок колонки</th>
+          <th>Column heading</th>
+          <th>Column heading</th>
+          <th>Column heading</th>
         </tr>
       </thead>
       <tbody>
         <tr class="active">
           <td>1</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
         </tr>
         <tr>
           <td>2</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
         </tr>
         <tr class="success">
           <td>3</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
         </tr>
         <tr>
           <td>4</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
         </tr>
         <tr class="info">
           <td>5</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
         </tr>
         <tr>
           <td>6</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
         </tr>
         <tr class="warning">
           <td>7</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
         </tr>
         <tr>
           <td>8</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
         </tr>
         <tr class="danger">
           <td>9</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
-          <td>Вміст колонки</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
         </tr>
       </tbody>
     </table>
   </div><!-- /example -->
 {% highlight html %}
-<!-- В рядках -->
+<!-- On rows -->
 <tr class="active">...</tr>
 <tr class="success">...</tr>
 <tr class="warning">...</tr>
 <tr class="danger">...</tr>
 <tr class="info">...</tr>
 
-<!-- В комірках (`td` або `th`) -->
+<!-- On cells (`td` or `th`) -->
 <tr>
   <td class="active">...</td>
   <td class="success">...</td>
@@ -348,18 +348,18 @@
 {% endhighlight %}
 
 
-  <h2 id="tables-responsive">Чутливі таблиці</h2>
-  <p>Створюйте чутливі таблиці, обгортаючи будь-яку таблицю з класом <code>.table</code> в <code>.table-responsive</code> щоб створити в них горизонтальну лінію прокрутки для малих пристроїв (для 768px). При перегляді на чомусь ширшому за 768px, ви не не побачите ніякої різниці між ними.</p>
+  <h2 id="tables-responsive">Responsive tables</h2>
+  <p>Create responsive tables by wrapping any <code>.table</code> in <code>.table-responsive</code> to make them scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in these tables.</p>
 
   <div class="bs-callout bs-callout-warning">
-    <h4>Firefox та fieldsets</h4>
-    <p>Firefox має незграбні деякі стилі fieldset за участю <code>width</code>, які заважають чуйності таблиці. Це не можна перевизначити без спеціального хака для Firefox, який ми <strong>не</strong> надаємо в Bootstrap:</p>
+    <h4>Firefox and fieldsets</h4>
+    <p>Firefox has some awkward fieldset styling involving <code>width</code> that interferes with the responsive table. This cannot be overriden without a Firefox-specific hack that we <strong>don't</strong> provide in Bootstrap:</p>
 {% highlight css %}
 @-moz-document url-prefix() {
   fieldset { display: table-cell; }
 }
 {% endhighlight %}
-    <p>Детальніше можна прочитати у <a href="http://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content/17863685#17863685">відповіді на Stack Overflow</a>.</p>
+    <p>For more information, read <a href="http://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content/17863685#17863685">this Stack Overflow answer</a>.</p>
   </div>
 
   <div class="bs-example">
@@ -368,41 +368,41 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>Заголовок таблиці</th>
-            <th>Заголовок таблиці</th>
-            <th>Заголовок таблиці</th>
-            <th>Заголовок таблиці</th>
-            <th>Заголовок таблиці</th>
-            <th>Заголовок таблиці</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>1</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
           </tr>
           <tr>
             <td>2</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
           </tr>
           <tr>
             <td>3</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
           </tr>
         </tbody>
       </table>
@@ -413,41 +413,41 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>Заголовок таблиці</th>
-            <th>Заголовок таблиці</th>
-            <th>Заголовок таблиці</th>
-            <th>Заголовок таблиці</th>
-            <th>Заголовок таблиці</th>
-            <th>Заголовок таблиці</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>1</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
           </tr>
           <tr>
             <td>2</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
           </tr>
           <tr>
             <td>3</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
-            <td>Комірка таблиці</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
           </tr>
         </tbody>
       </table>

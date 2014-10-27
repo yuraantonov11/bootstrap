@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
   <head>
     <!-- Meta, title, CSS, favicons, etc. -->
     {% include header.html %}
@@ -15,7 +15,7 @@
       <div class="container">
         <h1>{{ page.title }}</h1>
         <p>{{ page.lead }}</p>
-       <!-- { % include ads.html % } -->
+        {% include ads.html %}
       </div>
     </div>
 
@@ -45,11 +45,11 @@
               {% endif %}
             </ul>
             <a class="back-to-top" href="#top">
-              Піднятись вгору
+              Back to top
             </a>
             {% if page.slug == "css" or page.slug == "components" or page.slug == "js" %}
             <a href="#" class="bs-docs-theme-toggle" role="button">
-              Предогляд теми
+              Preview theme
             </a>
             {% endif %}
           </div>

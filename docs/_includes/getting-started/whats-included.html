@@ -1,15 +1,15 @@
 <div class="bs-docs-section">
-  <h1 id="whats-included" class="page-header">Що включено в матеріали для скачування</h1>
+  <h1 id="whats-included" class="page-header">What's included</h1>
 
-  <p class="lead">Bootstrap доступний в двох формах, в яких ви знайдете логічно згруповані каталоги та файли, представлені в зібраному та мінімізованому варіанті.</p>
+  <p class="lead">Bootstrap is downloadable in two forms, within which you'll find the following directories and files, logically grouping common resources and providing both compiled and minified variations.</p>
 
   <div class="bs-callout bs-callout-warning" id="jquery-required">
-    <h4>Необхідність в jQuery</h4>
-    <p>Будь-ласка майте на увазі, що <strong>всі JavaScript плагіни потребують підключення jQuery</strong>, прогляньте як це зроблено в <a href="#template">стартовому шаблоні</a>. <a href="{{ site.repo }}/blob/v{{ site.current_version }}/bower.json">У файлі <code>bower.json</code></a> можна побачити які версії jQuery підтримуються.</p>
+    <h4>jQuery required</h4>
+    <p>Please note that <strong>all JavaScript plugins require jQuery</strong> to be included, as shown in the <a href="#template">starter template</a>. <a href="{{ site.repo }}/blob/v{{ site.current_version }}/bower.json">Consult our <code>bower.json</code></a> to see which versions of jQuery are supported.</p>
   </div>
 
-  <h2 id="whats-included-precompiled">Готова збірка</h2>
-  <p>Якщо ви скористались лінком "Скачати Bootstrap", то структура скачаного пакета після розархівації є приблизно такою:</p>
+  <h2 id="whats-included-precompiled">Precompiled Bootstrap</h2>
+  <p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Bootstrap. You'll see something like this:</p>
 <!-- NOTE: This info is intentionally duplicated in the README.
 Copy any changes made here over to the README too. -->
 {% highlight bash %}
@@ -29,10 +29,10 @@ bootstrap/
     └── glyphicons-halflings-regular.woff
 {% endhighlight %}
 
-  <p>Це є найбільш базова форма Bootstrap &#8211; тут зібрані файли для їх швидкої вставки в будь-який веб-проект. Ми надаємо збірку CSS та JS (<code>bootstrap.*</code>), а також її мінімізований варіант (<code>bootstrap.min.*</code>). Як додаткові опції тем Bootstrap &#8211; також надаються шрифти з Glyphicons.</p>
+  <p>This is the most basic form of Bootstrap: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (<code>bootstrap.*</code>), as well as compiled and minified CSS and JS (<code>bootstrap.min.*</code>). Fonts from Glyphicons are included, as is the optional Bootstrap theme.</p>
 
-  <h2 id="whats-included-source">Сирцевий код Bootstrap</h2>
-  <p>Завантаження сирцевого коду Bootstrap вміщує збірку CSS, JavaScript, та шрифтів, а також сирцевий код LESS, JavaScript, та документацію. Точніше, завантаження має такі елементи:</p>
+  <h2 id="whats-included-source">Bootstrap source code</h2>
+  <p>The Bootstrap source code download includes the precompiled CSS, JavaScript, and font assets, along with source Less, JavaScript, and documentation. More specifically, it includes the following and more:</p>
 {% highlight bash %}
 bootstrap/
 ├── less/
@@ -45,5 +45,5 @@ bootstrap/
 └── docs/
     └── examples/
 {% endhighlight %}
-  <p>В каталоги <code>less/</code>, <code>js/</code>, та <code>fonts/</code> вміщено сирцевий код для наших CSS, JS, та шрифтів (відповідно). Каталог <code>dist/</code> вміщує весь список з верхньої секції завантаження в прекомпільованому вигляді (готовому до використання, на відміну від сирцевого коду). Каталог <code>docs/</code> вміщує сирцевий код для нашої документації, а в <code>examples/</code> показані приклади використання Bootstrap. Решта файлів призначена для підтримки самого пакета (де вони знаходяться) в актуальному стані, інформацію ліцензування, та інші матеріали для розробки.</p>
+  <p>The <code>less/</code>, <code>js/</code>, and <code>fonts/</code> are the source code for our CSS, JS, and icon fonts (respectively). The <code>dist/</code> folder includes everything listed in the precompiled download section above. The <code>docs/</code> folder includes the source code for our documentation, and <code>examples/</code> of Bootstrap usage. Beyond that, any other included file provides support for packages, license information, and development.</p>
 </div>

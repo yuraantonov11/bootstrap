@@ -1,74 +1,74 @@
 <div class="bs-docs-section">
-  <h1 id="forms" class="page-header">Форми</h1>
+  <h1 id="forms" class="page-header">Forms</h1>
 
-  <h2 id="forms-example">Базовий приклад</h2>
-  <p>Окремі елементи управління автоматично отримують певні глобальні налаштування. Всі текстові елементи <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, та <code>&lt;select&gt;</code> з класом <code>.form-control</code> встановлюють за промовчанням <code>width: 100%;</code>. Обгорніть надписи та елементи керування в <code>.form-group</code> для оптимізації простору між ними.</p>
+  <h2 id="forms-example">Basic example</h2>
+  <p>Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.</p>
   <div class="bs-example">
     <form role="form">
       <div class="form-group">
-        <label for="exampleInputEmail1">Імейл адреса</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Введіть імейл">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Пароль</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
       </div>
       <div class="form-group">
-        <label for="exampleInputFile">Вкласти файл</label>
+        <label for="exampleInputFile">File input</label>
         <input type="file" id="exampleInputFile">
-        <p class="help-block">Приклад блочного тексту довідки.</p>
+        <p class="help-block">Example block-level help text here.</p>
       </div>
       <div class="checkbox">
         <label>
-          <input type="checkbox"> Поставте галочку
+          <input type="checkbox"> Check me out
         </label>
       </div>
-      <button type="submit" class="btn btn-default">Відправити</button>
+      <button type="submit" class="btn btn-default">Submit</button>
     </form>
   </div><!-- /example -->
 {% highlight html %}
 <form role="form">
   <div class="form-group">
-    <label for="exampleInputEmail1">Імейл адреса</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Введіть імейл">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Пароль</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
   <div class="form-group">
-    <label for="exampleInputFile">Вкласти файл</label>
+    <label for="exampleInputFile">File input</label>
     <input type="file" id="exampleInputFile">
-    <p class="help-block">Приклад блочного тексту довідки.</p>
+    <p class="help-block">Example block-level help text here.</p>
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox"> Поставте галочку
+      <input type="checkbox"> Check me out
     </label>
   </div>
-  <button type="submit" class="btn btn-default">Відправити</button>
+  <button type="submit" class="btn btn-default">Submit</button>
 </form>
 {% endhighlight %}
   <div class="bs-callout bs-callout-warning">
-    <h4>Не змішуйте класи form-group з класами input-group</h4>
-    <p>Не змішуйте класи form-groups безпосередньо з класами <a href="/components/#input-groups">input-group</a>. Замість цього, вкладіть елементи з класом input-group всередину елементів з класами form-group.</p>
+    <h4>Don't mix form groups with input groups</h4>
+    <p>Do not mix form groups directly with <a href="/components/#input-groups">input groups</a>. Instead, nest the input group inside of the form group.</p>
   </div>
 
 
-  <h2 id="forms-inline">Вбудована форма</h2>
-  <p>Додайте <code>.form-inline</code> до <code>&lt;form&gt;</code> для вирівнювання по лівому краю та вставки блоку елементів управління форми. <strong>Це стосується лише форми в оглядовому вікні, з шириною щонайменше 768px.</strong></p>
+  <h2 id="forms-inline">Inline form</h2>
+  <p>Add <code>.form-inline</code> to your <code>&lt;form&gt;</code> for left-aligned and inline-block controls. <strong>This only applies to forms within viewports that are at least 768px wide.</strong></p>
   <div class="bs-callout bs-callout-danger">
-    <h4>Необхідно налаштовувати ширину</h4>
-    <p>В Bootstrap елементи &lt;input&gt; та &lt;select&gt; за промовчанням мають ширину <code>width: 100%;</code>. Всередині вбудованих форм, ми скидаємо її до <code>width: auto;</code>, так що елементи для множинного вибору можуть знаходитись в одному рядку. В залежності від вашого шаблону, може знадобитись додаткова підбірка ширини.</p>
+    <h4>Requires custom widths</h4>
+    <p>Inputs and selects have <code>width: 100%;</code> applied by default in Bootstrap. Within inline forms, we reset that to <code>width: auto;</code> so multiple controls can reside on the same line. Depending on your layout, additional custom widths may be required.</p>
   </div>
   <div class="bs-callout bs-callout-warning">
-    <h4>Завжди додавайте ярлики</h4>
-    <p>Браузери будуть мати проблему з вашими формами, якщо ви не будете додавати ярлики для кожного їх елементу введення. В прикладі нижче, для вбудованої форми, ми можемо приховати ярлики використовуючи клас <code>.sr-only</code>.</p>
+    <h4>Always add labels</h4>
+    <p>Screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the <code>.sr-only</code> class.</p>
   </div>
   <div class="bs-example">
     <form class="form-inline" role="form">
       <div class="form-group">
-        <label class="sr-only" for="exampleInputEmail2">Імейл адреса</label>
+        <label class="sr-only" for="exampleInputEmail2">Email address</label>
         <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
       </div>
       <div class="form-group">
@@ -78,21 +78,21 @@
         </div>
       </div>
       <div class="form-group">
-        <label class="sr-only" for="exampleInputPassword2">Пароль</label>
-        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Пароль">
+        <label class="sr-only" for="exampleInputPassword2">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
       </div>
       <div class="checkbox">
         <label>
-          <input type="checkbox"> Запам'ятати мене
+          <input type="checkbox"> Remember me
         </label>
       </div>
-      <button type="submit" class="btn btn-default">Увійти</button>
+      <button type="submit" class="btn btn-default">Sign in</button>
     </form>
   </div><!-- /example -->
 {% highlight html %}
 <form class="form-inline" role="form">
   <div class="form-group">
-    <label class="sr-only" for="exampleInputEmail2">Імейл адреса</label>
+    <label class="sr-only" for="exampleInputEmail2">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
   </div>
   <div class="form-group">
@@ -102,47 +102,47 @@
     </div>
   </div>
   <div class="form-group">
-    <label class="sr-only" for="exampleInputPassword2">Пароль</label>
-    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Пароль">
+    <label class="sr-only" for="exampleInputPassword2">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
   </div>
   <div class="checkbox">
     <label>
-      <input type="checkbox"> Запам'ятати мене
+      <input type="checkbox"> Remember me
     </label>
   </div>
-  <button type="submit" class="btn btn-default">Увійти</button>
+  <button type="submit" class="btn btn-default">Sign in</button>
 </form>
 {% endhighlight %}
 
 
-  <h2 id="forms-horizontal">Горизонтальна форма</h2>
-  <p>Використовуйте предвизначені класи в Bootstrap для вирівнювання ярликів та елементів управління в горизонтальному макеті форми, додаючи до цих форм клас <code>.form-horizontal</code>. Діючи таким чином, <code>.form-group</code> поводитиметься як рядки сітки, тобто відпадає потреба в <code>.row</code>.</p>
+  <h2 id="forms-horizontal">Horizontal form</h2>
+  <p>Use Bootstrap's predefined grid classes to align labels and groups of form controls in a horizontal layout by adding <code>.form-horizontal</code> to the form. Doing so changes <code>.form-group</code>s to behave as grid rows, so no need for <code>.row</code>.</p>
   <div class="bs-example">
     <form class="form-horizontal" role="form">
       <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Імейл</label>
+        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
         <div class="col-sm-10">
           <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
         </div>
       </div>
       <div class="form-group">
-        <label for="inputPassword3" class="col-sm-2 control-label">Пароль</label>
+        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
         <div class="col-sm-10">
-          <input type="password" class="form-control" id="inputPassword3" placeholder="Пароль">
+          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
         </div>
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
           <div class="checkbox">
             <label>
-              <input type="checkbox"> Запам'ятати мене
+              <input type="checkbox"> Remember me
             </label>
           </div>
         </div>
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-default">Увійти</button>
+          <button type="submit" class="btn btn-default">Sign in</button>
         </div>
       </div>
     </form>
@@ -150,59 +150,59 @@
 {% highlight html %}
 <form class="form-horizontal" role="form">
   <div class="form-group">
-    <label for="inputEmail3" class="col-sm-2 control-label">Імейл</label>
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
     <div class="col-sm-10">
       <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputPassword3" class="col-sm-2 control-label">Пароль</label>
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" placeholder="Пароль">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <div class="checkbox">
         <label>
-          <input type="checkbox"> Запам'ятати мене
+          <input type="checkbox"> Remember me
         </label>
       </div>
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Увійти</button>
+      <button type="submit" class="btn btn-default">Sign in</button>
     </div>
   </div>
 </form>
 {% endhighlight %}
 
 
-  <h2 id="forms-controls">Підтримувані елементи управління</h2>
-  <p>Демонстрація підтримуваних стандартних елементів форми на прикладі макету форми.</p>
+  <h2 id="forms-controls">Supported controls</h2>
+  <p>Examples of standard form controls supported in an example form layout.</p>
 
-  <h3>Форми введення</h3>
-  <p>Підтримуються найбільш поширені елементи управління форми та текстові поля введення. Також включено підтримку всіх типів поля HTML5: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, та <code>color</code>.</p>
+  <h3>Inputs</h3>
+  <p>Most common form control, text-based input fields. Includes support for all HTML5 types: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, and <code>color</code>.</p>
   <div class="bs-callout bs-callout-danger">
-    <h4>Необхідно оголошувати тип поля</h4>
-    <p>Форми введення матимуть весь набір стилів, лише якщо вони мають правильно оголошений <code>type</code>.</p>
+    <h4>Type declaration required</h4>
+    <p>Inputs will only be fully styled if their <code>type</code> is properly declared.</p>
   </div>
   <div class="bs-example">
     <form role="form">
-      <input type="text" class="form-control" placeholder="Текстовий тип поля">
+      <input type="text" class="form-control" placeholder="Text input">
     </form>
   </div><!-- /.bs-example -->
 {% highlight html %}
-<input type="text" class="form-control" placeholder="Текстовий тип поля">
+<input type="text" class="form-control" placeholder="Text input">
 {% endhighlight %}
   <div class="bs-callout bs-callout-info">
-    <h4>Групи форм введення</h4>
-    <p>Щоб побачити як можна додавати інтегрований текст чи кнопку до або після будь-якого текстового елемента <code>&lt;input&gt;</code>, <a href="../components/#input-groups">прогляньте компоненти груп введення</a>.</p>
+    <h4>Input groups</h4>
+    <p>To add integrated text or buttons before and/or after any text-based <code>&lt;input&gt;</code>, <a href="../components/#input-groups">check out the input group component</a>.</p>
   </div>
 
   <h3>Textarea</h3>
-  <p>Textarea – це елемент управління форми, котрий підтримує багаторядкові лінії тексту. Змініть атрибут <code>rows</code> якщо необхідно.</p>
+  <p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
   <div class="bs-example">
     <form role="form">
       <textarea class="form-control" rows="3"></textarea>
@@ -212,41 +212,41 @@
 <textarea class="form-control" rows="3"></textarea>
 {% endhighlight %}
 
-  <h3>Галочки та перемикачі</h3>
-  <p>Галочки призначені для позначення вибору одного або декількох елементів, у той час як перемикачі – можуть мати лише один вибраний елемент із декількох запропонованих.</p>
-  <p>Галочки чи перемикачі з атрибутом <code>disabled</code> будуть мати стиль заблокованого елемента. Щоб елементи <code>&lt;label&gt;</code> для галочок або перемикачів також відображали курсор зі значком "не-дозволено" при наведені на такий елемент, додайте клас <code>.disabled</code> до <code>.radio</code>, <code>.radio-inline</code>, <code>.checkbox</code>, <code>.checkbox-inline</code>, чи <code>&lt;fieldset&gt;</code>.</p>
-  <h4>За промовчанням (складені)</h4>
+  <h3>Checkboxes and radios</h3>
+  <p>Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.</p>
+  <p>A checkbox or radio with the <code>disabled</code> attribute will be styled appropriately. To have the <code>&lt;label&gt;</code> for the checkbox or radio also display a "not-allowed" cursor when the user hovers over the label, add the <code>.disabled</code> class to your <code>.radio</code>, <code>.radio-inline</code>, <code>.checkbox</code>, <code>.checkbox-inline</code>, or <code>&lt;fieldset&gt;</code>.</p>
+  <h4>Default (stacked)</h4>
   <div class="bs-example">
     <form role="form">
       <div class="checkbox">
         <label>
           <input type="checkbox" value="">
-          Опція перша – вибирайте її, якщо вам подобається цей пункт
+          Option one is this and that&mdash;be sure to include why it's great
         </label>
       </div>
       <div class="checkbox disabled">
         <label>
           <input type="checkbox" value="" disabled>
-          Опцію другу - заблоковано
+          Option two is disabled
         </label>
       </div>
       <br>
       <div class="radio">
         <label>
           <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-          Опція перша – вибирайте її, якщо вам подобається цей пункт
+          Option one is this and that&mdash;be sure to include why it's great
         </label>
       </div>
       <div class="radio">
         <label>
           <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-          Опція друга може мати щось ще, та при її вибору буде зніматись галочка з першої опції
+          Option two can be something else and selecting it will deselect option one
         </label>
       </div>
       <div class="radio disabled">
         <label>
           <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-          Опцію третю заблоковано
+          Option three is disabled
         </label>
       </div>
     </form>
@@ -255,38 +255,38 @@
 <div class="checkbox">
   <label>
     <input type="checkbox" value="">
-    Опція перша – вибирайте її, якщо вам подобається цей пункт
+    Option one is this and that&mdash;be sure to include why it's great
   </label>
 </div>
 <div class="checkbox disabled">
   <label>
     <input type="checkbox" value="" disabled>
-    Опцію другу - заблоковано
+    Option two is disabled
   </label>
 </div>
-<br>
+
 <div class="radio">
   <label>
     <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-    Опція перша – вибирайте її, якщо вам подобається цей пункт
+    Option one is this and that&mdash;be sure to include why it's great
   </label>
 </div>
 <div class="radio">
   <label>
     <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-    Опція друга може мати щось ще, та при її вибору буде зніматись галочка з першої опції
+    Option two can be something else and selecting it will deselect option one
   </label>
 </div>
 <div class="radio disabled">
   <label>
     <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-    Опцію третю заблоковано
+    Option three is disabled
   </label>
 </div>
 {% endhighlight %}
 
-  <h4>Форми для галочок в одну лінію</h4>
-  <p>Використовуйте клас <code>.checkbox-inline</code> або <code>.radio-inline</code> для серії полів галочок чи перемикачів, котрі відображаються в одну лінію.</p>
+  <h4>Inline checkboxes and radios</h4>
+  <p>Use the <code>.checkbox-inline</code> or <code>.radio-inline</code> classes on a series of checkboxes or radios for controls that appear on the same line.</p>
   <div class="bs-example">
     <form role="form">
       <label class="checkbox-inline">
@@ -334,8 +334,8 @@
 </label>
 {% endhighlight %}
 
-  <h4>Галочки та перемикачі без ярликів</h4>
-  <p>Якщо у вас немає текста всередині <code>&lt;label&gt;</code>, елемент input позиціонується так, як це очікується. <strong>Зараз працює тільки для галочок та перемикачів, стилізованих не в одну лінію (non-inline).</strong></p>
+  <h4>Checkboxes and radios without labels</h4>
+  <p>Should you have no text within the <code>&lt;label&gt;</code>, the input is positioned as you'd expect. <strong>Currently only works on non-inline checkboxes and radios.</strong></p>
   <div class="bs-example">
     <form role="form">
       <div class="checkbox">
@@ -363,8 +363,8 @@
 </div>
 {% endhighlight %}
 
-  <h3>Select</h3>
-  <p>Використовуйте опції за промовчанням, або додайте <code>multiple</code>, щоб мати можливість вибрати декілька пунктів.</p>
+  <h3>Selects</h3>
+  <p>Use the default option, or add <code>multiple</code> to show multiple options at once.</p>
   <div class="bs-example">
     <form role="form">
       <select class="form-control">
@@ -403,20 +403,20 @@
 {% endhighlight %}
 
 
-  <h2 id="forms-controls-static">Статичні елементи управління</h2>
-  <p>Коли вам потрібно розмістити простий текст після ярлика поля горизонтальної форми, використовуйте клас <code>.form-control-static</code> для <code>&lt;p&gt;</code>.</p>
+  <h2 id="forms-controls-static">Static control</h2>
+  <p>When you need to place plain text next to a form label within a form, use the <code>.form-control-static</code> class on a <code>&lt;p&gt;</code>.</p>
   <div class="bs-example">
     <form class="form-horizontal" role="form">
       <div class="form-group">
-        <label class="col-sm-2 control-label">Імейл</label>
+        <label class="col-sm-2 control-label">Email</label>
         <div class="col-sm-10">
           <p class="form-control-static">email@example.com</p>
         </div>
       </div>
       <div class="form-group">
-        <label for="inputPassword" class="col-sm-2 control-label">Пароль</label>
+        <label for="inputPassword" class="col-sm-2 control-label">Password</label>
         <div class="col-sm-10">
-          <input type="password" class="form-control" id="inputPassword" placeholder="Пароль">
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
         </div>
       </div>
     </form>
@@ -424,15 +424,15 @@
 {% highlight html %}
 <form class="form-horizontal" role="form">
   <div class="form-group">
-    <label class="col-sm-2 control-label">Імейл</label>
+    <label class="col-sm-2 control-label">Email</label>
     <div class="col-sm-10">
       <p class="form-control-static">email@example.com</p>
     </div>
   </div>
   <div class="form-group">
-    <label for="inputPassword" class="col-sm-2 control-label">Пароль</label>
+    <label for="inputPassword" class="col-sm-2 control-label">Password</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword" placeholder="Пароль">
+      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
     </div>
   </div>
 </form>
@@ -440,12 +440,12 @@
   <div class="bs-example">
     <form class="form-inline" role="form">
       <div class="form-group">
-        <label class="sr-only">Імейл</label>
+        <label class="sr-only">Email</label>
         <p class="form-control-static">email@example.com</p>
       </div>
       <div class="form-group">
-        <label for="inputPassword2" class="sr-only">Пароль</label>
-        <input type="password" class="form-control" id="inputPassword2" placeholder="Пароль">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
       </div>
       <button type="submit" class="btn btn-default">Confirm identity</button>
     </form>
@@ -453,73 +453,73 @@
 {% highlight html %}
 <form class="form-inline" role="form">
   <div class="form-group">
-    <label class="sr-only">Імейл</label>
+    <label class="sr-only">Email</label>
     <p class="form-control-static">email@example.com</p>
   </div>
   <div class="form-group">
-    <label for="inputPassword2" class="sr-only">Пароль</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Пароль">
+    <label for="inputPassword2" class="sr-only">Password</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
   </div>
   <button type="submit" class="btn btn-default">Confirm identity</button>
 </form>
 {% endhighlight %}
 
-  <h2 id="forms-control-focus">Фокус в елементі форми input</h2>
-  <p>Ми видалили стилі за промовчанням <code>outline</code> на деяких елементах форми, та застосували <code>box-shadow</code> в середині них, для встановлення <code>:focus</code>.</p>
+  <h2 id="forms-control-focus">Input focus</h2>
+  <p>We remove the default <code>outline</code> styles on some form controls and apply a <code>box-shadow</code> in its place for <code>:focus</code>.</p>
   <div class="bs-example">
     <form role="form">
-      <input class="form-control" id="focusedInput" type="text" value="Демонстрація фокусу в формі">
+      <input class="form-control" id="focusedInput" type="text" value="Demonstrative focus state">
     </form>
   </div>
   <div class="bs-callout bs-callout-info">
-    <h4>Демо стану <code>:focus</code></h4>
-    <p>В прикладі вгорі, демонструється елемент в стані <code>:focus</code> в класі <code>.form-control</code>.</p>
+    <h4>Demo <code>:focus</code> state</h4>
+    <p>The above example input uses custom styles in our documentation to demonstrate the <code>:focus</code> state on a <code>.form-control</code>.</p>
   </div>
 
 
-  <h2 id="forms-control-disabled">Заблоковані форми input</h2>
-  <p>Додайте атрибут <code>disabled</code> до форми input для заборони введення даних користувачами та для надання формі дещо іншого вигляду.</p>
+  <h2 id="forms-control-disabled">Disabled inputs</h2>
+  <p>Add the <code>disabled</code> boolean attribute on an input to prevent user input and trigger a slightly different look.</p>
   <div class="bs-example">
     <form role="form">
-      <input class="form-control" id="disabledInput" type="text" placeholder="Це заблокований елемент input…" disabled>
+      <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here…" disabled>
     </form>
   </div><!-- /.bs-example -->
 {% highlight html %}
-<input class="form-control" id="disabledInput" type="text" placeholder="Це заблокований елемент input..." disabled>
+<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
 {% endhighlight %}
 
-  <h3 id="forms-disabled-fieldsets">Блокування елемента fieldsets</h3>
-  <p>Додайте атрибут <code>disabled</code> до <code>&lt;fieldset&gt;</code> щоб заблокувати одразу всі елементи форми в середині <code>&lt;fieldset&gt;</code>.</p>
+  <h3 id="forms-disabled-fieldsets">Disabled fieldsets</h3>
+  <p>Add the <code>disabled</code> attribute to a <code>&lt;fieldset&gt;</code> to disable all the controls within the <code>&lt;fieldset&gt;</code> at once.</p>
 
   <div class="bs-callout bs-callout-warning">
-    <h4>Функціональності лінка <code>&lt;a&gt;</code> не змінено</h4>
-    <p>В наших стилях використовується <code>pointer-events: none</code> щоб спробувати заблокувати функціональність лінка в кнопкі <code>&lt;a class="btn btn-*"&gt;</code>, в даному випадку, але ця властивість CSS ще не стандартизована та не в повній мірі підтримується в Opera 18 та нижче, або в Internet Explorer 11. Отже, щоб бути впевненим, використовуйте відповідний код JavaScript для блокування таких лінків.</p>
+    <h4>Caveat about link functionality of <code>&lt;a&gt;</code></h4>
+    <p>Our styles use <code>pointer-events: none</code> to try to disable the link functionality of <code>&lt;a class="btn btn-*"&gt;</code> buttons in this case, but that CSS property is not yet standardized and isn't fully supported in Opera 18 and below, or in Internet Explorer 11. So to be safe, use custom JavaScript to disable such links.</p>
   </div>
 
   <div class="bs-callout bs-callout-danger">
-    <h4>Крос-браузерна сумісність</h4>
-    <p>Хоча Bootstrap застосовує ці стилі у всіх браузерах, Internet Explorer 11 та старіше, фактично не підтримують атрибут <code>disabled</code> для <code>&lt;fieldset&gt;</code>. В цих браузерах використовуйте JavaScript для блокування fieldset.</p>
+    <h4>Cross-browser compatibility</h4>
+    <p>While Bootstrap will apply these styles in all browsers, Internet Explorer 11 and below don't fully support the <code>disabled</code> attribute on a <code>&lt;fieldset&gt;</code>. Use custom JavaScript to disable the fieldset in these browsers.</p>
   </div>
 
   <div class="bs-example">
     <form role="form">
       <fieldset disabled>
         <div class="form-group">
-          <label for="disabledTextInput">Заблоковано введення</label>
-          <input type="text" id="disabledTextInput" class="form-control" placeholder="Введення заблоковано">
+          <label for="disabledTextInput">Disabled input</label>
+          <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
         </div>
         <div class="form-group">
-          <label for="disabledSelect">Заблоковано меню вибору</label>
+          <label for="disabledSelect">Disabled select menu</label>
           <select id="disabledSelect" class="form-control">
-            <option>Заблоковано select</option>
+            <option>Disabled select</option>
           </select>
         </div>
         <div class="checkbox">
           <label>
-            <input type="checkbox"> Тут не зможете поставити галочку
+            <input type="checkbox"> Can't check this
           </label>
         </div>
-        <button type="submit" class="btn btn-primary">Відправити</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </fieldset>
     </form>
   </div><!-- /.bs-example -->
@@ -527,60 +527,60 @@
 <form role="form">
   <fieldset disabled>
     <div class="form-group">
-      <label for="disabledTextInput">Заблоковано введення</label>
-      <input type="text" id="disabledTextInput" class="form-control" placeholder="Введення заблоковано">
+      <label for="disabledTextInput">Disabled input</label>
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
     </div>
     <div class="form-group">
-      <label for="disabledSelect">Заблоковано меню вибору</label>
+      <label for="disabledSelect">Disabled select menu</label>
       <select id="disabledSelect" class="form-control">
-        <option>Заблоковано select</option>
+        <option>Disabled select</option>
       </select>
     </div>
     <div class="checkbox">
       <label>
-        <input type="checkbox"> Тут не зможете поставити галочку
+        <input type="checkbox"> Can't check this
       </label>
     </div>
-    <button type="submit" class="btn btn-primary">Відправити</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </fieldset>
 </form>
 {% endhighlight %}
 
 
-  <h2 id="forms-control-readonly">Стан елемента input "тільки для читання"</h2>
-  <p>Додайте логічний атрибут <code>readonly</code> в елемент input, щоб заблокувати введення у форму, та стилізувати елемент input як заблокований.</p>
+  <h2 id="forms-control-readonly">Readonly inputs</h2>
+  <p>Add the <code>readonly</code> boolean attribute on an input to prevent user input and style the input as disabled.</p>
   <div class="bs-example">
     <form role="form">
-      <input class="form-control" type="text" placeholder="input заблоковано…" readonly>
+      <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
     </form>
   </div><!-- /.bs-example -->
 {% highlight html %}
-<input class="form-control" type="text" placeholder="input заблоковано…" readonly>
+<input class="form-control" type="text" placeholder="Readonly input here…" readonly>
 {% endhighlight %}
 
 
-  <h2 id="forms-control-validation">Стан пригодності</h2>
-  <p>Bootstrap має стилі пригодності (validation) для елементів управління форми, із такими станами: успішна дія, попередження, помилка. Щоб ці стилі задіяти додайте <code>.has-warning</code>, <code>.has-error</code>, або <code>.has-success</code> до їх батьківських елементів. Будь-які <code>.control-label</code>, <code>.form-control</code>, та <code>.help-block</code> в середині цих елементів будуть відображати стани пригодності.</p>
+  <h2 id="forms-control-validation">Validation states</h2>
+  <p>Bootstrap includes validation styles for error, warning, and success states on form controls. To use, add <code>.has-warning</code>, <code>.has-error</code>, or <code>.has-success</code> to the parent element. Any <code>.control-label</code>, <code>.form-control</code>, and <code>.help-block</code> within that element will receive the validation styles.</p>
 
   <div class="bs-example">
     <form role="form">
       <div class="form-group has-success">
-        <label class="control-label" for="inputSuccess1">Успішне введення</label>
+        <label class="control-label" for="inputSuccess1">Input with success</label>
         <input type="text" class="form-control" id="inputSuccess1">
       </div>
       <div class="form-group has-warning">
-        <label class="control-label" for="inputWarning1">Введення з попередженням</label>
+        <label class="control-label" for="inputWarning1">Input with warning</label>
         <input type="text" class="form-control" id="inputWarning1">
       </div>
       <div class="form-group has-error">
-        <label class="control-label" for="inputError1">Помилкове введення</label>
+        <label class="control-label" for="inputError1">Input with error</label>
         <input type="text" class="form-control" id="inputError1">
       </div>
       <div class="has-success">
         <div class="checkbox">
           <label>
             <input type="checkbox" id="checkboxSuccess" value="option1">
-            Вигляд галочки при успіху
+            Checkbox with success
           </label>
         </div>
       </div>
@@ -588,7 +588,7 @@
         <div class="checkbox">
           <label>
             <input type="checkbox" id="checkboxWarning" value="option1">
-            Вигляд галочки при попередженні
+            Checkbox with warning
           </label>
         </div>
       </div>
@@ -596,7 +596,7 @@
         <div class="checkbox">
           <label>
             <input type="checkbox" id="checkboxError" value="option1">
-            Вигляд галочки при помилці
+            Checkbox with error
           </label>
         </div>
       </div>
@@ -604,22 +604,22 @@
   </div><!-- /.bs-example -->
 {% highlight html %}
 <div class="form-group has-success">
-  <label class="control-label" for="inputSuccess1">Успішне введення</label>
+  <label class="control-label" for="inputSuccess1">Input with success</label>
   <input type="text" class="form-control" id="inputSuccess1">
 </div>
 <div class="form-group has-warning">
-  <label class="control-label" for="inputWarning1">Введення з попередженням</label>
+  <label class="control-label" for="inputWarning1">Input with warning</label>
   <input type="text" class="form-control" id="inputWarning1">
 </div>
 <div class="form-group has-error">
-  <label class="control-label" for="inputError1">Помилкове введення</label>
+  <label class="control-label" for="inputError1">Input with error</label>
   <input type="text" class="form-control" id="inputError1">
 </div>
 <div class="has-success">
   <div class="checkbox">
     <label>
       <input type="checkbox" id="checkboxSuccess" value="option1">
-      Вигляд галочки при успіху
+      Checkbox with success
     </label>
   </div>
 </div>
@@ -627,7 +627,7 @@
   <div class="checkbox">
     <label>
       <input type="checkbox" id="checkboxWarning" value="option1">
-      Вигляд галочки при попередженні
+      Checkbox with warning
     </label>
   </div>
 </div>
@@ -635,15 +635,15 @@
   <div class="checkbox">
     <label>
       <input type="checkbox" id="checkboxError" value="option1">
-      Вигляд галочки при помилці
+      Checkbox with error
     </label>
   </div>
 </div>
 {% endhighlight %}
 
-  <h3>З додатковими значками</h3>
-  <p>За допомогою <code>.has-feedback</code> можна також додати більш красномовну демонстрацію правильності заповнення форми введення - через значок зправа.</p>
-  <p><strong class="text-danger">Такі значки працюють тільки з текстовими елементами <code>&lt;input class="form-control"&gt;</code>.</strong></p>
+  <h3>With optional icons</h3>
+  <p>You can also add optional feedback icons with the addition of <code>.has-feedback</code> and the right icon.</p>
+  <p><strong class="text-danger">Feedback icons only work with textual <code>&lt;input class="form-control"&gt;</code> elements.</strong></p>
   <div class="bs-callout bs-callout-warning">
     <h4>Icons, labels, and input groups</h4>
     <p>Manual positioning of feedback icons is required for inputs without a label and for <a href="../components#input-groups">input groups</a> with an add-on on the right. You are strongly encouraged to provide labels for all inputs for accessibility reasons. If you wish to prevent labels from being displayed, hide them with the <code>sr-only</code> class. If you must do without labels, adjust the <code>top</code> value of the feedback icon. For input groups, adjust the <code>right</code> value to an appropriate pixel value depending on the width of your addon.</p>
@@ -651,17 +651,17 @@
   <div class="bs-example">
     <form role="form">
       <div class="form-group has-success has-feedback">
-        <label class="control-label" for="inputSuccess2">Успішне введення</label>
+        <label class="control-label" for="inputSuccess2">Input with success</label>
         <input type="text" class="form-control" id="inputSuccess2">
         <span class="glyphicon glyphicon-ok form-control-feedback"></span>
       </div>
       <div class="form-group has-warning has-feedback">
-        <label class="control-label" for="inputWarning2">Введення з попередженням</label>
+        <label class="control-label" for="inputWarning2">Input with warning</label>
         <input type="text" class="form-control" id="inputWarning2">
         <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
       </div>
       <div class="form-group has-error has-feedback">
-        <label class="control-label" for="inputError2">Помилкове введення</label>
+        <label class="control-label" for="inputError2">Input with error</label>
         <input type="text" class="form-control" id="inputError2">
         <span class="glyphicon glyphicon-remove form-control-feedback"></span>
       </div>
@@ -669,17 +669,17 @@
   </div>
 {% highlight html %}
 <div class="form-group has-success has-feedback">
-  <label class="control-label" for="inputSuccess2">Успішне введення</label>
+  <label class="control-label" for="inputSuccess2">Input with success</label>
   <input type="text" class="form-control" id="inputSuccess2">
   <span class="glyphicon glyphicon-ok form-control-feedback"></span>
 </div>
 <div class="form-group has-warning has-feedback">
-  <label class="control-label" for="inputWarning2">Введення з попередженням</label>
+  <label class="control-label" for="inputWarning2">Input with warning</label>
   <input type="text" class="form-control" id="inputWarning2">
   <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
 </div>
 <div class="form-group has-error has-feedback">
-  <label class="control-label" for="inputError2">Помилкове введення</label>
+  <label class="control-label" for="inputError2">Input with error</label>
   <input type="text" class="form-control" id="inputError2">
   <span class="glyphicon glyphicon-remove form-control-feedback"></span>
 </div>
@@ -689,7 +689,7 @@
   <div class="bs-example">
     <form class="form-horizontal" role="form">
       <div class="form-group has-success has-feedback">
-        <label class="control-label col-sm-3" for="inputSuccess3">Успішне введення</label>
+        <label class="control-label col-sm-3" for="inputSuccess3">Input with success</label>
         <div class="col-sm-9">
           <input type="text" class="form-control" id="inputSuccess3">
           <span class="glyphicon glyphicon-ok form-control-feedback"></span>
@@ -700,7 +700,7 @@
 {% highlight html %}
 <form class="form-horizontal" role="form">
   <div class="form-group has-success has-feedback">
-    <label class="control-label col-sm-3" for="inputSuccess3">Успішне введення</label>
+    <label class="control-label col-sm-3" for="inputSuccess3">Input with success</label>
     <div class="col-sm-9">
       <input type="text" class="form-control" id="inputSuccess3">
       <span class="glyphicon glyphicon-ok form-control-feedback"></span>
@@ -712,7 +712,7 @@
   <div class="bs-example">
     <form class="form-inline" role="form">
       <div class="form-group has-success has-feedback">
-        <label class="control-label" for="inputSuccess4">Успішне введення</label>
+        <label class="control-label" for="inputSuccess4">Input with success</label>
         <input type="text" class="form-control" id="inputSuccess4">
         <span class="glyphicon glyphicon-ok form-control-feedback"></span>
       </div>
@@ -721,7 +721,7 @@
 {% highlight html %}
 <form class="form-inline" role="form">
   <div class="form-group has-success has-feedback">
-    <label class="control-label" for="inputSuccess4">Успішне введення</label>
+    <label class="control-label" for="inputSuccess4">Input with success</label>
     <input type="text" class="form-control" id="inputSuccess4">
     <span class="glyphicon glyphicon-ok form-control-feedback"></span>
   </div>
@@ -746,7 +746,7 @@
 {% endhighlight %}
 
 
-  <h2 id="forms-control-sizes">Управління розмірами</h2>
+  <h2 id="forms-control-sizes">Control sizing</h2>
   <p>Set heights using classes like <code>.input-lg</code>, and set widths using grid column classes like <code>.col-lg-*</code>.</p>
 
   <h3>Height sizing</h3>
@@ -847,7 +847,7 @@
 </div>
 {% endhighlight %}
 
-  <h2 id="forms-help-text">Допоміжний текст</h2>
+  <h2 id="forms-help-text">Help text</h2>
   <p>Block level help text for form controls.</p>
   <div class="bs-example">
     <form role="form">
