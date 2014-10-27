@@ -1,39 +1,39 @@
 <div class="bs-docs-section">
-  <h1 id="grid" class="page-header">Grid system</h1>
+  <h1 id="grid" class="page-header">Система сітки</h1>
 
-  <p class="lead">Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes <a href="#grid-example-basic">predefined classes</a> for easy layout options, as well as powerful <a href="#grid-less">mixins for generating more semantic layouts</a>.</p>
+  <p class="lead">Bootstrap має чутливу, "найперше – мобільну" рідинну систему сітки, яка масштабується до 12 колонок відповідно до розміру пристрою або до розміру оглядового вікна. Вона включає <a href="#grid-example-basic">предвизначені класи</a> для легкого налаштування шаблонів, а також потужні <a href="#grid-less">mixins для генерації більш семантичних шаблонів</a>.</p>
 
-  <h3 id="grid-intro">Introduction</h3>
-  <p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+  <h3 id="grid-intro">Ознайомлення</h3>
+  <p>Система сітки використовується для створення сторінок шаблону через серію рядків та колонок із вмістом. Далі показано як працює система сітки Bootstrap:</p>
   <ul>
-    <li>Rows must be placed within a <code>.container</code> (fixed-width) or <code>.container-fluid</code> (full-width) for proper alignment and padding.</li>
-    <li>Use rows to create horizontal groups of columns.</li>
-    <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
-    <li>Predefined grid classes like <code>.row</code> and <code>.col-xs-4</code> are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li>
-    <li>Columns create gutters (gaps between column content) via <code>padding</code>. That padding is offset in rows for the first and last column via negative margin on <code>.row</code>s.</li>
-    <li>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined up with non-grid content.</li>
-    <li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <code>.col-xs-4</code>.</li>
-    <li>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</li>
-    <li>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, applying any <code>.col-md-</code> class to an element will not only affect its styling on medium devices but also on large devices if a <code>.col-lg-</code> class is not present.</li>
+    <li>Рядки повинні розміщуватись всередині <code>.container</code> (фіксованої ширини) чи <code>.container-fluid</code> (на повну ширину) для правильного вирівнювання та відступів.</li>
+    <li>Використовуйте рядки для створення горизонтальних груп колонок.</li>
+    <li>Вміст повинен розміщуватись в межах колонок, та лише колонки можуть безпосередньо наслідувати рядки (тобто, лише рядки можуть безпосередньо обгортати колонки).</li>
+    <li>Предвизначені класи сітки, наприклад <code>.row</code> та <code>.col-xs-4</code> доступні для швидкого створення шаблону сітки. LESS mixins також можуть бути використані для більш семантичних шаблонів.</li>
+    <li>Колонки створюють внутрішні відступи (між їх рамками та вмістом) через <code>padding</code>. Ці відступи зміщені в рядках для першої та останньої колонки через від'ємний зовнішній відступ (margin) для <code>.row</code>.</li>
+    <li>Цей від'ємний відступ є причиною - чому в прикладах внизу, сітка виступає за межі ширини іншого вмісту. Також це є причиною - чому вміст всередині колонок сітки вишикувався в одну лінію з вмістом не вміщеним в сітку.</li>
+    <li>Колонка сітки створюється через зазначення одного номера із загальної доступної "суми дванадцять" (тобто – загальна сума номерів колонок в одному рядку не повинна перевищувати 12). Наприклад, щоб створити три однакові колонки, які розтягнуться на всю ширину рядка, у кожній із них необхідно встановити клас <code>.col-xs-4</code>.</li>
+    <li>Якщо в одному рядку вміщено більше, ніж 12 колонок, кожну групу додаткових колонок <a href="#grid-example-wrapping">буде перенесено</a>, як єдине ціле, на новий рядок.</li>
+    <li>Класи сітки застосовуються до пристроїв, з шириною екрану більшою або рівною певній контрольній точці, та нехтують класами сітки, призначеними для пристроїв з вужчим екраном. Таким чином, застосування будь-якого класа <code>.col-md-</code> до певного елемента, буде впливати на його стилі не лише на пристроях середнього розміру, але також і на пристроях з широким екраном, якщо клас <code>.col-lg-</code> не представлено.</li>
   </ul>
-  <p>Look to the examples for applying these principles to your code.</p>
+  <p>Прогляньте приклади (нижче) для застосування цих принципів у вашому коді.</p>
 
-  <h3 id="grid-media-queries">Media queries</h3>
-  <p>We use the following media queries in our Less files to create the key breakpoints in our grid system.</p>
+  <h3 id="grid-media-queries">Медіа запити</h3>
+  <p>Ми застосовуємо наступні медіа запити в LESS файлах для створення ключових контрольних точок у системі сітки.</p>
 {% highlight scss %}
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
+/* Дуже вузькі пристрої (телефони, вужчі ніж 768px) */
+/* Немає медіа запиту оскільки це встановлено за промовчанням в Bootstrap */
 
-/* Small devices (tablets, 768px and up) */
+/* Невеликі пристрої (планшети, 768px та ширші) */
 @media (min-width: @screen-sm-min) { ... }
 
-/* Medium devices (desktops, 992px and up) */
+/* Пристрої середнього розміру (настільні монітори, 992px та ширші) */
 @media (min-width: @screen-md-min) { ... }
 
-/* Large devices (large desktops, 1200px and up) */
+/* Великі пристрої (великі настільні монітори, 1200px та ширші) */
 @media (min-width: @screen-lg-min) { ... }
 {% endhighlight %}
-  <p>We occasionally expand on these media queries to include a <code>max-width</code> to limit CSS to a narrower set of devices.</p>
+  <p>Ми іноді додаємо в ці медіа запити <code>max-width</code>, щоб обмежити певні CSS, призначені для вужчого переліку пристроїв.</p>
 {% highlight scss %}
 @media (max-width: @screen-xs-max) { ... }
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
@@ -41,84 +41,84 @@
 @media (min-width: @screen-lg-min) { ... }
 {% endhighlight %}
 
-  <h3 id="grid-options">Grid options</h3>
-  <p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
+  <h3 id="grid-options">Опції сітки</h3>
+  <p>Прогляньте призначення певних аспектів системи сітки Bootstrap для різних пристроїв.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
           <th></th>
           <th>
-            Extra small devices
-            <small>Phones (&lt;768px)</small>
+            Дуже вузькі пристрої
+            <small>Телефони (&lt;768px)</small>
           </th>
           <th>
-            Small devices
-            <small>Tablets (&ge;768px)</small>
+            Вузькі пристрої
+            <small>Планшети (&ge;768px)</small>
           </th>
           <th>
-            Medium devices
-            <small>Desktops (&ge;992px)</small>
+            Середні пристрої
+            <small>Монітори (&ge;992px)</small>
           </th>
           <th>
-            Large devices
-            <small>Desktops (&ge;1200px)</small>
+            Широкі пристрої
+            <small>Монітори (&ge;1200px)</small>
           </th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th class="text-nowrap">Grid behavior</th>
-          <td>Horizontal at all times</td>
-          <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
+          <th class="text-nowrap">Поведінка сітки</th>
+          <td>Горизонтальна завжди</td>
+          <td colspan="3">Складена спочатку, горизонтальна, коли ширша за контрольні точки</td>
         </tr>
         <tr>
-          <th class="text-nowrap">Container width</th>
-          <td>None (auto)</td>
+          <th class="text-nowrap">Ширина контейнера</th>
+          <td>Немає (автоматична)</td>
           <td>750px</td>
           <td>970px</td>
           <td>1170px</td>
         </tr>
         <tr>
-          <th class="text-nowrap">Class prefix</th>
+          <th class="text-nowrap">Префікс класа</th>
           <td><code>.col-xs-</code></td>
           <td><code>.col-sm-</code></td>
           <td><code>.col-md-</code></td>
           <td><code>.col-lg-</code></td>
         </tr>
         <tr>
-          <th class="text-nowrap"># of columns</th>
+          <th class="text-nowrap"># колонок</th>
           <td colspan="4">12</td>
         </tr>
         <tr>
-          <th class="text-nowrap">Column width</th>
-          <td class="text-muted">Auto</td>
+          <th class="text-nowrap">Ширина колонки</th>
+          <td class="text-muted">Автоматична</td>
           <td>~62px</td>
           <td>~81px</td>
           <td>~97px</td>
         </tr>
         <tr>
-          <th class="text-nowrap">Gutter width</th>
-          <td colspan="4">30px (15px on each side of a column)</td>
+          <th class="text-nowrap">Ширина проміжку</th>
+          <td colspan="4">30px (15px з кожної сторони колонки)</td>
         </tr>
         <tr>
-          <th class="text-nowrap">Nestable</th>
-          <td colspan="4">Yes</td>
+          <th class="text-nowrap">Можуть вкладатись</th>
+          <td colspan="4">Так</td>
         </tr>
         <tr>
-          <th class="text-nowrap">Offsets</th>
-          <td colspan="4">Yes</td>
+          <th class="text-nowrap">Можуть зміщуватись</th>
+          <td colspan="4">Так</td>
         </tr>
         <tr>
-          <th class="text-nowrap">Column ordering</th>
-          <td colspan="4">Yes</td>
+          <th class="text-nowrap">Порядок колонок</th>
+          <td colspan="4">Так</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <h3 id="grid-example-basic">Example: Stacked-to-horizontal</h3>
-  <p>Using a single set of <code>.col-md-*</code> grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices. Place grid columns in any <code>.row</code>.</p>
+  <h3 id="grid-example-basic">Приклад: Складені-по-горизонталі</h3>
+  <p>Використовуючи для сітки лише клас <code>.col-md-*</code>, ви можете створити базову сітку, в якій комірки буду складатись одна на одну на мобільних телефонах та планшетах (тобто на дуже вузьких, та вузьких пристроях). І ці ж самі комірки ставатимуть в одну горизонтальну лінію на настільних моніторах, тобто на пристроях середнього розміру. Розмістіть колонки сітки в будь-якому рядку з класом <code>.row</code>.</p>
   <div class="bs-docs-grid">
     <div class="row show-grid">
       <div class="col-md-1">.col-md-1</div>
@@ -178,8 +178,8 @@
 </div>
 {% endhighlight %}
 
-  <h3 id="grid-example-fluid">Example: Fluid container</h3>
-  <p>Turn any fixed-width grid layout into a full-width layout by changing your outermost <code>.container</code> to <code>.container-fluid</code>.</p>
+  <h3 id="grid-example-fluid">Приклад: Рідинний контейнер</h3>
+  <p>Перетворіть будь-який шаблон сітки з фіксованою шириною, на шаблон з повною шириною, змінивши ваш самий верхній-ззовні <code>.container</code> на <code>.container-fluid</code>.</p>
 {% highlight html %}
 <div class="container-fluid">
   <div class="row">
@@ -188,8 +188,8 @@
 </div>
 {% endhighlight %}
 
-  <h3 id="grid-example-mixed">Example: Mobile and desktop</h3>
-  <p>Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding <code>.col-xs-*</code> <code>.col-md-*</code> to your columns. See the example below for a better idea of how it all works.</p>
+  <h3 id="grid-example-mixed">Приклад: Мобільники та настільні комп'ютери</h3>
+  <p>Не хочете, щоб комірки сітки складались одна на одну в малих пристроях? Використовуйте класи сітки для дуже малих та середніх пристроїв, додаючи до колонок відповідно класи <code>.col-xs-*</code> <code>.col-md-*</code>. Прогляньте приклад нижче, для кращого уявлення як це працює.</p>
   <div class="bs-docs-grid">
     <div class="row show-grid">
       <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
@@ -206,28 +206,30 @@
     </div>
   </div>
 {% highlight html %}
-<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<!-- Складіть комірки колонок на мобільних пристроях
+     створюючи одну комірку на повну ширину, іншу – на половину ширини -->
 <div class="row">
   <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
   <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
 </div>
 
-<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<!-- Колонки стартують з ширини 50% на мобільниках
+     та ущільнюються до ширини 33.3% на десктопах -->
 <div class="row">
   <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
   <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
   <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
 </div>
 
-<!-- Columns are always 50% wide, on mobile and desktop -->
+<!-- Колонки завжди займають ширину 50% на мобільниках та десктопах -->
 <div class="row">
   <div class="col-xs-6">.col-xs-6</div>
   <div class="col-xs-6">.col-xs-6</div>
 </div>
 {% endhighlight %}
 
-  <h3 id="grid-example-mixed-complete">Example: Mobile, tablet, desktops</h3>
-  <p>Build on the previous example by creating even more dynamic and powerful layouts with tablet <code>.col-sm-*</code> classes.</p>
+  <h3 id="grid-example-mixed-complete">Приклад: Мобільники, планшети, настільні комп'ютери</h3>
+  <p>Створюємо навіть більш динамічний та потужний шаблон з класом для планшетів <code>.col-sm-*</code>.</p>
   <div class="bs-docs-grid">
     <div class="row show-grid">
       <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
@@ -236,7 +238,7 @@
     <div class="row show-grid">
       <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
       <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-      <!-- Optional: clear the XS cols if their content doesn't match in height -->
+      <!-- Необов'язково: скасовуємо вплив класів XS на колонки, якщо їх вміст не підходить по висоті -->
       <div class="clearfix visible-xs-block"></div>
       <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
     </div>
@@ -249,41 +251,41 @@
 <div class="row">
   <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
   <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-  <!-- Optional: clear the XS cols if their content doesn't match in height -->
+  <!-- Необов'язково: скасовуємо вплив класів XS на колонки, якщо їх вміст не підходить по висоті -->
   <div class="clearfix visible-xs-block"></div>
   <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
 </div>
 {% endhighlight %}
 
-  <h3 id="grid-example-wrapping">Example: Column wrapping</h3>
-  <p>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</p>
+  <h3 id="grid-example-wrapping">Приклад: Обгортання колонки</h3>
+  <p>Якщо більше, ніж 12 колонок вміщено всередину одного рядка, кожна додаткова група колонок буде переноситись на новий рядок, як єдине ціле.</p>
   <div class="bs-docs-grid">
     <div class="row show-grid">
       <div class="col-xs-9">.col-xs-9</div>
-      <div class="col-xs-4">.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
-      <div class="col-xs-6">.col-xs-6<br>Subsequent columns continue along the new line.</div>
+      <div class="col-xs-4">.col-xs-4<br>Оскільки 9 + 4 = 13 &gt; 12, цей div шириною на 4 колонки буде переноситись на новий рядок як єдине ціле.</div>
+      <div class="col-xs-6">.col-xs-6<br>Наступні колонки стають вздовж нового рядка.</div>
     </div>
   </div>
 {% highlight html %}
 <div class="row">
   <div class="col-xs-9">.col-xs-9</div>
-  <div class="col-xs-4">.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
-  <div class="col-xs-6">.col-xs-6<br>Subsequent columns continue along the new line.</div>
+  <div class="col-xs-4">.col-xs-4<br>Оскільки 9 + 4 = 13 &gt; 12, цей div шириною на 4 колонки буде переноситись на новий рядок як єдине ціле.</div>
+  <div class="col-xs-6">.col-xs-6<br>Наступні колонки стають вздовж нового рядка.</div>
 </div>
 {% endhighlight %}
 
-  <h3 id="grid-responsive-resets">Responsive column resets</h3>
-  <p>With the four tiers of grids available you're bound to run into issues where, at certain breakpoints, your columns don't clear quite right as one is taller than the other. To fix that, use a combination of a <code>.clearfix</code> and our <a href="#responsive-utilities">responsive utility classes</a>.</p>
+  <h3 id="grid-responsive-resets">Скидання чутливості колонок</h3>
+  <p>Чотири рівня сітки інколи можуть спричиняти відому проблему, коли в певних контрольних точках колонки матимуть різну висоту. Це можна виправити, комбінуючи <code>.clearfix</code> з нашими <a href="#responsive-utilities">допоміжними классами для чутливості</a>.</p>
   <div class="bs-docs-grid">
     <div class="row show-grid">
       <div class="col-xs-6 col-sm-3">
         .col-xs-6 .col-sm-3
         <br>
-        Resize your viewport or check it out on your phone for an example.
+       Змініть розмір оглядового вікна, або прогляньте цей приклад на мобільному телефоні.
       </div>
       <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
 
-      <!-- Add the extra clearfix for only the required viewport -->
+      <!-- Додавайте clearfix лише якщо цього потребує оглядове вікно -->
       <div class="clearfix visible-xs-block"></div>
 
       <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
@@ -295,14 +297,14 @@
   <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
   <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
 
-  <!-- Add the extra clearfix for only the required viewport -->
+  <!-- Додавайте clearfix лише якщо цього потребує оглядове вікно -->
   <div class="clearfix visible-xs-block"></div>
 
   <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
   <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
 </div>
 {% endhighlight %}
-  <p>In addition to column clearing at responsive breakpoints, you may need to <strong>reset offsets, pushes, or pulls</strong>. See this in action in <a href="../examples/grid/">the grid example</a>.</p>
+  <p>На додаток до очищення колонок від чутливості в контрольних точках, вам може знадобитись <strong>скидання offsets, pushes, чи pulls</strong>. Прогляньте це в дії в шаблоні з <a href="../examples/grid/">прикладами сітки</a>.</p>
 {% highlight html %}
 <div class="row">
   <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
@@ -316,8 +318,8 @@
 {% endhighlight %}
 
 
-  <h3 id="grid-offsetting">Offsetting columns</h3>
-  <p>Move columns to the right using <code>.col-md-offset-*</code> classes. These classes increase the left margin of a column by <code>*</code> columns. For example, <code>.col-md-offset-4</code> moves <code>.col-md-4</code> over four columns.</p>
+  <h3 id="grid-offsetting">Зміщення колонок</h3>
+  <p>Зміщуйте колонки вправо використовуючи класи <code>.col-md-offset-*</code>. Ці класи збільшують відступ зліва колонки на ширину <code>*</code> (цифра від 1 до 12) колонок. Наприклад, <code>.col-md-offset-4</code> зміщує <code>.col-md-4</code> на ширину рівній чотирьом колонкам.</p>
   <div class="bs-docs-grid">
     <div class="row show-grid">
       <div class="col-md-4">.col-md-4</div>
@@ -346,17 +348,17 @@
 {% endhighlight %}
 
 
-  <h3 id="grid-nesting">Nesting columns</h3>
-  <p>To nest your content with the default grid, add a new <code>.row</code> and set of <code>.col-sm-*</code> columns within an existing <code>.col-sm-*</code> column. Nested rows should include a set of columns that add up to 12 or less (it is not required that you use all 12 available columns).</p>
+  <h3 id="grid-nesting">Вкладені колонки</h3>
+  <p>Щоб вкласти контент із сіткою за промовчанням, додайте новий <code>.row</code> та набір колонок <code>.col-sm-*</code> у вже існуючу колонку <code>.col-sm-*</code>. Ці вкладені рядки повинні мати номери класів, котрі в сумі складають 12 або менше (тобто необов'язково використовувати всі 12 колонок).</p>
   <div class="row show-grid">
     <div class="col-sm-9">
-      Level 1: .col-sm-9
+      Рівень 1: .col-sm-9
       <div class="row show-grid">
         <div class="col-xs-8 col-sm-6">
-          Level 2: .col-xs-8 .col-sm-6
+          Рівень 2: .col-xs-8 .col-sm-6
         </div>
         <div class="col-xs-4 col-sm-6">
-          Level 2: .col-xs-4 .col-sm-6
+          Рівень 2: .col-xs-4 .col-sm-6
         </div>
       </div>
     </div>
@@ -364,21 +366,21 @@
 {% highlight html %}
 <div class="row">
   <div class="col-sm-9">
-    Level 1: .col-sm-9
+    Рівень 1: .col-sm-9
     <div class="row">
       <div class="col-xs-8 col-sm-6">
-        Level 2: .col-xs-8 .col-sm-6
+        Рівень 2: .col-xs-8 .col-sm-6
       </div>
       <div class="col-xs-4 col-sm-6">
-        Level 2: .col-xs-4 .col-sm-6
+        Рівень 2: .col-xs-4 .col-sm-6
       </div>
     </div>
   </div>
 </div>
 {% endhighlight %}
 
-  <h3 id="grid-column-ordering">Column ordering</h3>
-  <p>Easily change the order of our built-in grid columns with <code>.col-md-push-*</code> and <code>.col-md-pull-*</code> modifier classes.</p>
+  <h3 id="grid-column-ordering">Порядок (сортування) колонок</h3>
+  <p>Можна легко змінювати порядок сортування вбудованих колонок сітки з модифікаторами класів <code>.col-md-push-*</code> та <code>.col-md-pull-*</code>.</p>
   <div class="row show-grid">
     <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
     <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
@@ -391,11 +393,11 @@
 </div>
 {% endhighlight %}
 
-  <h3 id="grid-less">Less mixins and variables</h3>
-  <p>In addition to <a href="#grid-example-basic">prebuilt grid classes</a> for fast layouts, Bootstrap includes Less variables and mixins for quickly generating your own simple, semantic layouts.</p>
+  <h3 id="grid-less">Less mixins та змінні</h3>
+  <p>На додачу до <a href="#grid-example-basic">готових класів сітки</a> для створення швидкого шаблону, Bootstrap має змінні та mixins LESS для легкого генерування ваших власних простих семантичних шаблонів.</p>
 
-  <h4>Variables</h4>
-  <p>Variables determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.</p>
+  <h4>Змінні</h4>
+  <p>Змінні визначають кількість колонок, ширину відступів між ними, та контрольні точки медіа запитів, по яким орієнтуються рідинні колонки. Ми використовуємо змінні для генерації предвизначених класів сітки документа, що знаходиться вище, а також для налаштування списку mixins, наданого нижче.</p>
 {% highlight scss %}
 @grid-columns:              12;
 @grid-gutter-width:         30px;
@@ -403,11 +405,11 @@
 {% endhighlight %}
 
   <h4>Mixins</h4>
-  <p>Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.</p>
+  <p>Mixins використовуються в поєднанні зі змінними сітки при генерації семантичного CSS для окремих колонок сітки.</p>
 {% highlight scss %}
-// Creates a wrapper for a series of columns
+// Створює обгортку для серії колонок
 .make-row(@gutter: @grid-gutter-width) {
-  // Then clear the floated columns
+  // Потім скасовує рідинність колонок
   .clearfix();
 
   @media (min-width: @screen-sm-min) {
@@ -415,46 +417,46 @@
     margin-right: (@gutter / -2);
   }
 
-  // Negative margin nested rows out to align the content of columns
+  // Від'ємні відступи вкладених рядків для вирівнювання вмісту колонок
   .row {
     margin-left:  (@gutter / -2);
     margin-right: (@gutter / -2);
   }
 }
 
-// Generate the extra small columns
+// Створення дуже малих колонок
 .make-xs-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
+  // Запобігання зникненню колонок за відсутності значень в них
   min-height: 1px;
-  // Inner gutter via padding
+  // Внутрішні канавки (gutter) через padding
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  // Calculate width based on number of columns available
+  // Розрахунок ширини в залежності від кількості колонок
   @media (min-width: @grid-float-breakpoint) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }
 }
 
-// Generate the small columns
+// Створення вузьких колонок
 .make-sm-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
+  // Запобігання зникненню колонок за відсутності значень в них
   min-height: 1px;
-  // Inner gutter via padding
+  // Внутрішні канавки (gutter) через padding
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  // Calculate width based on number of columns available
+  // Розрахунок ширини в залежності від кількості колонок
   @media (min-width: @screen-sm-min) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }
 }
 
-// Generate the small column offsets
+// Створення зміщення вузьких колонок
 .make-sm-column-offset(@columns) {
   @media (min-width: @screen-sm-min) {
     margin-left: percentage((@columns / @grid-columns));
@@ -471,16 +473,16 @@
   }
 }
 
-// Generate the medium columns
+// Створення середнього розміру колонок
 .make-md-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
+  // Запобігання зникненню колонок за відсутності значень в них
   min-height: 1px;
-  // Inner gutter via padding
+  // Внутрішні канавки (gutter) через padding
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  // Calculate width based on number of columns available
+  // Розрахунок ширини в залежності від кількості колонок
   @media (min-width: @screen-md-min) {
     float: left;
     width: percentage((@columns / @grid-columns));
@@ -504,23 +506,23 @@
   }
 }
 
-// Generate the large columns
+// Створення широких колонок
 .make-lg-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
+  // Запобігання зникненню колонок за відсутності значень в них
   min-height: 1px;
-  // Inner gutter via padding
+  // Внутрішні канавки (gutter) через padding
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  // Calculate width based on number of columns available
+  // Розрахунок ширини в залежності від кількості колонок
   @media (min-width: @screen-lg-min) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }
 }
 
-// Generate the large column offsets
+// Створення зміщення широких колонок
 .make-lg-column-offset(@columns) {
   @media (min-width: @screen-lg-min) {
     margin-left: percentage((@columns / @grid-columns));
@@ -538,8 +540,8 @@
 }
 {% endhighlight %}
 
-  <h4>Example usage</h4>
-  <p>You can modify the variables to your own custom values, or just use the mixins with their default values. Here's an example of using the default settings to create a two-column layout with a gap between.</p>
+  <h4>Приклад використання</h4>
+  <p>Ви можете підставляти власні значення змінним, або використовувати mixins з їхніми значеннями за промовчанням. Нижче наведено приклад використання налаштувань за промовчанням для створення шаблона з двома колонками та проміжком між ними.</p>
 {% highlight scss %}
 .wrapper {
   .make-row();

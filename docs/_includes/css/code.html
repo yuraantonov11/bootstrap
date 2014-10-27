@@ -1,38 +1,38 @@
 <div class="bs-docs-section">
-  <h1 id="code" class="page-header">Code</h1>
+  <h1 id="code" class="page-header">Код</h1>
 
-  <h2 id="code-inline">Inline</h2>
-  <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
+  <h2 id="code-inline">Вбудований код</h2>
+  <p>Обгорніть фрагмент вбудованого коду за допомогою <code>&lt;code&gt;</code>.</p>
 <div class="bs-example">
-  For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+  Наприклад, код <code>&lt;section&gt;</code> повинен обгортатись як вбудований код.
 </div>
 {% highlight html %}
-For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+Наприклад, код <code>&lt;section&gt;</code> повинен обгортатись як вбудований код.
 {% endhighlight %}
 
-  <h2 id="code-user-input">User input</h2>
-  <p>Use the <code>&lt;kbd&gt;</code> to indicate input that is typically entered via keyboard.</p>
+  <h2 id="code-user-input">Введений з клавіатури</h2>
+  <p>Використовуйте <code>&lt;kbd&gt;</code> для підсвічування текста, введеного з клавіатури.</p>
 <div class="bs-example">
-  To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
-  To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+  Щоб змінити поточний каталог, введіть <kbd>cd</kbd> та шлях до каталогу, куди здійснюється перехід.<br>
+  Щоб змінити налаштування, натисніть <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
 </div>
 {% highlight html %}
-To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
-To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+Щоб змінити поточний каталог, введіть <kbd>cd</kbd> та шлях до каталогу, куди здійснюється перехід.<br>
+Щоб змінити налаштування, натисніть <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
 {% endhighlight %}
 
-  <h2 id="code-block">Basic block</h2>
-  <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</p>
+  <h2 id="code-block">Основний блок</h2>
+  <p>Використовуйте <code>&lt;pre&gt;</code> для декількох ліній коду. Переконайтесь, що в коді екрановано кутові дужки, для їх належного відображення.</p>
 <div class="bs-example">
-  <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+  <pre>&lt;p&gt;Це зразок текста...&lt;/p&gt;</pre>
 </div>
 {% highlight html %}
-<pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+<pre>&lt;p&gt;Це зразок текста...&lt;/p&gt;</pre>
 {% endhighlight %}
 
-  <p>You may optionally add the <code>.pre-scrollable</code> class, which will set a max-height of 350px and provide a y-axis scrollbar.</p>
-  <h2 id="code-variables">Variables</h2>
-  <p>For indicating variables use the <code>&lt;var&gt;</code> tag.</p>
+  <p>Ви можете ще додати клас <code>.pre-scrollable</code>, який буде встановлювати max-height в 350px та дозволятиме прокручувати вісь-Y.</p>
+  <h2 id="code-variables">Змінні</h2>
+  <p>Щоб показувати змінні використовуйте тег <code>&lt;var&gt;</code>.</p>
   <div class="bs-example">
     <p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
 
@@ -41,12 +41,12 @@ To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
 <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
 {% endhighlight %}
 
-  <h2 id="code-sample-output">Sample output</h2>
-  <p>For indicating blocks sample output from a program use the <code>&lt;samp&gt;</code> tag.</p>
+  <h2 id="code-sample-output">Зразки виводу</h2>
+  <p>Щоб показати блоки зразків виводу певною програмою, використовуйте тег <code>&lt;samp&gt;</code>.</p>
   <div class="bs-example">
-    <p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
+    <p><samp>Цей текст буде сприйматись як зразок виводу від певної комп'ютерної програми.</samp></p>
   </div>
 {% highlight html %}
-<samp>This text is meant to be treated as sample output from a computer program.</samp>
+<samp>Цей текст буде сприйматись як зразок виводу від певної комп'ютерної програми.</samp>
 {% endhighlight %}
 </div>

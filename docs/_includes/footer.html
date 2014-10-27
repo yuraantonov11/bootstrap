@@ -2,21 +2,21 @@
 ================================================== -->
 <footer class="bs-docs-footer" role="contentinfo">
   <div class="container">
-    {% include social-buttons.html %}
+    <!-- { % include social-buttons.html % } -->
 
-    <p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>.</p>
-    <p>Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
-    <p>Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    <p>Спроектовано та побудовано з усією любов'ю у світі, авторами <a href="https://twitter.com/mdo" target="_blank">@mdo</a> та <a href="https://twitter.com/fat" target="_blank">@fat</a>.</p>
+    <p>Обслуговується <a href="https://github.com/orgs/twbs/people">ядром команди</a> та з допомогою <a href="https://github.com/twbs/bootstrap/graphs/contributors">наших помічників</a>.</p>
+    <p>Код ліцензовано під <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, документацію під <a href="http://creativecommons.org/licenses/by/3.0/deed.uk">CC BY 3.0</a>.</p>
     <ul class="bs-docs-footer-links muted">
-      <li>Currently v{{ site.current_version }}</li>
+      <li>Поточна v{{ site.current_version }}</li>
       <li>&middot;</li>
       <li><a href="{{ site.repo }}">GitHub</a></li>
       <li>&middot;</li>
-      <li><a href="../getting-started/#examples">Examples</a></li>
+      <li><a href="../getting-started/#examples">Приклади</a></li>
       <li>&middot;</li>
-      <li><a href="../2.3.2/">v2.3.2 docs</a></li>
+      <li><a href="http://getbootstrap.com/2.3.2/">v2.3.2 docs</a></li>
       <li>&middot;</li>
-      <li><a href="../about/">About</a></li>
+      <li><a href="../about/">Про сайт</a></li>
       <li>&middot;</li>
       <li><a href="{{ site.expo }}">Expo</a></li>
       <li>&middot;</li>
@@ -51,12 +51,12 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
 
-{% comment %}
+<!-- { % comment % }
   Inject Twitter widgets asynchronously. Snippet snipped from Twitter's
   JS interface site: https://dev.twitter.com/docs/tfw-javascript
 
   * "js.async=1;" added to add async attribute to the generated script tag.
-{% endcomment %}
+{ % endcomment % } 
 <script>
   window.twttr = (function (d,s,id) {
     var t, js, fjs = d.getElementsByTagName(s)[0];
@@ -64,19 +64,15 @@
     js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
     return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
   }(document, "script", "twitter-wjs"));
-</script>
+</script>-->
 
 <!-- Analytics
 ================================================== -->
 <script>
-  var _gauges = _gauges || [];
-  (function() {
-    var t   = document.createElement('script');
-    t.async = true;
-    t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
-    t.src = '//secure.gaug.es/track.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(t, s);
-  })();
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-55971630-1', 'auto');
+  ga('send', 'pageview');
 </script>

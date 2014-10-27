@@ -8,19 +8,19 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Grid Template for Bootstrap</title>
+    <title>Шаблон із сітками Bootstrap</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- CSS-ядро Bootstrap -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+    <!-- Підібрані стилі саме для цього шаблона -->
     <link href="grid.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!-- Це чисто для цілей налагодження. Вам не потрібно копіювати цих два рядки! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- Вставка HTML5 поєднується з Respond.js для підтримки в IE8 елементів HTML5 та медіа-запитів -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -31,41 +31,41 @@
     <div class="container">
 
       <div class="page-header">
-        <h1>Bootstrap grid examples</h1>
-        <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
+        <h1>Приклади Bootstrap сітки</h1>
+        <p class="lead">Базові макети сітки для ознайомлення з системою сітки, яка пропонується Bootstrap.</p>
       </div>
 
-      <h3>Three equal columns</h3>
-      <p>Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>
+      <h3>Три однакові колонки</h3>
+      <p>Створення трьох однакових по-ширині колонок <strong>для застосування на звичайних та великих настільних комп'ютерах</strong>. На мобільних пристороях, планшетах, колонки будуть автоматично складатись.</p>
       <div class="row">
         <div class="col-md-4">.col-md-4</div>
         <div class="col-md-4">.col-md-4</div>
         <div class="col-md-4">.col-md-4</div>
       </div>
 
-      <h3>Three unequal columns</h3>
-      <p>Get three columns <strong>starting at desktops and scaling to large desktops</strong> of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</p>
+      <h3>Три неоднакові колонки</h3>
+      <p>Створення трьох колонок з різною шириною <strong>для застосування на звичайних та великих настільних комп'ютерах</strong>. Пам'ятайте, сума всіх номерів колонок має не перевищувати число дванадцять, для вміщення їх у горизонтальну лінію. У противному разі колонки будуть відображатись незалежно від пристрою, на якому їх проглядають.</p>
       <div class="row">
         <div class="col-md-3">.col-md-3</div>
         <div class="col-md-6">.col-md-6</div>
         <div class="col-md-3">.col-md-3</div>
       </div>
 
-      <h3>Two columns</h3>
-      <p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>
+      <h3>Дві колонки</h3>
+      <p>Створення двох колонок <strong>для застосування на звичайних та великих настільних комп'ютерах</strong>.</p>
       <div class="row">
         <div class="col-md-8">.col-md-8</div>
         <div class="col-md-4">.col-md-4</div>
       </div>
 
-      <h3>Full width, single column</h3>
-      <p class="text-warning">No grid classes are necessary for full-width elements.</p>
+      <h3>Одинарна колонка на всю ширину сторінки</h3>
+      <p class="text-warning">Щоб відобразити певний елемент на всю ширину сторінки немає необхідності додавати спеціальний клас.</p>
 
       <hr>
 
-      <h3>Two columns with two nested columns</h3>
-      <p>Per the documentation, nesting is easy—just put a row of columns within an existing column. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
-      <p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
+      <h3>Дві колонки, які вміщують ще дві колонки</h3>
+      <p>Згідно з документацією, створити вкладеність легко — просто вкладіть рядок з колонками у вже існуючий рядок (<strong>підходить для застосування на звичайних та великих настільних комп'ютерах</strong>).</p>
+      <p>На пристроях розміром з мобільний телефон, планшет або щось менше, ці колонки (в тому числі і вкладені) будуть складатись.</p>
       <div class="row">
         <div class="col-md-8">
           .col-md-8
@@ -79,9 +79,9 @@
 
       <hr>
 
-      <h3>Mixed: mobile and desktop</h3>
-      <p>The Bootstrap 3 grid system has four tiers of classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops). You can use nearly any combination of these classes to create more dynamic and flexible layouts.</p>
-      <p>Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.</p>
+      <h3>Поєднання: настільні комп'ютери та мобільні пристрої</h3>
+      <p>Система сітки "Bootstrap 3" має чотири рівні класів: xs (телефони), sm (планшети), md (настільні комп'ютери), та lg (великі настільні комп'ютери). Ви можете поєднувати майже будь-яку комбінацію цих класів, для створення більш динамічних та гнучких макетів.</p>
+      <p>Кожен рівень класів масштабується, тобто якщо ви плануєте використовувати однакові налаштування і для xs, і для sm, то вам достатньо поєднати ці два класи у відповідному елементі.</p>
       <div class="row">
         <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
         <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
@@ -98,7 +98,7 @@
 
       <hr>
 
-      <h3>Mixed: mobile, tablet, and desktop</h3>
+      <h3>Поєднання: настільні комп'ютери, мобільні пристрої та планшети</h3>
       <p></p>
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-lg-8">.col-xs-12 .col-sm-6 .col-lg-8</div>
@@ -112,13 +112,13 @@
 
       <hr>
 
-      <h3>Column clearing</h3>
-      <p><a href="http://getbootstrap.com/css/#grid-responsive-resets">Clear floats</a> at specific breakpoints to prevent awkward wrapping with uneven content.</p>
+      <h3>Очищення колонок</h3>
+      <p><a href="http://getbootstrap.com/css/#grid-responsive-resets">Очищення обтікання</a> у визначених контрольних точках, щоб запобігти незграбному обгортанню з нерівномірним вмістом.</p>
       <div class="row">
         <div class="col-xs-6 col-sm-3">
           .col-xs-6 .col-sm-3
           <br>
-          Resize your viewport or check it out on your phone for an example.
+          Змініть оглядове вікно або прогляньте цей шаблон на телефоні, наприклад.
         </div>
         <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
 
@@ -131,8 +131,8 @@
 
       <hr>
 
-      <h3>Offset, push, and pull resets</h3>
-      <p>Reset offsets, pushes, and pulls at specific breakpoints.</p>
+      <h3>Скидання offset, push, та pull</h3>
+      <p>Щоб проглянути в яких саме точках скидаються offset, push, та pull, рекомендуємо проглянути код сторінки.</p>
       <div class="row">
         <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
         <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
@@ -146,7 +146,7 @@
     </div> <!-- /container -->
 
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- viewport для браузера IE10, це зроблено щоб виправити помилку для Surface/desktop Windows 8 -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>

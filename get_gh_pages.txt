@@ -1,0 +1,3 @@
+sudo mount -t vboxsf forumc /home/forumc
+cd /home/forumc/domains/twbs.docs.org.ua
+jekyll serve
