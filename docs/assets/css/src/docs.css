@@ -1538,3 +1538,26 @@ h1[id] {
   -webkit-box-shadow: 0 0 8px rgba(82,168,236,.6);
           box-shadow: 0 0 8px rgba(82,168,236,.6);
 }
+
+/* Спеціально додав для вміщення в навбар лінка на Форум */
+
+@media (min-width: 768px)
+{
+  .bs-navbar-collapse {width: 750px;}
+  .navbar-right{margin-right: 10px;}
+  .navbar-nav li>a{padding: 15px 10px;}
+}
+
+@media (min-width: 992px)
+{
+  .bs-navbar-collapse {width: 896px;}
+  .navbar-right{margin-right: -15px;}
+  .navbar-nav li>a{padding: 15px 15px;}
+}
+
+@media (min-width: 1200px)
+{
+  .bs-navbar-collapse {width: 1096px;}
+  .navbar-right{margin-right: -15px;}
+  .navbar-nav li>a{padding: 15px 15px;}
+}
