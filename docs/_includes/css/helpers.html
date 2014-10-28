@@ -2,7 +2,7 @@
   <h1 id="helper-classes" class="page-header">Допоміжні класи</h1>
 
   <h3 id="helper-classes-colors">Контекстні кольори</h3>
-  <p>Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.</p>
+  <p>Передавайте зміст за допомогою кольорів з кількома допоміжними класами, для акцентування. Вони можуть також застосовуватись для лінків та будуть затемнюватись при наведені курсору, схоже на стилізацію лінків за промовчанням.</p>
   <div class="bs-example">
     <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
     <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -20,12 +20,12 @@
 <p class="text-danger">...</p>
 {% endhighlight %}
   <div class="bs-callout bs-callout-info">
-    <h4>Dealing with specificity</h4>
-    <p>Sometimes emphasis classes cannot be applied due to the specificity of another selector. In most cases, a sufficient workaround is to wrap your text in a <code>&lt;span&gt;</code> with the class.</p>
+    <h4>Специфічне використання</h4>
+    <p>Інколи класи для акцентування не можуть бути застосовані через специфіку інших селекторів. У більшості випадків, достатнім обхідним шляхом буде обгорнення тексту з цим класом в <code>&lt;span&gt;</code> with the class.</p>
   </div>
 
   <h3 id="helper-classes-backgrounds">Контекстний фон</h3>
-  <p>Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes.</p>
+  <p>Як для класів контекстних текстових кольорів, легко встановити фон елемента для будь-якого контекстного класу. Компоненти якоря (anchor) будуть затемнюватись при наведені курсору, так само як текстові класи.</p>
   <div class="bs-example bs-example-bg-classes">
     <p class="bg-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
     <p class="bg-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
@@ -41,22 +41,22 @@
 <p class="bg-danger">...</p>
 {% endhighlight %}
   <div class="bs-callout bs-callout-info">
-    <h4>Dealing with specificity</h4>
-    <p>Sometimes contextual background classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a <code>&lt;div&gt;</code> with the class.</p>
+    <h4>Специфічне використання</h4>
+    <p>Іноді контекстні класи фону не можуть бути застосовані через специфіку інших селекторів. У більшості випадків, достатнім обхідним шляхом буде обгорнення тексту з цим класом в <code>&lt;div&gt;</code>.</p>
   </div>
 
   <h3 id="helper-classes-close">Значки закриття</h3>
-  <p>Use the generic close icon for dismissing content like modals and alerts.</p>
+  <p>Використовуйте загальний значок закриття для модальних вікон чи зауважень.</p>
   <div class="bs-example">
-    <p><button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></p>
+    <p><button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Закрити</span></button></p>
   </div>
 {% highlight html %}
-<button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+<button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Закрити</span></button>
 {% endhighlight %}
 
 
   <h3 id="helper-classes-carets">Спадаюче меню</h3>
-  <p>Use carets to indicate dropdown functionality and direction. Note that the default caret will reverse automatically in <a href="../components/#btn-dropdowns-dropup">dropup menus</a>.</p>
+  <p>Використовуйте caret, щоб вказати на місцезнаходження спадаючого меню. Зверніть увагу, що цей значок буде автоматично змінювати вигляд у <a href="../components/#btn-dropdowns-dropup">піднімаючому меню</a>.</p>
   <div class="bs-example">
     <span class="caret"></span>
   </div>
@@ -66,13 +66,13 @@
 
 
   <h3 id="helper-classes-floats">Швидке вирівнювання</h3>
-  <p>Float an element to the left or right with a class. <code>!important</code> is included to avoid specificity issues. Classes can also be used as mixins.</p>
+  <p>Вирівнюйте елементи ліворуч чи праворуч, за допомогою відповідних класів. Включено <code>!important</code> щоб уникнути окремих проблем. Класи також можуть використовуватись в якості mixins.</p>
 {% highlight html %}
 <div class="pull-left">...</div>
 <div class="pull-right">...</div>
 {% endhighlight %}
 {% highlight scss %}
-// Classes
+// Класи
 .pull-left {
   float: left !important;
 }
@@ -80,7 +80,7 @@
   float: right !important;
 }
 
-// Usage as mixins
+// Використання в якості mixins
 .element {
   .pull-left();
 }
@@ -90,25 +90,25 @@
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-warning">
-    <h4>Not for use in navbars</h4>
-    <p>To align components in navbars with utility classes, use <code>.navbar-left</code> or <code>.navbar-right</code> instead. <a href="../components/#navbar-component-alignment">See the navbar docs</a> for details.</p>
+    <h4>Не для використання в навігаційних панелях</h4>
+    <p>Щоб вирівняти компоненти із допоміжними класами в навігаційних панелях, використовуйте <code>.navbar-left</code> чи <code>.navbar-right</code>. <a href="../components/#navbar-component-alignment">Прогляньте доки для навменю</a> для уточнень.</p>
   </div>
 
 
   <h3 id="helper-classes-center">Центрування вмісту блоків</h3>
-  <p>Set an element to <code>display: block</code> and center via <code>margin</code>. Available as a mixin and class.</p>
+  <p>Встановіть для елементу блочне відображення через <code>display: block</code> та відображення по центру через <code>margin</code>. Така установка є доступною в якості класу та mixin.</p>
 {% highlight html %}
 <div class="center-block">...</div>
 {% endhighlight %}
 {% highlight scss %}
-// Classes
+// Класи
 .center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-// Usage as mixins
+// Використання в якості mixins
 .element {
   .center-block();
 }
@@ -116,9 +116,9 @@
 
 
   <h3 id="helper-classes-clearfix">Чітке фіксування (Clearfix)</h3>
-  <p>Easily clear <code>float</code>s by adding <code>.clearfix</code> <strong>to the parent element</strong>. Utilizes <a href="http://nicolasgallagher.com/micro-clearfix-hack/">the micro clearfix</a> as popularized by Nicolas Gallagher. Can also be used as a mixin.</p>
+  <p>Скасуйте <code>float</code> на будь-якому елементі, додаючи клас <code>.clearfix</code> <strong>до батьківського елемента</strong>. Тут використовується <a href="http://nicolasgallagher.com/micro-clearfix-hack/">the micro clearfix</a> наданий Nicolas Gallagher. Це також може застосовуватись в якості mixin.</p>
 {% highlight html %}
-<!-- Usage as a class -->
+<!-- Використовується як клас -->
 <div class="clearfix">...</div>
 {% endhighlight %}
 {% highlight scss %}
@@ -134,23 +134,23 @@
   }
 }
 
-// Usage as a Mixin
+// Використання в якості mixin
 .element {
   .clearfix();
 }
 {% endhighlight %}
 
 
-  <h3 id="helper-classes-show-hide">Відображення та приховування вмісту</h3>
-  <p>Force an element to be shown or hidden (<strong>including for screen readers</strong>) with the use of <code>.show</code> and <code>.hidden</code> classes. These classes use <code>!important</code> to avoid specificity conflicts, just like the <a href="#helper-classes-floats">quick floats</a>. They are only available for block level toggling. They can also be used as mixins.</p>
-  <p><code>.hide</code> is available, but it does not always affect screen readers and is <strong>deprecated</strong> as of v3.0.1. Use <code>.hidden</code> or <code>.sr-only</code> instead.</p>
-  <p>Furthermore, <code>.invisible</code> can be used to toggle only the visibility of an element, meaning its <code>display</code> is not modified and the element can still affect the flow of the document.</p>
+  <h3 id="helper-classes-show-hide">Показ та приховування вмісту</h3>
+  <p>Щоб приховати або показати елемент, <strong>в тому числі для програм читання екранів</strong>, використовуйте класи <code>.show</code> та <code>.hidden</code>. Ці класи використовують <code>!important</code> щоб уникнути специфічних конфліктів, як це робиться при <a href="#helper-classes-floats">швидкому вирівнюванні</a>. Вони є доступними для блочного рівня перемикання. Вони також можуть використовуватись в якості mixins.</p>
+  <p>Клас <code>.hide</code> є доступним, але він не завжди обробляється програмами читання екранів та є <strong>застарілими</strong> починаючи з v3.0.1. Використовуйте замість нього клас <code>.hidden</code> або <code>.sr-only</code>.</p>
+  <p>Окрім цього, <code>.invisible</code> може використовуватись для перемикання лише видимості елементу, тобто його <code>display</code> не змінено, і цей елемент все ще може впливати на роботу документа.</p>
 {% highlight html %}
 <div class="show">...</div>
 <div class="hidden">...</div>
 {% endhighlight %}
 {% highlight scss %}
-// Classes
+// Класи
 .show {
   display: block !important;
 }
@@ -162,7 +162,7 @@
   visibility: hidden;
 }
 
-// Usage as mixins
+// Використання в якості mixins
 .element {
   .show();
 }
@@ -172,13 +172,13 @@
 {% endhighlight %}
 
 
-  <h3 id="helper-classes-screen-readers">Зчитування вмісту з екрана та клавіатура навігації вмісту</h3>
-  <p>Hide an element to all devices <strong>except screen readers</strong> with <code>.sr-only</code>. Combine <code>.sr-only</code> with <code>.sr-only-focusable</code> to show the element again when it's focused (e.g. by a keyboard-only user). Necessary for following <a href="../getting-started/#accessibility">accessibility best practices</a>. Can also be used as mixins.</p>
+  <h3 id="helper-classes-screen-readers">Зчитувачі екрана та клавіатура навігації вмісту</h3>
+  <p>Приховайте елементи для всіх пристроїв <strong>окрім зчитувачів екрану</strong> за допомогою класа <code>.sr-only</code>. Комбінуйте <code>.sr-only</code> з <code>.sr-only-focusable</code> щоб показати елемент знову коли він у фокусі (напр. коли користувач використовує лише клавіатуру). Це є необхідністю для дотримання <a href="../getting-started/#accessibility">кращої практики доступності</a>. Цей клас також може використовуватись в якості mixin.</p>
 {% highlight html %}
 <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 {% endhighlight %}
 {% highlight scss %}
-// Usage as a Mixin
+// Використання в якості mixin
 .skip-navigation {
   .sr-only();
   .sr-only-focusable();
@@ -187,12 +187,12 @@
 
 
   <h3 id="helper-classes-image-replacement">Заміщення зображень</h3>
-  <p>Utilize the <code>.text-hide</code> class or mixin to help replace an element's text content with a background image.</p>
+  <p>Застосовуйте клас <code>.text-hide</code> чи mixin для заміни текстового елементу контента фоновим зображенням.</p>
 {% highlight html %}
-<h1 class="text-hide">Custom heading</h1>
+<h1 class="text-hide">Певний заголовок</h1>
 {% endhighlight %}
   {% highlight scss %}
-// Usage as a Mixin
+// Використання в якості mixin
 .heading {
   .text-hide();
 }

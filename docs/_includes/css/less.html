@@ -1,20 +1,20 @@
 <div class="bs-docs-section">
   <h1 id="less" class="page-header">Використання Less</h1>
 
-  <p class="lead">Bootstrap's CSS is built on Less, a preprocessor with additional functionality like variables, mixins, and functions for compiling CSS. Those looking to use the source Less files instead of our compiled CSS files can make use of the numerous variables and mixins we use throughout the framework.</p>
+  <p class="lead">Bootstrap CSS побудовані на LESS, препроцесорі з додатковою функціональністю, такою як змінні, mixins, та функціях для компіляції CSS. Тим, хто прагне використовувати сирцеві файли Less замість наших скомпільованих файлів CSS, можна скористатись численними змінними та mixins, які ми використовуємо у фреймворку.</p>
 
-  <p>Grid variables and mixins are covered <a href="#grid-less">within the Grid system section</a>.</p>
+  <p>Змінні сітки та mixins описано в <a href="#grid-less">розділі Системи сітки</a>.</p>
 
 
   <h2 id="less-bootstrap">Збірка Bootstrap</h2>
-  <p>Bootstrap can be used in at least two ways: with the compiled CSS or with the source Less files. To compile the Less files, <a href="../getting-started/#grunt">consult the Getting Started section</a> for how to setup your development environment to run the necessary commands.</p>
-  <p>Third party compilation tools may work with Bootstrap, but they are not supported by our core team.</p>
+  <p>Bootstrap можна використовувати принаймні двома способами: у вигляді вже зібраних (компільованих) CSS, або у вигляді сирцевих файлів Less. Щоб компілювати файли Less, <a href="../getting-started/#grunt">огляньте наш розділ Ознайомлення</a>, де можна дізнатись кроки налаштування оточення для розробки, запускаючи необхідні команди.</p>
+  <p>Сторонні сервіси можуть працювати з Bootstrap для його компіляції, але вони не підтримуються нашою основною командою.</p>
 
   <h2 id="less-variables">Змінні</h2>
-  <p>Variables are used throughout the entire project as a way to centralize and share commonly used values like colors, spacing, or font stacks. For a complete breakdown, please see <a href="../customize/#less-variables-section">the Customizer</a>.</p>
+  <p>Змінні використовуються кругом в нашому проекті в якості способу централізації та обміну широковживаними значеннями, такими як кольори, відступи, або черги шрифтів. Щоб повніше ознайомитись з цим, прогляньте <a href="../customize/#less-variables-section">Компонувальник</a>.</p>
 
-  <h3 id="less-variables-colors">Colors</h3>
-  <p>Easily make use of two color schemes: grayscale and semantic. Grayscale colors provide quick access to commonly used shades of black while semantic include various colors assigned to meaningful contextual values.</p>
+  <h3 id="less-variables-colors">Кольори</h3>
+  <p>Легко використовувати дві колірні схеми: "сіру" та "семантичну". Сірі кольори надають швидкий доступ до широковживаних відтінків чорного, у той час як семантичні - включають варіанти кольорів, призначених для виразних контекстних значень.</p>
   <div class="bs-example">
     <div class="color-swatches">
       <div class="color-swatch gray-darker"></div>
@@ -49,36 +49,36 @@
 @brand-danger:  #d9534f;
 {% endhighlight %}
 
-  <p>Use any of these color variables as they are or reassign them to more meaningful variables for your project.</p>
+  <p>Використовуйте будь-які із цих змінних кольору як вони є, або перепризначте їх більш значущими змінними для вашого проекта.</p>
 {% highlight scss %}
-// Use as-is
+// Використовуйте як є
 .masthead {
   background-color: @brand-primary;
 }
 
-// Reassigned variables in Less
+// Перепризначайте змінні в LESS
 @alert-message-background: @brand-info;
 .alert {
   background-color: @alert-message-background;
 }
 {% endhighlight %}
 
-  <h3 id="less-variables-scaffolding">Scaffolding</h3>
-  <p>A handful of variables for quickly customizing key elements of your site's skeleton.</p>
+  <h3 id="less-variables-scaffolding">Каркас</h3>
+  <p>Декілька змінних для швидкого налаштування ключових елементів каркасу вашого сайта.</p>
 {% highlight scss %}
-// Scaffolding
+// Каркас
 @body-bg:    #fff;
 @text-color: @black-50;
 {% endhighlight %}
 
-  <h3 id="less-variables-links">Links</h3>
-  <p>Easily style your links with the right color with only one value.</p>
+  <h3 id="less-variables-links">Лінки</h3>
+  <p>Легко стилізувати лінки під потрібний колір лише з одним значенням змінної.</p>
 {% highlight scss %}
-// Variables
+// Змінні
 @link-color:       @brand-primary;
 @link-hover-color: darken(@link-color, 15%);
 
-// Usage
+// Використання
 a {
   color: @link-color;
   text-decoration: none;
@@ -89,10 +89,10 @@ a {
   }
 }
 {% endhighlight %}
-  <p>Note that the <code>@link-hover-color</code> uses a function, another awesome tool from Less, to automagically create the right hover color. You can use <code>darken</code>, <code>lighten</code>, <code>saturate</code>, and <code>desaturate</code>.</p>
+  <p>Зауважте, що <code>@link-hover-color</code> використовує функцію – інший дивовижний інструмент в LESS, для автоматичного створення правильних завислих (hover) кольорів. Ви можете використовувати <code>darken</code>, <code>lighten</code>, <code>saturate</code>, та <code>desaturate</code>.</p>
 
-  <h3 id="less-variables-typography">Typography</h3>
-  <p>Easily set your type face, text size, leading, and more with a few quick variables. Bootstrap makes use of these as well to provide easy typographic mixins.</p>
+  <h3 id="less-variables-typography">Типографія</h3>
+  <p>Легко встановити шрифт, розмір тексту, провідний текст, та таке інше з кількома швидкими змінними. Bootstrap дозволяє використовувати їх, а також надає легкі типографські mixins.</p>
 {% highlight scss %}
 @font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
@@ -119,15 +119,15 @@ a {
 @headings-color:          inherit;
 {% endhighlight %}
 
-  <h3 id="less-variables-icons">Icons</h3>
-  <p>Two quick variables for customizing the location and filename of your icons.</p>
+  <h3 id="less-variables-icons">Значки</h3>
+  <p>Дві швидкі змінні для налаштувань розміщення та визначення назв файлів значків.</p>
 {% highlight scss %}
 @icon-font-path:          "../fonts/";
 @icon-font-name:          "glyphicons-halflings-regular";
 {% endhighlight %}
 
-  <h3 id="less-variables-components">Components</h3>
-  <p>Components throughout Bootstrap make use of some default variables for setting common values. Here are the most commonly used.</p>
+  <h3 id="less-variables-components">Компоненти</h3>
+  <p>Компоненти по всьому Bootstrap дозволяють використовувати деякі змінні за промовчанням для встановлення загальних значень. Ось найбільш часто використовувані.</p>
 {% highlight scss %}
 @padding-base-vertical:          6px;
 @padding-base-horizontal:        12px;
@@ -157,12 +157,12 @@ a {
 
 
   <h2 id="less-mixins-vendor">Постачальник mixins</h2>
-  <p>Vendor mixins are mixins to help support multiple browsers by including all relevant vendor prefixes in your compiled CSS.</p>
+  <p>Постачальники mixins підмішуються в код, щоб допомогти підтримувати багато браузерів через включення їх відповідних префіксів у вашу збірку CSS.</p>
 
 
   <h3 id="less-mixins-box-sizing">Box-sizing</h3>
-  <p>Reset your components' box model with a single mixin. For context, see this <a href="https://developer.mozilla.org/en-US/docs/CSS/box-sizing" target="_blank">helpful article from Mozilla</a>.</p>
-  <p>The mixin is <strong>deprecated</strong> as of v3.2.0, with the introduction of autoprefixer. To preserve backwards-compatibility, Bootstrap will continue to use the mixin internally until Bootstrap v4.</p>
+  <p>Скидання компонентів box model в одному mixin. Щоб зрозуміти контекст, прогляньте <a href="https://developer.mozilla.org/en-US/docs/CSS/box-sizing" target="_blank">helpful article from Mozilla</a>.</p>
+  <p>Mixin є <strong>застарілим</strong> починаючи з v3.2.0, з появою автопрефіксера. Щоб залишити зворотну сумісність, Bootstrap буде продовжувати використовувати mixin внутрішньо до Bootstrap v4.</p>
 {% highlight scss %}
 .box-sizing(@box-model) {
   -webkit-box-sizing: @box-model; // Safari <= 5
@@ -171,8 +171,8 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-rounded-corners">Rounded corners</h3>
-  <p>Today all modern browsers support the non-prefixed <code>border-radius</code> property. As such, there is no <code>.border-radius()</code> mixin, but Bootstrap does include shortcuts for quickly rounding two corners on a particular side of an object.</p>
+  <h3 id="less-mixins-rounded-corners">Закруглені кути</h3>
+  <p>Сьогодні всі сучасні браузери підтримують безпрефіксні властивості <code>border-radius</code>. І тому, зараз немає mixin <code>.border-radius()</code>, але Bootstrap робить включення ярликів для швидкого закруглення двох кутів з певних сторін об'єкта.</p>
 {% highlight scss %}
 .border-top-radius(@radius) {
   border-top-right-radius: @radius;
@@ -192,10 +192,10 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-box-shadow">Box (Drop) shadows</h3>
-  <p>If your target audience is using the latest and greatest browsers and devices, be sure to just use the <code>box-shadow</code> property on its own. If you need support for older Android (pre-v4) and iOS devices (pre-iOS 5), use the <strong>deprecated</strong> mixin to pick up the required <code>-webkit</code> prefix.</p>
-  <p>The mixin is <strong>deprecated</strong> as of v3.1.0, since Bootstrap doesn't officially support the outdated platforms that don't support the standard property. To preserve backwards-compatibility, Bootstrap will continue to use the mixin internally until Bootstrap v4.</p>
-  <p>Be sure to use <code>rgba()</code> colors in your box shadows so they blend as seamlessly as possible with backgrounds.</p>
+  <h3 id="less-mixins-box-shadow">Блочна тінь (Спадаюча вниз)</h3>
+  <p>Якщо ваша цільова аудиторія використовує найновіші версії сучасних браузерів та пристроїв, переконайтесь що ви в себе використовуєте властивість <code>box-shadow</code>. Якщо ви потребуєте підтримки пристроїв, що працюють на попередніх версіях Android (перед-v4) та iOS (перед-iOS 5), використовуйте <strong>застарілий</strong> mixin закріплення необхідних префіксів <code>-webkit</code>.</p>
+  <p>Mixin є <strong>застарілим</strong> починаючи з v3.1.0, оскільки Bootstrap офіційно не підтримує неоновлювані платформи, які не підтримують стандартні властивості. Щоб залишити зворотну сумісність, Bootstrap буде продовжувати використовувати mixin внутрішньо до Bootstrap v4.</p>
+  <p>Не забудьте використовувати кольори <code>rgba()</code> у ваших блоках тіні (box shadows), бо в такому разі вони найменш проблематично зливаються з фоном.</p>
 {% highlight scss %}
 .box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
   -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
@@ -203,9 +203,9 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-transitions">Transitions</h3>
-  <p>Multiple mixins for flexibility. Set all transition information with one, or specify a separate delay and duration as needed.</p>
-  <p>The mixins are <strong>deprecated</strong> as of v3.2.0, with the introduction of autoprefixer. To preserve backwards-compatibility, Bootstrap will continue to use the mixins internally until Bootstrap v4.</p>
+  <h3 id="less-mixins-transitions">Переходи</h3>
+  <p>Кілька mixin для гнучкості. Задайте інформацію про переходи всю за раз, або визначте окремі затримки та тривалість як це вам потрібно.</p>
+  <p>Mixin є <strong>застарілими</strong> починаючи з v3.2.0, з появою автопрефіксера. Щоб залишити зворотну сумісність, Bootstrap буде продовжувати використовувати mixin внутрішньо до Bootstrap v4.</p>
 {% highlight scss %}
 .transition(@transition) {
   -webkit-transition: @transition;
@@ -235,28 +235,28 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-transformations">Transformations</h3>
-  <p>Rotate, scale, translate (move), or skew any object.</p>
-  <p>The mixins are <strong>deprecated</strong> as of v3.2.0, with the introduction of autoprefixer. To preserve backwards-compatibility, Bootstrap will continue to use the mixins internally until Bootstrap v4.</p>
+  <h3 id="less-mixins-transformations">Перетворення</h3>
+  <p>Обертання, масштабування, переклад (перенесення), або нахил будь-якого об'єкта.</p>
+  <p>Mixin є <strong>застарілими</strong> починаючи з v3.2.0, з появою автопрефіксера. Щоб залишити зворотну сумісність, Bootstrap буде продовжувати використовувати mixin внутрішньо до Bootstrap v4.</p>
 {% highlight scss %}
 .rotate(@degrees) {
   -webkit-transform: rotate(@degrees);
-      -ms-transform: rotate(@degrees); // IE9 only
+      -ms-transform: rotate(@degrees); // Тільки IE9
           transform: rotate(@degrees);
 }
 .scale(@ratio; @ratio-y...) {
   -webkit-transform: scale(@ratio, @ratio-y);
-      -ms-transform: scale(@ratio, @ratio-y); // IE9 only
+      -ms-transform: scale(@ratio, @ratio-y); // Тільки IE9
           transform: scale(@ratio, @ratio-y);
 }
 .translate(@x; @y) {
   -webkit-transform: translate(@x, @y);
-      -ms-transform: translate(@x, @y); // IE9 only
+      -ms-transform: translate(@x, @y); // Тільки IE9
           transform: translate(@x, @y);
 }
 .skew(@x; @y) {
   -webkit-transform: skew(@x, @y);
-      -ms-transform: skewX(@x) skewY(@y); // See https://github.com/twbs/bootstrap/issues/4885; IE9+
+      -ms-transform: skewX(@x) skewY(@y); // Див. https://github.com/twbs/bootstrap/issues/4885; IE9+
           transform: skew(@x, @y);
 }
 .translate3d(@x; @y; @z) {
@@ -266,12 +266,12 @@ a {
 
 .rotateX(@degrees) {
   -webkit-transform: rotateX(@degrees);
-      -ms-transform: rotateX(@degrees); // IE9 only
+      -ms-transform: rotateX(@degrees); // Тільки IE9
           transform: rotateX(@degrees);
 }
 .rotateY(@degrees) {
   -webkit-transform: rotateY(@degrees);
-      -ms-transform: rotateY(@degrees); // IE9 only
+      -ms-transform: rotateY(@degrees); // Тільки IE9
           transform: rotateY(@degrees);
 }
 .perspective(@perspective) {
@@ -287,14 +287,14 @@ a {
 .transform-origin(@origin) {
   -webkit-transform-origin: @origin;
      -moz-transform-origin: @origin;
-      -ms-transform-origin: @origin; // IE9 only
+      -ms-transform-origin: @origin; // Тільки IE9
           transform-origin: @origin;
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-animations">Animations</h3>
-  <p>A single mixin for using all of CSS3's animation properties in one declaration and other mixins for individual properties.</p>
-  <p>The mixins are <strong>deprecated</strong> as of v3.2.0, with the introduction of autoprefixer. To preserve backwards-compatibility, Bootstrap will continue to use the mixins internally until Bootstrap v4.</p>
+  <h3 id="less-mixins-animations">Анімація</h3>
+  <p>Єдиний mixin для використання всіх властивостей анімації CSS3 в одному оголошенні, а інші mixins – для індивідуальних властивостей.</p>
+  <p>Mixin є <strong>застарілими</strong> починаючи з v3.2.0, з появою автопрефіксера. Щоб залишити зворотну сумісність, Bootstrap буде продовжувати використовувати mixin внутрішньо до Bootstrap v4.</p>
 {% highlight scss %}
 .animation(@animation) {
   -webkit-animation: @animation;
@@ -326,8 +326,8 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-opacity">Opacity</h3>
-  <p>Set the opacity for all browsers and provide a <code>filter</code> fallback for IE8.</p>
+  <h3 id="less-mixins-opacity">Непрозорість</h3>
+  <p>Встановіть непрозорість для всіх браузерів та надайте окремий <code>filter</code> fallback для IE8.</p>
 {% highlight scss %}
 .opacity(@opacity) {
   opacity: @opacity;
@@ -337,8 +337,8 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-placeholder">Placeholder text</h3>
-  <p>Provide context for form controls within each field.</p>
+  <h3 id="less-mixins-placeholder">Текстовий заповнювач (placeholder)</h3>
+  <p>Надайте контекст для елементів керування форми всередині кожного поля.</p>
 {% highlight scss %}
 .placeholder(@color: @input-color-placeholder) {
   &::-moz-placeholder           { color: @color; } // Firefox
@@ -347,8 +347,8 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-columns">Columns</h3>
-  <p>Generate columns via CSS within a single element.</p>
+  <h3 id="less-mixins-columns">Колонки</h3>
+  <p>Генеруйте колонки через CSS всередині одного елемента.</p>
 {% highlight scss %}
 .content-columns(@width; @count; @gap) {
   -webkit-column-width: @width;
@@ -363,34 +363,34 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-gradients">Gradients</h3>
-  <p>Easily turn any two colors into a background gradient. Get more advanced and set a direction, use three colors, or use a radial gradient. With a single mixin you get all the prefixed syntaxes you'll need.</p>
+  <h3 id="less-mixins-gradients">Градієнти</h3>
+  <p>Легко перетворити два кольори у фоновий градієнт. Можна зробити ще більше – встановити напрямок, використовуючи три кольори, або використовуючи радіальний градієнт. З одиничним mixin ви отримаєте всі префіксовані синтакси, що вам треба.</p>
 {% highlight scss %}
 #gradient > .vertical(#333; #000);
 #gradient > .horizontal(#333; #000);
 #gradient > .radial(#333; #000);
 {% endhighlight %}
-  <p>You can also specify the angle of a standard two-color, linear gradient:</p>
+  <p>Ви також можете вказати кут стандартного двокольора, лінійний градієнт:</p>
 {% highlight scss %}
 #gradient > .directional(#333; #000; 45deg);
 {% endhighlight %}
-  <p>If you need a barber-stripe style gradient, that's easy, too. Just specify a single color and we'll overlay a translucent white stripe.</p>
+  <p>Якщо вам треба стиль градієнта туманні-смуги, то це легко, також. Просто визначте одиничний колір, і будете мати накладку напівпрозорих білих ліній.</p>
 {% highlight scss %}
 #gradient > .striped(#333; 45deg);
 {% endhighlight %}
-  <p>Up the ante and use three colors instead. Set the first color, the second color, the second color's color stop (a percentage value like 25%), and the third color with these mixins:</p>
+  <p>Підніміть ставки та використовуйте натомість три кольори. Встановіть перший колір, другий колір, колірну зупинку другого кольору (десяткове значення, наприклад 0.25), та третій колір з цими mixins:</p>
 {% highlight scss %}
 #gradient > .vertical-three-colors(#777; #333; 25%; #000);
 #gradient > .horizontal-three-colors(#777; #333; 25%; #000);
 {% endhighlight %}
-  <p><strong>Heads up!</strong> Should you ever need to remove a gradient, be sure to remove any IE-specific <code>filter</code> you may have added. You can do that by using the <code>.reset-filter()</code> mixin alongside <code>background-image: none;</code>.</p>
+  <p><strong>Увага!</strong> Якщо вам коли-небудь знадобиться видаляти градієнт, не забудьте видалити всі IE-спеціальні <code>filter</code>, які ви могли додати. Ви можете це зробити за допомогою mixin <code>.reset-filter()</code> окремо від <code>background-image: none;</code>.</p>
 
 
   <h2 id="less-mixins-utility">Допоміжні mixins</h2>
-  <p>Utility mixins are mixins that combine otherwise unrelated CSS properties to achieve a specific goal or task.</p>
+  <p>Допоміжні mixins є домішками, що поєднують непов'язані (в іншому випадку) властивості CSS, для досягнення конкретної мети чи задачі.</p>
 
   <h3 id="less-mixins-clearfix">Clearfix</h3>
-  <p>Forget adding <code>class="clearfix"</code> to any element and instead add the <code>.clearfix()</code> mixin where appropriate. Uses the <a href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank">micro clearfix</a> from <a href="https://twitter.com/necolas" target="_blank">Nicolas Gallager</a>.</p>
+  <p>Забудьте за додавання <code>class="clearfix"</code> до кожного елемента, а замість цього додайте mixin <code>.clearfix()</code>, у разі потреби. У цьому прикладі використовується <a href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank">micro clearfix</a> from <a href="https://twitter.com/necolas" target="_blank">Nicolas Gallager</a>.</p>
 {% highlight scss %}
 // Mixin
 .clearfix() {
@@ -404,14 +404,14 @@ a {
   }
 }
 
-// Usage
+// Використання
 .container {
   .clearfix();
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-centering">Horizontal centering</h3>
-  <p>Quickly center any element within its parent. <strong>Requires <code>width</code> or <code>max-width</code> to be set.</strong></p>
+  <h3 id="less-mixins-centering">Горизонтальне центрування</h3>
+  <p>Швидко центруйте будь-який елемент всередині його батька. <strong>Необхідно щоб <code>width</code> чи <code>max-width</code> були встановленими.</strong></p>
 {% highlight scss %}
 // Mixin
 .center-block() {
@@ -420,15 +420,15 @@ a {
   margin-right: auto;
 }
 
-// Usage
+// Використання
 .container {
   width: 940px;
   .center-block();
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-sizing">Sizing helpers</h3>
-  <p>Specify the dimensions of an object more easily.</p>
+  <h3 id="less-mixins-sizing">Помічники калібрування</h3>
+  <p>Стало простіше вказувати розміри об'єктів.</p>
 {% highlight scss %}
 // Mixins
 .size(@width; @height) {
@@ -439,24 +439,24 @@ a {
   .size(@size; @size);
 }
 
-// Usage
+// Використання
 .image { .size(400px; 300px); }
 .avatar { .square(48px); }
 {% endhighlight %}
 
-  <h3 id="less-mixins-resizable">Resizable textareas</h3>
-  <p>Easily configure the resize options for any textarea, or any other element. Defaults to normal browser behavior (<code>both</code>).</p>
+  <h3 id="less-mixins-resizable">Калібрування textarea</h3>
+  <p>Легко налаштувати параметри калібрування до будь-якої текстової області (textarea), або будь-якого іншого елементу. За промовчанням для нормальної поведінки браузерів (<code>both</code>).</p>
 {% highlight scss %}
 .resizable(@direction: both) {
-  // Options: horizontal, vertical, both
+  // Параметри: horizontal, vertical, both
   resize: @direction;
-  // Safari fix
+  // Виправлення для Safari
   overflow: auto;
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-truncating">Truncating text</h3>
-  <p>Easily truncate text with an ellipsis with a single mixin. <strong>Requires element to be <code>block</code> or <code>inline-block</code> level.</strong></p>
+  <h3 id="less-mixins-truncating">Скорочення текста</h3>
+  <p>Легко скоротити текст, з трьома крапками, за допомогою єдиного mixin. <strong>При цьому необхідно щоб елемент був стилізований як <code>block</code>, або як <code>inline-block</code> level.</strong></p>
 {% highlight scss %}
 // Mixin
 .text-overflow() {
@@ -465,7 +465,7 @@ a {
   white-space: nowrap;
 }
 
-// Usage
+// Використання
 .branch-name {
   display: inline-block;
   max-width: 200px;
@@ -473,8 +473,8 @@ a {
 }
 {% endhighlight %}
 
-  <h3 id="less-mixins-retina-images">Retina images</h3>
-  <p>Specify two image paths and the @1x image dimensions, and Bootstrap will provide an @2x media query. <strong>If you have many images to serve, consider writing your retina image CSS manually in a single media query.</strong></p>
+  <h3 id="less-mixins-retina-images">Сітка зображень</h3>
+  <p>Визначте два шляхи зображень та @1x розмір зображень, і Bootstrap забезпечить @2x медіа запити. <strong>Якщо ви обслуговуєте багато зображень, подумайте про написання коду для CSS сітки зображень в єдиному медіа запиті.</strong></p>
 {% highlight scss %}
 .img-retina(@file-1x; @file-2x; @width-1x; @height-1x) {
   background-image: url("@{file-1x}");
@@ -491,7 +491,7 @@ a {
   }
 }
 
-// Usage
+// Використання
 .jumbotron {
   .img-retina("/img/bg-1x.png", "/img/bg-2x.png", 100px, 100px);
 }
