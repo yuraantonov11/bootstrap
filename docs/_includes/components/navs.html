@@ -1,51 +1,51 @@
 <div class="bs-docs-section">
-  <h1 id="nav" class="page-header">Навігація</h1>
+  <h1 id="nav" class="page-header">Навігаційні елементи</h1>
 
-  <p class="lead">Navs available in Bootstrap have shared markup, starting with the base <code>.nav</code> class, as well as shared states. Swap modifier classes to switch between each style.</p>
+  <p class="lead">В Bootstrap, навігаційні елементи мають однакові частини розмітки, починаючи від базового класа <code>.nav</code>, і а ж до однакових станів. Змініть модифікатор класа для переключення між кожним стилем.</p>
 
   <h2 id="nav-tabs">Вкладки</h2>
-  <p>Note the <code>.nav-tabs</code> class requires the <code>.nav</code> base class.</p>
+  <p>Зауважте, що клас <code>.nav-tabs</code> потребує базового класу <code>.nav</code>.</p>
   <div class="bs-example">
     <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#">Home</a></li>
-      <li role="presentation"><a href="#">Profile</a></li>
-      <li role="presentation"><a href="#">Messages</a></li>
+      <li role="presentation" class="active"><a href="#">Стартова</a></li>
+      <li role="presentation"><a href="#">Профіль</a></li>
+      <li role="presentation"><a href="#">Повідомлення</a></li>
     </ul>
   </div>
 {% highlight html %}
 <ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#">Home</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
+  <li role="presentation" class="active"><a href="#">Стартова</a></li>
+  <li role="presentation"><a href="#">Профіль</a></li>
+  <li role="presentation"><a href="#">Повідомлення</a></li>
 </ul>
 {% endhighlight %}
   <div class="bs-callout bs-callout-info">
-    <h4>Requires JavaScript tabs plugin</h4>
-    <p>For tabs with tabbable areas, you must use the <a href="../javascript/#tabs">tabs JavaScript plugin</a>.</p>
+    <h4>Необхідність в JavaScript-плагіні</h4>
+    <p>Для переключення між різними вкладками, вам потрібно використовувати <a href="../javascript/#tabs">JavaScript-плагін для вкладок</a>.</p>
   </div>
 
   <h2 id="nav-pills">Навігаційні кнопки</h2>
-  <p>Take that same HTML, but use <code>.nav-pills</code> instead:</p>
+  <p>Візьміть той же HTML, але використовуйте <code>.nav-pills</code> замість <code>.nav-tabs</code>:</p>
   <div class="bs-example">
     <ul class="nav nav-pills" role="tablist">
-      <li role="presentation" class="active"><a href="#">Home</a></li>
-      <li role="presentation"><a href="#">Profile</a></li>
-      <li role="presentation"><a href="#">Messages</a></li>
+      <li role="presentation" class="active"><a href="#">Стартова</a></li>
+      <li role="presentation"><a href="#">Профіль</a></li>
+      <li role="presentation"><a href="#">Повідомлення</a></li>
     </ul>
   </div>
 {% highlight html %}
 <ul class="nav nav-pills" role="tablist">
-  <li role="presentation" class="active"><a href="#">Home</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
+  <li role="presentation" class="active"><a href="#">Стартова</a></li>
+  <li role="presentation"><a href="#">Профіль</a></li>
+  <li role="presentation"><a href="#">Повідомлення</a></li>
 </ul>
 {% endhighlight %}
-  <p>Pills are also vertically stackable. Just add <code>.nav-stacked</code>.</p>
+  <p>Навігаційні кнопки також доступні у вертикальній збірці. Просто додайте <code>.nav-stacked</code>.</p>
   <div class="bs-example">
     <ul class="nav nav-pills nav-stacked" role="tablist" style="max-width: 300px;">
-      <li role="presentation" class="active"><a href="#">Home</a></li>
-      <li role="presentation"><a href="#">Profile</a></li>
-      <li role="presentation"><a href="#">Messages</a></li>
+      <li role="presentation" class="active"><a href="#">Стартова</a></li>
+      <li role="presentation"><a href="#">Профіль</a></li>
+      <li role="presentation"><a href="#">Повідомлення</a></li>
     </ul>
   </div>
 {% highlight html %}
@@ -56,23 +56,23 @@
 
 
   <h2 id="nav-justified">Розтягнуте меню</h2>
-  <p>Easily make tabs or pills equal widths of their parent at screens wider than 768px with <code>.nav-justified</code>. On smaller screens, the nav links are stacked.</p>
-  <p><strong class="text-danger">Justified navbar nav links are currently not supported.</strong></p>
+  <p>За допомогою <code>.nav-justified</code> можна легко створювати вкладки чи навігаційні кнопки, однакової ширини, із їхніми батьківськими елементами, для екранів ширших за 768px. На менших екранах, навігаційні лінки будуть складатись.</p>
+  <p><strong class="text-danger">На даний момент в навігаційних панелях, вирівняних по-ширині, навігаційні лінки не підтримуються.</strong></p>
   <div class="bs-callout bs-callout-warning">
     <h4>Safari and responsive justified navs</h4>
     <p>As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing. This bug is also shown in the <a href="../examples/justified-nav/">justified nav example</a>.</p>
   </div>
   <div class="bs-example">
     <ul class="nav nav-tabs nav-justified" role="tablist">
-      <li role="presentation" class="active"><a href="#">Home</a></li>
-      <li role="presentation"><a href="#">Profile</a></li>
-      <li role="presentation"><a href="#">Messages</a></li>
+      <li role="presentation" class="active"><a href="#">Стартова</a></li>
+      <li role="presentation"><a href="#">Профіль</a></li>
+      <li role="presentation"><a href="#">Повідомлення</a></li>
     </ul>
     <br>
     <ul class="nav nav-pills nav-justified" role="tablist">
-      <li role="presentation" class="active"><a href="#">Home</a></li>
-      <li role="presentation"><a href="#">Profile</a></li>
-      <li role="presentation"><a href="#">Messages</a></li>
+      <li role="presentation" class="active"><a href="#">Стартова</a></li>
+      <li role="presentation"><a href="#">Профіль</a></li>
+      <li role="presentation"><a href="#">Повідомлення</a></li>
     </ul>
   </div>
 {% highlight html %}
@@ -115,7 +115,7 @@
   <h3>Tabs with dropdowns</h3>
   <div class="bs-example">
     <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#">Home</a></li>
+      <li role="presentation" class="active"><a href="#">Стартова</a></li>
       <li role="presentation"><a href="#">Help</a></li>
       <li role="presentation" class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -149,7 +149,7 @@
   <h3>Pills with dropdowns</h3>
   <div class="bs-example">
     <ul class="nav nav-pills" role="tablist">
-      <li role="presentation" class="active"><a href="#">Home</a></li>
+      <li role="presentation" class="active"><a href="#">Стартова</a></li>
       <li role="presentation"><a href="#">Help</a></li>
       <li role="presentation" class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
