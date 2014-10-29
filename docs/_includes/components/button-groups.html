@@ -1,32 +1,32 @@
 <div class="bs-docs-section">
   <h1 id="btn-groups" class="page-header">Групи кнопок</h1>
 
-  <p class="lead">Group a series of buttons together on a single line with the button group. Add on optional JavaScript radio and checkbox style behavior with <a href="../javascript/#buttons">our buttons plugin</a>.</p>
+  <p class="lead">Згрупуйте серію кнопок разом в одну лінію, створивши таким чином групову кнопку. За допомогою JavaScript та <a href="../javascript/#buttons">нашого плагіну кнопок</a>, можна ще додати стиль поведінки перемикачів або галочок.</p>
 
   <div class="bs-callout bs-callout-warning">
-    <h4>Tooltips &amp; popovers in button groups require special setting</h4>
-    <p>When using tooltips or popovers on elements within a <code>.btn-group</code>, you'll have to specify the option <code>container: 'body'</code> to avoid unwanted side effects (such as the element growing wider and/or losing its rounded corners when the tooltip or popover is triggered).</p>
+    <h4>Підказки та інформери в групі кнопок потребують спеціальних налаштувань</h4>
+    <p>При використанні підказок або інформерів (popovers) в межах <code>.btn-group</code>, необхідно визначити опцію <code>container: 'body'</code>, щоб уникнути небажаних ефектів (наприклад, коли елемент стає ширшим та/або коли втрачається закругленння кутів при виклику підказок чи інформерів).</p>
   </div>
 
   <h3 id="btn-groups-single">Базовий приклад</h3>
-  <p>Wrap a series of buttons with <code>.btn</code> in <code>.btn-group</code>.</p>
+  <p>Обгорніть серію кнопок з <code>.btn</code> в <code>.btn-group</code>.</p>
   <div class="bs-example">
     <div class="btn-group" style="margin: 9px 0 5px;">
-      <button type="button" class="btn btn-default">Left</button>
-      <button type="button" class="btn btn-default">Middle</button>
-      <button type="button" class="btn btn-default">Right</button>
+      <button type="button" class="btn btn-default">Ліва</button>
+      <button type="button" class="btn btn-default">Середня</button>
+      <button type="button" class="btn btn-default">Права</button>
     </div>
   </div>
 {% highlight html %}
 <div class="btn-group">
-  <button type="button" class="btn btn-default">Left</button>
-  <button type="button" class="btn btn-default">Middle</button>
-  <button type="button" class="btn btn-default">Right</button>
+  <button type="button" class="btn btn-default">Ліва</button>
+  <button type="button" class="btn btn-default">Середня</button>
+  <button type="button" class="btn btn-default">Права</button>
 </div>
 {% endhighlight %}
 
   <h3 id="btn-groups-toolbar">Кнопка панелі інструментів</h3>
-  <p>Combine sets of <code>&lt;div class="btn-group"&gt;</code> into a <code>&lt;div class="btn-toolbar"&gt;</code> for more complex components.</p>
+  <p>Об'єднайте набір <code>&lt;div class="btn-group"&gt;</code> всередині <code>&lt;div class="btn-toolbar"&gt;</code> для більш складних компонентів.</p>
   <div class="bs-example">
     <div class="btn-toolbar" role="toolbar" style="margin: 0;">
       <div class="btn-group">
@@ -54,34 +54,34 @@
 {% endhighlight %}
 
   <h3 id="btn-groups-sizing">Калібрування</h3>
-  <p>Instead of applying button sizing classes to every button in a group, just add <code>.btn-group-*</code> to the <code>.btn-group</code>.</p>
+  <p>Замість того, щоб застосовувати класи зміни розмірів до кожної кнопки в групі, просто додайте <code>.btn-group-*</code> до <code>.btn-group</code>.</p>
   <div class="bs-example">
     <div class="btn-toolbar" role="toolbar">
       <div class="btn-group btn-group-lg">
-        <button type="button" class="btn btn-default">Left</button>
-        <button type="button" class="btn btn-default">Middle</button>
-        <button type="button" class="btn btn-default">Right</button>
+        <button type="button" class="btn btn-default">Ліва</button>
+        <button type="button" class="btn btn-default">Середня</button>
+        <button type="button" class="btn btn-default">Права</button>
       </div>
     </div>
     <div class="btn-toolbar" role="toolbar">
       <div class="btn-group">
-        <button type="button" class="btn btn-default">Left</button>
-        <button type="button" class="btn btn-default">Middle</button>
-        <button type="button" class="btn btn-default">Right</button>
+        <button type="button" class="btn btn-default">Ліва</button>
+        <button type="button" class="btn btn-default">Середня</button>
+        <button type="button" class="btn btn-default">Права</button>
       </div>
     </div>
     <div class="btn-toolbar" role="toolbar">
       <div class="btn-group btn-group-sm">
-        <button type="button" class="btn btn-default">Left</button>
-        <button type="button" class="btn btn-default">Middle</button>
-        <button type="button" class="btn btn-default">Right</button>
+        <button type="button" class="btn btn-default">Ліва</button>
+        <button type="button" class="btn btn-default">Середня</button>
+        <button type="button" class="btn btn-default">Права</button>
       </div>
     </div>
     <div class="btn-toolbar" role="toolbar">
       <div class="btn-group btn-group-xs">
-        <button type="button" class="btn btn-default">Left</button>
-        <button type="button" class="btn btn-default">Middle</button>
-        <button type="button" class="btn btn-default">Right</button>
+        <button type="button" class="btn btn-default">Ліва</button>
+        <button type="button" class="btn btn-default">Середня</button>
+        <button type="button" class="btn btn-default">Права</button>
       </div>
     </div>
   </div>
@@ -93,7 +93,7 @@
 {% endhighlight %}
 
   <h3 id="btn-groups-nested">Вкладеність</h3>
-  <p>Place a <code>.btn-group</code> within another <code>.btn-group</code> when you want dropdown menus mixed with a series of buttons.</p>
+  <p>Розмістіть <code>.btn-group</code> всередині іншої <code>.btn-group</code>, якщо ви хочете поєднати спадне меню з серією кнопок.</p>
   <div class="bs-example">
     <div class="btn-group">
       <button type="button" class="btn btn-default">1</button>
@@ -101,12 +101,12 @@
 
       <div class="btn-group">
         <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-          Dropdown
+          Спадне меню
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupDrop1">
-          <li><a href="#">Dropdown link</a></li>
-          <li><a href="#">Dropdown link</a></li>
+          <li><a href="#">Лінк в спадному меню</a></li>
+          <li><a href="#">Лінк в спадному меню</a></li>
         </ul>
       </div>
     </div>
@@ -118,63 +118,63 @@
 
   <div class="btn-group">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-      Dropdown
+      Спадне меню
       <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
-      <li><a href="#">Dropdown link</a></li>
-      <li><a href="#">Dropdown link</a></li>
+      <li><a href="#">Лінк в спадному меню</a></li>
+      <li><a href="#">Лінк в спадному меню</a></li>
     </ul>
   </div>
 </div>
 {% endhighlight %}
 
   <h3 id="btn-groups-vertical">Вертикальні варіації</h3>
-  <p>Make a set of buttons appear vertically stacked rather than horizontally. <strong class="text-danger">Split button dropdowns are not supported here.</strong></p>
+  <p>Зробіть набір кнопок, складених вертикально, а не горизонтально. <strong class="text-danger">Розщеплені кнопки спадного меню тут не підтримуються.</strong></p>
   <div class="bs-example">
     <div class="btn-group-vertical">
-      <button type="button" class="btn btn-default">Button</button>
-      <button type="button" class="btn btn-default">Button</button>
+      <button type="button" class="btn btn-default">Кнопка</button>
+      <button type="button" class="btn btn-default">Кнопка</button>
       <div class="btn-group">
         <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-          Dropdown
+          Спадне меню
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop1">
-          <li><a href="#">Dropdown link</a></li>
-          <li><a href="#">Dropdown link</a></li>
+          <li><a href="#">Лінк в спадному меню</a></li>
+          <li><a href="#">Лінк в спадному меню</a></li>
         </ul>
       </div>
-      <button type="button" class="btn btn-default">Button</button>
-      <button type="button" class="btn btn-default">Button</button>
+      <button type="button" class="btn btn-default">Кнопка</button>
+      <button type="button" class="btn btn-default">Кнопка</button>
       <div class="btn-group">
         <button id="btnGroupVerticalDrop2" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-          Dropdown
+          Спадне меню
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop2">
-          <li><a href="#">Dropdown link</a></li>
-          <li><a href="#">Dropdown link</a></li>
+          <li><a href="#">Лінк в спадному меню</a></li>
+          <li><a href="#">Лінк в спадному меню</a></li>
         </ul>
       </div>
       <div class="btn-group">
         <button id="btnGroupVerticalDrop3" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-          Dropdown
+          Спадне меню
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop3">
-          <li><a href="#">Dropdown link</a></li>
-          <li><a href="#">Dropdown link</a></li>
+          <li><a href="#">Лінк в спадному меню</a></li>
+          <li><a href="#">Лінк в спадному меню</a></li>
         </ul>
       </div>
       <div class="btn-group">
         <button id="btnGroupVerticalDrop4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-          Dropdown
+          Спадне меню
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop4">
-          <li><a href="#">Dropdown link</a></li>
-          <li><a href="#">Dropdown link</a></li>
+          <li><a href="#">Лінк в спадному меню</a></li>
+          <li><a href="#">Лінк в спадному меню</a></li>
         </ul>
       </div>
     </div>
@@ -186,40 +186,40 @@
 {% endhighlight %}
 
   <h3 id="btn-groups-justified">Варіант вирівнювання лінків по-ширині</h3>
-  <p>Make a group of buttons stretch at equal sizes to span the entire width of its parent. Also works with button dropdowns within the button group.</p>
+  <p>Створюйте групи кнопок, розтягнуті на всю ширину їх батьківського елемента. Також розгляньте варіант з кнопкою спадного меню всередині групи кнопок.</p>
 
   <div class="bs-callout bs-callout-warning">
-    <h4>Handling borders</h4>
-    <p>Due to the specific HTML and CSS used to justify buttons (namely <code>display: table-cell</code>), the borders between them are doubled. In regular button groups, <code>margin-left: -1px</code> is used to stack the borders instead of removing them. However, <code>margin</code> doesn't work with <code>display: table-cell</code>. As a result, depending on your customizations to Bootstrap, you may wish to remove or re-color the borders.</p>
+    <h4>Обробка браузерами</h4>
+    <p>Завдяки специфіці використання HTML та CSS при вирівнюванні кнопок по-ширині (а саме <code>display: table-cell</code>), рамки між ними дублюються. В звичайних групах кнопок, використовується <code>margin-left: -1px</code> для складання рамок, замість видалення їх. Тим не менше, але <code>margin</code> не працює з <code>display: table-cell</code>. В результаті, в залежності від налаштування Bootstrap, ви можливо схочете видалити чи перефарбувати рамки.</p>
   </div>
   <div class="bs-callout bs-callout-warning">
-    <h4>IE8 and borders</h4>
-    <p>Internet Explorer 8 doesn't render borders on buttons in a justified button group, whether it's on <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> elements. To get around that, wrap each button in another <code>.btn-group</code>.</p>
-    <p>See <a href="https://github.com/twbs/bootstrap/issues/12476">#12476</a> for more information.</p>
+    <h4>Рамки елементів в IE8</h4>
+    <p>Internet Explorer 8 не відображає рамки кнопок в групі з вирівняній по-ширині, ні для <code>&lt;a&gt;</code>, ні для <code>&lt;button&gt;</code> елементів. Щоб обійти це, обгорніть кожну кнопку в інший елемент з класом <code>.btn-group</code>.</p>
+    <p>Див. <a href="https://github.com/twbs/bootstrap/issues/12476">#12476</a> для детальнішої інфи.</p>
   </div>
 
-  <h4>With <code>&lt;a&gt;</code> elements</h4>
-  <p>Just wrap a series of <code>.btn</code>s in <code>.btn-group.btn-group-justified</code>.</p>
+  <h4>З елементом <code>&lt;a&gt;</code></h4>
+  <p>Просто обгорніть серію <code>.btn</code> в <code>.btn-group.btn-group-justified</code>.</p>
   <div class="bs-example">
     <div class="btn-group btn-group-justified">
-       <a href="#" class="btn btn-default" role="button">Left</a>
-      <a href="#" class="btn btn-default" role="button">Middle</a>
-      <a href="#" class="btn btn-default" role="button">Right</a>
+       <a href="#" class="btn btn-default" role="button">Ліва</a>
+      <a href="#" class="btn btn-default" role="button">Середня</a>
+      <a href="#" class="btn btn-default" role="button">Права</a>
     </div>
     <br>
     <div class="btn-group btn-group-justified">
-      <a href="#" class="btn btn-default" role="button">Left</a>
-      <a href="#" class="btn btn-default" role="button">Middle</a>
+      <a href="#" class="btn btn-default" role="button">Ліва</a>
+      <a href="#" class="btn btn-default" role="button">Середня</a>
       <div class="btn-group">
         <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-          Dropdown <span class="caret"></span>
+          Спадне меню <span class="caret"></span>
         </a>
         <ul class="dropdown-menu" role="menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
+          <li><a href="#">Дія</a></li>
+          <li><a href="#">Інша дія</a></li>
+          <li><a href="#">Тут щось ще</a></li>
           <li class="divider"></li>
-          <li><a href="#">Separated link</a></li>
+          <li><a href="#">Відокремлений лінк</a></li>
         </ul>
       </div>
     </div>
@@ -230,31 +230,31 @@
 </div>
 {% endhighlight %}
 
-  <h4>With <code>&lt;button&gt;</code> elements</h4>
-  <p>To use justified button groups with <code>&lt;button&gt;</code> elements, <strong class="text-danger">you must wrap each button in a button group</strong>. Most browsers don't properly apply our CSS for justification to <code>&lt;button&gt;</code> elements, but since we support button dropdowns, we can workaround that.</p>
+  <h4>З елементом <code>&lt;button&gt;</code></h4>
+  <p>Щоб використовувати групи кнопок вирівняні по-ширині з елементами <code>&lt;button&gt;</code>, <strong class="text-danger">ви мусите обгорнути кожну кнопку в групу кнопок</strong>. Більшість браузерів не правильно застосовують наші CSS до елементів <code>&lt;button&gt;</code> для вирівнювання їх по-ширині, але оскільки ми підтримуємо групи кнопок, то ж необхідні такі обхідні шляхи.</p>
   <div class="bs-example">
     <div class="btn-group btn-group-justified">
       <div class="btn-group">
-        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Ліва</button>
       </div>
       <div class="btn-group">
-        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Середня</button>
       </div>
       <div class="btn-group">
-        <button type="button" class="btn btn-default">Right</button>
+        <button type="button" class="btn btn-default">Права</button>
       </div>
     </div>
   </div>
 {% highlight html %}
 <div class="btn-group btn-group-justified">
   <div class="btn-group">
-    <button type="button" class="btn btn-default">Left</button>
+    <button type="button" class="btn btn-default">Ліва</button>
   </div>
   <div class="btn-group">
-    <button type="button" class="btn btn-default">Middle</button>
+    <button type="button" class="btn btn-default">Середня</button>
   </div>
   <div class="btn-group">
-    <button type="button" class="btn btn-default">Right</button>
+    <button type="button" class="btn btn-default">Права</button>
   </div>
 </div>
 {% endhighlight %}
