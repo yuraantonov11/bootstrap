@@ -1,47 +1,47 @@
 <div class="bs-docs-section">
   <h1 id="dropdowns" class="page-header">Спадаюче меню</h1>
 
-  <p class="lead">Toggleable, contextual menu for displaying lists of links. Made interactive with the <a href="../javascript/#dropdowns">dropdown JavaScript plugin</a>.</p>
+  <p class="lead">Контекстні меню, що перемикаються, для відображення списку лінків. Їхня інтерактивність забезпечується <a href="../javascript/#dropdowns">JavaScript плагіном для спадаючого меню</a>.</p>
 
   <h3 id="dropdowns-example">Приклад</h3>
-  <p>Wrap the dropdown's trigger and the dropdown menu within <code>.dropdown</code>, or another element that declares <code>position: relative;</code>. Then add the menu's HTML.</p>
+  <p>Вкладіть кнопку-перемикач та його меню всередину елемента з класом <code>.dropdown</code>, або в інший елемент, котрий оголошує <code>position: relative;</code>.</p>
   <div class="bs-example">
     <div class="dropdown clearfix">
       <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-        Dropdown
+        Спадаючий список
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Дія</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Інша дія</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Щось ще тут</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Відокремлений лінк</a></li>
       </ul>
     </div>
   </div><!-- /example -->
 {% highlight html %}
 <div class="dropdown">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-    Dropdown
+    Спадаючий список
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Дія</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Інша дія</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Щось ще тут</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Відокремлений лінк</a></li>
   </ul>
 </div>
 {% endhighlight %}
 
   <h3 id="dropdowns-alignment">Опції вирівнювання</h3>
-  <p>By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent. Add <code>.dropdown-menu-right</code> to a <code>.dropdown-menu</code> to right align the dropdown menu.</p>
+  <p>За промовчанням, спадаюче меню автоматично позиціоновано 100% згори та в лівий кут батьківського елемента. Додайте <code>.dropdown-menu-right</code> до <code>.dropdown-menu</code> щоб вирівняти праворуч спадаюче меню.</p>
   <div class="bs-callout bs-callout-warning">
-    <h4>May require additional positioning</h4>
-    <p>Dropdowns are automatically positioned via CSS within the normal flow of the document. This means dropdowns may be cropped by parents with certain <code>overflow</code> properties or appear out of bounds of the viewport. Address these issues on your own as they arise.</p>
+    <h4>Може потребувати додаткового позиціонування</h4>
+    <p>Спадаюче меню автоматично позиціонується через CSS всередині звичайного потоку документа. Це означає, що спадаюче меню може обрізатись батьківським елементом, якщо встановлено певну властивісь <code>overflow</code>, або з'являтись за межами оглядового вікна. Ці проблеми ви можете вирішити самостійно по мірі їх виникнення.</p>
   </div>
   <div class="bs-callout bs-callout-warning">
-    <h4>Deprecated <code>.pull-right</code> alignment</h4>
+    <h4>Застаріле вирівнювання <code>.pull-right</code></h4>
     <p>As of v3.1.0, we've deprecated <code>.pull-right</code> on dropdown menus. To right-align a menu, use <code>.dropdown-menu-right</code>. Right-aligned nav components in the navbar use a mixin version of this class to automatically align the menu. To override it, use <code>.dropdown-menu-left</code>.</p>
   </div>
 {% highlight html %}
@@ -60,11 +60,11 @@
       </button>
       <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
         <li role="presentation" class="dropdown-header">Dropdown header</li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Дія</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Інша дія</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Щось ще тут</a></li>
         <li role="presentation" class="dropdown-header">Dropdown header</li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Відокремлений лінк</a></li>
       </ul>
     </div>
   </div><!-- /example -->
@@ -85,11 +85,11 @@
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuDivider">
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Дія</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Інша дія</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Щось ще тут</a></li>
         <li role="presentation" class="divider"></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Відокремлений лінк</a></li>
       </ul>
     </div>
   </div><!-- /example -->

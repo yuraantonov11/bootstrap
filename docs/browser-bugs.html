@@ -109,9 +109,15 @@ lead: "A list of the browser bugs that Bootstrap is currently grappling with."
         </tr>
         <tr>
           <td>Safari</td>
-          <td>Justified nav rendering bug</td>
-          <td>(No public bug tracker)</td>
+          <td><code>display: table-cell;</code> within media query renders incorrectly when resizing the window</td>
+          <td><a href="https://bugs.webkit.org/show_bug.cgi?id=138167">WebKit bug #138167</a></td>
           <td><a href="https://github.com/twbs/bootstrap/issues/9774">#9774</a></td>
+        </tr>
+        <tr>
+          <td>Safari</td>
+          <td><code>transform: translate3d(0, 0, 0);</code> iOS bug</td>
+          <td><a href="https://bugs.webkit.org/show_bug.cgi?id=138162">WebKit bug #138162</a>, <a href="http://openradar.appspot.com/18804973">Apple Safari Radar #18804973</a></td>
+          <td><a href="https://github.com/twbs/bootstrap/pull/14603">#14603</a></td>
         </tr>
       </tbody>
     </table>
