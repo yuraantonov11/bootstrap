@@ -63,7 +63,7 @@
 
       var activateTheme = function () {
         stylesheetLink.attr('href', stylesheetLink.attr('data-href'))
-        themeBtn.text('Disable theme preview')
+        themeBtn.text('Заблокувати предогляд теми')
         localStorage.setItem('previewTheme', true)
       }
 
@@ -77,7 +77,7 @@
           activateTheme()
         } else {
           stylesheetLink.attr('href', '')
-          themeBtn.text('Preview theme')
+          themeBtn.text('Попередньо оглянути тему')
           localStorage.removeItem('previewTheme')
         }
       })
@@ -122,7 +122,7 @@
 
     // Insert copy to clipboard button before .highlight
     $('.highlight').each(function () {
-      var btnHtml = '<div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>'
+      var btnHtml = '<div class="zero-clipboard"><span class="btn-clipboard">Скопіювати</span></div>'
       $(this).before(btnHtml)
     })
     var zeroClipboard = new ZeroClipboard($('.btn-clipboard'))
@@ -132,7 +132,7 @@
     zeroClipboard.on('load', function () {
       htmlBridge
         .data('placement', 'top')
-        .attr('title', 'Copy to clipboard')
+        .attr('title', 'Скопіювати в буфер обміну')
         .tooltip()
     })
 
@@ -145,17 +145,17 @@
     // Notify copy success and reset tooltip title
     zeroClipboard.on('complete', function () {
       htmlBridge
-        .attr('title', 'Copied!')
+        .attr('title', 'Скопійовано!')
         .tooltip('fixTitle')
         .tooltip('show')
-        .attr('title', 'Copy to clipboard')
+        .attr('title', 'Скопіювати в буфер обміну')
         .tooltip('fixTitle')
     })
 
     // Notify copy failure
     zeroClipboard.on('noflash wrongflash', function () {
       htmlBridge
-        .attr('title', 'Flash required')
+        .attr('title', 'Необхідний Flash')
         .tooltip('fixTitle')
         .tooltip('show')
     })
