@@ -7,26 +7,26 @@
 
   <div class="bs-callout bs-callout-warning" id="callout-navbar-overflow">
     <h4>Переповнення контентом</h4>
-    <p>Оскільки Bootstrap не знає який об'єм займає вміст у вашій навігаційній панелі, ви можете стикнутись з тим, що вміст переноситься на другий рядок. Щоб вирішити це, ви можете:</p>
+    <p>Оскільки Bootstrap не знає який об'єм займає вміст у вашій навігаційній панелі, ви можете виявити проблему, коли вміст переноситься на другий рядок. Щоб вирішити це, ви можете:</p>
     <ol type="a">
       <li>Скоротити кількість або ширину пунктів навігаційної панелі.</li>
-      <li>Приховайте деякі пункти навпанелі Hide certain navbar items at certain screen sizes using <a href="../css/#responsive-utilities">responsive utility classes</a>.</li>
-      <li>Change the point at which your navbar switches between collapsed and horizontal mode. Customize the <code>@grid-float-breakpoint</code> variable or add your own media query.</li>
+      <li>Приховайте деякі пункти навпанелі у визначених місцях використовуючи <a href="../css/#responsive-utilities">допоміжні класи чутливості</a>.</li>
+      <li>Змініть точку, в якій навпанель перемикається між горизонтальним та складеним виглядом. Підберіть значення для змінної <code>@grid-float-breakpoint</code> або додайте свій власний медіа-запит.</li>
     </ol>
   </div>
   <div class="bs-callout bs-callout-danger">
-    <h4>Requires JavaScript</h4>
-    <p>If JavaScript is disabled and the viewport is narrow enough that the navbar collapses, it will be impossible to expand the navbar and view the content within the <code>.navbar-collapse</code>.</p>
+    <h4>Необхідність в JavaScript</h4>
+    <p>Якщо JavaScript заблокована, а оглядове вікно є досить вузьким, щоб навігаційна панель згорнулась, то вже не буде можливості розгорнути цю навігаційну панель та продивитись її вміст в <code>.navbar-collapse</code>.</p>
   </div>
   <div class="bs-callout bs-callout-info">
-    <h4>Changing the collapsed mobile navbar breakpoint</h4>
-    <p>The navbar collapses into its vertical mobile view when the viewport is narrower than <code>@grid-float-breakpoint</code>, and expands into its horizontal non-mobile view when the viewport is at least <code>@grid-float-breakpoint</code> in width. Adjust this variable in the Less source to control when the navbar collapses/expands. The default value is <code>768px</code> (the smallest "small" or "tablet" screen).</p>
+    <h4>Зміна контрольних точок в мобільній навпанелі</h4>
+    <p>Навігаційна панель складається, приймаючи вертикальний мобільний вигляд, коли оглядове вікно є вужчим за <code>@grid-float-breakpoint</code>, та розкладається, приймаючи горизонтальний не-мобільний вигляд, коли оглядове вікно має ширину не меншу за <code>@grid-float-breakpoint</code>. Підберіть значення для цієї змінної в сирцевому файлі Less, щоб визначити коли навпанель складатиметься/розкладатиметься. Значення за промовчанням <code>768px</code><!-- (the smallest "small" or "tablet" screen) -->.</p>
   </div>
 
   <div class="bs-example">
     <nav class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- Бренд та перемикач згруповані для кращого відображення на мобільних пристроях -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
@@ -34,16 +34,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="#">Бренд</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Зібрано навігаційні лінки, форми, та інший вміст для переключення -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
+            <li class="active"><a href="#">Лінк</a></li>
+            <li><a href="#">Лінк</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Спадне меню <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Дія</a></li>
                 <li><a href="#">Інша дія</a></li>
@@ -51,7 +51,7 @@
                 <li class="divider"></li>
                 <li><a href="#">Відокремлений лінк</a></li>
                 <li class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
+                <li><a href="#">Ще один відокремлений лінк</a></li>
               </ul>
             </li>
           </ul>
@@ -59,12 +59,12 @@
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit" class="btn btn-default">Відправити</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Link</a></li>
+            <li><a href="#">Лінк</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Спадне меню <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Дія</a></li>
                 <li><a href="#">Інша дія</a></li>
@@ -81,7 +81,7 @@
 {% highlight html %}
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- Бренд та перемикач згруповані для кращого відображення на мобільних пристроях -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
@@ -89,16 +89,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <a class="navbar-brand" href="#">Бренд</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Зібрано навігаційні лінки, форми, та інший вміст для переключення -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+        <li class="active"><a href="#">Лінк</a></li>
+        <li><a href="#">Лінк</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Спадне меню <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Дія</a></li>
             <li><a href="#">Інша дія</a></li>
@@ -106,7 +106,7 @@
             <li class="divider"></li>
             <li><a href="#">Відокремлений лінк</a></li>
             <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="#">Ще один відокремлений лінк</a></li>
           </ul>
         </li>
       </ul>
@@ -114,12 +114,12 @@
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default">Відправити</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+        <li><a href="#">Лінк</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Спадне меню <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Дія</a></li>
             <li><a href="#">Інша дія</a></li>
@@ -135,18 +135,18 @@
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-danger">
-    <h4>Plugin dependency</h4>
-    <p>The responsive navbar requires the <a href="../javascript/#collapse">collapse plugin</a> to be included in your version of Bootstrap.</p>
+    <h4>Залежність від плагіну</h4>
+    <p>Чутлива навігаційна панель потребує, щоб у вашій версії Bootstrap було підключено <a href="../javascript/#collapse">плагін для переключення</a>.</p>
   </div>
 
   <div class="bs-callout bs-callout-warning">
-    <h4>Make navbars accessible</h4>
-    <p>Be sure to add a <code>role="navigation"</code> to every navbar to help with accessibility.</p>
+    <h4>Доступність навігаційних панелей</h4>
+    <p>Переконайтесь що додали <code>role="navigation"</code> до кожної навігаційної панелі щоб спростити їх доступність.</p>
   </div>
 
 
   <h2 id="navbar-brand-image">Зображення бренду</h2>
-  <p>Replace the navbar brand with your own image by swapping the text for an <code>&lt;img&gt;</code>. Since the <code>.navbar-brand</code> has its own padding and height, you may need to override some CSS depending on your image.</p>
+  <p>Замініть текст бренду в навігаційній панелі на певну картинку за допомогою елемента <code>&lt;img&gt;</code>. Оскільки <code>.navbar-brand</code> має власні відступи та висоту, можливо потрібно буде перевизначити деякі CSS в залежності від вашої картинки.</p>
   <div class="bs-example">
     <nav class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
@@ -172,8 +172,8 @@
 
 
   <h2 id="navbar-forms">Форми</h2>
-<p>Place form content within <code>.navbar-form</code> for proper vertical alignment and collapsed behavior in narrow viewports. Use the alignment options to decide where it resides within the navbar content.</p>
-  <p>As a heads up, <code>.navbar-form</code> shares much of its code with <code>.form-inline</code> via mixin. <strong class="text-danger">Some form controls, like input groups, may require fixed widths to be show up properly within a navbar.</strong></p>
+<p>Вкладіть вміст форми в межах <code>.navbar-form</code> для правильного вертикального вирівнювання та функціональності згортання при перегляді на вузьких екранах. Використовуйте параметри вирівнювання, щоб вирішити, де буде знаходитись вміст у межах навігаційної панелі.</p>
+  <p>Примітка, клас <code>.navbar-form</code> використовує більшість свого коду спільно з <code>.form-inline</code> через mixin. <strong class="text-danger">Деякі елементи управління форми, такі як групи input, можуть потребувати фіксованої ширини щоб правильно відображатись в межах навігаційної панелі.</strong></p>
   <div class="bs-example">
     <nav class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
@@ -184,14 +184,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="#">Бренд</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
           <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit" class="btn btn-default">Відправити</button>
           </form>
         </div>
       </div>
@@ -202,23 +202,23 @@
   <div class="form-group">
     <input type="text" class="form-control" placeholder="Search">
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button type="submit" class="btn btn-default">Відправити</button>
 </form>
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-warning">
-    <h4>Mobile device caveats</h4>
-    <p>There are some caveats regarding using form controls within fixed elements on mobile devices. <a href="../getting-started/#support-fixed-position-keyboards">See our browser support docs</a> for details.</p>
+    <h4>Застереження для мобільних пристроїв</h4>
+    <p>Є деякі застереження щодо використання елементів управління форми всередині фіксованих елементів на мобільних пристроях. <a href="../getting-started/#support-fixed-position-keyboards">Прогляньте нашу документацію підтримки браузерів</a> для уточнення.</p>
   </div>
 
   <div class="bs-callout bs-callout-warning">
-    <h4>Always add labels</h4>
-    <p>Screen readers will have trouble with your forms if you don't include a label for every input. For these inline navbar forms, you can hide the labels using the <code>.sr-only</code> class.</p>
+    <h4>Завжди додавайте ярлики (label)</h4>
+    <p>Програми читання екранів (screen readers) будуть мати проблеми з вашою формою, якщо ви не будете додавати ярлики (label) до кожного елемента input. Для даних вбудованих форм навігаційних панелей, ви можете приховати ярлики використовуючи клас <code>.sr-only</code>.</p>
   </div>
 
 
   <h2 id="navbar-buttons">Кнопки</h2>
-  <p>Add the <code>.navbar-btn</code> class to <code>&lt;button&gt;</code> elements not residing in a <code>&lt;form&gt;</code> to vertically center them in the navbar.</p>
+  <p>Додайте клас <code>.navbar-btn</code> до елементів <code>&lt;button&gt;</code> котрі не знаходяться у <code>&lt;form&gt;</code> для вертикального їх центрування в навігаційних панелях.</p>
   <div class="bs-example">
     <nav class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
@@ -229,25 +229,25 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="#">Бренд</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
-          <button type="button" class="btn btn-default navbar-btn">Sign in</button>
+          <button type="button" class="btn btn-default navbar-btn">Увійти</button>
         </div>
       </div>
     </nav>
   </div>
 {% highlight html %}
-<button type="button" class="btn btn-default navbar-btn">Sign in</button>
+<button type="button" class="btn btn-default navbar-btn">Увійти</button>
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-warning">
-    <h4>Context-specific usage</h4>
-    <p>Like the standard <a href="../css/#buttons">button classes</a>, <code>.navbar-btn</code> can be used on <code>&lt;a&gt;</code> and <code>&lt;input&gt;</code> elements. However, neither <code>.navbar-btn</code> nor the standard button classes should be used on <code>&lt;a&gt;</code> elements within <code>.navbar-nav</code>.</p>
+    <h4>Специфіка використання в певному контексті</h4>
+    <p>Як і стандартні <a href="../css/#buttons">класи кнопок</a>, <code>.navbar-btn</code> може використовуватись в елементах <code>&lt;a&gt;</code> та <code>&lt;input&gt;</code>. Тим не менше, але жоден <code>.navbar-btn</code> або ж стандартні класи кнопки не повинні використовуватись в елементах <code>&lt;a&gt;</code> в межах <code>.navbar-nav</code>.</p>
   </div>
 
   <h2 id="navbar-text">Текст</h2>
-  <p>Wrap strings of text in an element with <code>.navbar-text</code>, usually on a <code>&lt;p&gt;</code> tag for proper leading and color.</p>
+  <p>Обгорніть рядок тексту в елемент з класом <code>.navbar-text</code>, зазвичай з тегом <code>&lt;p&gt;</code> для правильного вирівнювання та кольору.</p>
   <div class="bs-example">
     <nav class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
@@ -258,21 +258,21 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="#">Бренд</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-4">
-          <p class="navbar-text">Signed in as Mark Otto</p>
+          <p class="navbar-text">Ви увійшли як Mark Otto</p>
         </div>
       </div>
     </nav>
   </div>
 {% highlight html %}
-<p class="navbar-text">Signed in as Mark Otto</p>
+<p class="navbar-text">Ви увійшли як Mark Otto</p>
 {% endhighlight %}
 
 
   <h2 id="navbar-links">Ненавігаційні лінки</h2>
-  <p>For folks using standard links that are not within the regular navbar navigation component, use the <code>.navbar-link</code> class to add the proper colors for the default and inverse navbar options.</p>
+  <p>Люди, котрі використовують стандартні лінки в межах незвичайних компонентів навігаційних панелей, можуть застосовувати клас <code>.navbar-link</code> для додавання правильних кольорів у навігаційних панелях за промовчанням та інвертованих навігаційних панелях.</p>
   <div class="bs-example">
     <nav class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
@@ -283,31 +283,31 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="#">Бренд</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
-          <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
+          <p class="navbar-text navbar-right">Ви увійшли як <a href="#" class="navbar-link">Mark Otto</a></p>
         </div>
       </div>
     </nav>
   </div>
 {% highlight html %}
-<p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
+<p class="navbar-text navbar-right">Ви увійшли як <a href="#" class="navbar-link">Mark Otto</a></p>
 {% endhighlight %}
 
 
   <h2 id="navbar-component-alignment">Компонент вирівнювання</h2>
-  <p>Align nav links, forms, buttons, or text, using the <code>.navbar-left</code> or <code>.navbar-right</code> utility classes. Both classes will add a CSS float in the specified direction. For example, to align nav links, put them in a separate <code>&lt;ul&gt;</code> with the respective utility class applied.</p>
-  <p>These classes are mixin-ed versions of <code>.pull-left</code> and <code>.pull-right</code>, but they're scoped to media queries for easier handling of navbar components across device sizes.</p>
+  <p>Вирівнюйте навігаційні лінки, форми, кнопки, чи текст використовуючи допоміжні класи <code>.navbar-left</code> чи <code>.navbar-right</code>. Обидва класи додають CSS float в зазначеному напрямку. Наприклад, щоб вирівняти навігаційні лінки, вкладіть їх в окремий <code>&lt;ul&gt;</code> з відповідним допоміжним класом.</p>
+  <p>Ці класи є mixin-ed (мішаною) версією класів <code>.pull-left</code> та <code>.pull-right</code>, але вони призначені для медіа запитів, щоб спростити обробку компонентів навігаційних панелей для різних розмірів пристроїв.</p>
   <div class="bs-callout bs-callout-warning">
-    <h4>Right aligning multiple components</h4>
-    <p>Navbars currently have a limitation with multiple <code>.navbar-right</code> classes. To properly space content, we use negative margin on the last <code>.navbar-right</code> element. When there are multiple elements using that class, these margins don't work as intended.</p>
-    <p>We'll revisit this when we can rewrite that component in v4.</p>
+    <h4>Вірівнювання праворуч кількох компонентів</h4>
+    <p>Навігаційна панель, на даний момент, має обмеження для стосовно використання зразу кількох компонентів з класом <code>.navbar-right</code>. Щоб правильно вмістити контент, ми використовуємо від'ємний відступ (margin) для останнього елемента <code>.navbar-right</code>. При використанні декількох елементів з даним класом, ці відступи не працюють так як задумано.</p>
+    <p>Ми будемо змінювати цю особливість у Bootstrap v4.</p>
   </div>
 
 
   <h2 id="navbar-fixed-top">Фіксація вгорі</h2>
-  <p>Add <code>.navbar-fixed-top</code> and include a <code>.container</code> or <code>.container-fluid</code> to center and pad navbar content.</p>
+  <p>Додайте  <code>.navbar-fixed-top</code> та включіть <code>.container</code> або <code>.container-fluid</code> для центрування та внутрішніх відступів вмісту навігаційної панелі.</p>
   <div class="bs-example bs-navbar-top-example">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
@@ -319,14 +319,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="#">Бренд</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
+            <li class="active"><a href="#">Стартова</a></li>
+            <li><a href="#">Лінк</a></li>
+            <li><a href="#">Лінк</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -341,17 +341,17 @@
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-danger">
-    <h4>Body padding required</h4>
-    <p>The fixed navbar will overlay your other content, unless you add <code>padding</code> to the top of the <code>&lt;body&gt;</code>. Try out your own values or use our snippet below. Tip: By default, the navbar is 50px high.</p>
+    <h4>Необхідність встановлення padding для body</h4>
+    <p>Фіксована навігаційна панель буде накладатись на решту вашого вмісту, допоки ви не додасте <code>padding</code> до верхньої частини <code>&lt;body&gt;</code>. Спробуйте встановити свої власні значення, або використовуйте фрагмент коду, що нижче. Довідка: За промовчанням, навігаційна панель має висоту 50px.</p>
 {% highlight scss %}
 body { padding-top: 70px; }
 {% endhighlight %}
-    <p>Make sure to include this <strong>after</strong> the core Bootstrap CSS.</p>
+    <p>Переконайтесь, що це включено <strong>після</strong> основного коду Bootstrap CSS.</p>
   </div>
 
 
   <h2 id="navbar-fixed-bottom">Фіксація внизу</h2>
-  <p>Add <code>.navbar-fixed-bottom</code> and include a <code>.container</code> or <code>.container-fluid</code> to center and pad navbar content.</p>
+  <p>Додайте <code>.navbar-fixed-bottom</code> та включіть <code>.container</code> або <code>.container-fluid</code> для центрування та внутрішніх відступів вмісту навігаційної панелі.</p>
   <div class="bs-example bs-navbar-bottom-example">
     <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
       <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
@@ -363,14 +363,14 @@ body { padding-top: 70px; }
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="#">Бренд</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-7">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
+            <li class="active"><a href="#">Стартова</a></li>
+            <li><a href="#">Лінк</a></li>
+            <li><a href="#">Лінк</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -385,18 +385,18 @@ body { padding-top: 70px; }
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-danger">
-    <h4>Body padding required</h4>
-    <p>The fixed navbar will overlay your other content, unless you add <code>padding</code> to the bottom of the <code>&lt;body&gt;</code>. Try out your own values or use our snippet below. Tip: By default, the navbar is 50px high.</p>
+    <h4>Необхідність встановлення padding для body</h4>
+    <p>Фіксована навігаційна панель буде накладатись на решту вашого вмісту, допоки ви не додасте <code>padding</code> до нижньої частини <code>&lt;body&gt;</code>. Спробуйте встановити свої власні значення, або використовуйте фрагмент коду, що нижче. Довідка: За промовчанням, навігаційна панель має висоту 50px.</p>
 {% highlight scss %}
 body { padding-bottom: 70px; }
 {% endhighlight %}
-    <p>Make sure to include this <strong>after</strong> the core Bootstrap CSS.</p>
+    <p>Переконайтесь, що це включено <strong>після</strong> основного коду Bootstrap CSS.</p>
   </div>
 
 
   <h2 id="navbar-static-top">Статичний верх</h2>
-  <p>Create a full-width navbar that scrolls away with the page by adding <code>.navbar-static-top</code> and include a <code>.container</code> or <code>.container-fluid</code> to center and pad navbar content.</p>
-  <p>Unlike the <code>.navbar-fixed-*</code> classes, you do not need to change any padding on the <code>body</code>.</p>
+  <p>Створіть навігаційну панель на повну ширину, котра буде прокручуватись разом зі сторінкою, додавши <code>.navbar-static-top</code> та включіть <code>.container</code> або <code>.container-fluid</code>, для центрування та внутрішніх відступів вмісту навігаційної панелі.</p>
+  <p>На відміну від класів <code>.navbar-fixed-*</code>, вам непотрібно змінювати будь-який <code>padding</code> для <code>body</code>.</p>
   <div class="bs-example bs-navbar-top-example">
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
       <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
@@ -408,15 +408,15 @@ body { padding-bottom: 70px; }
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="#">Бренд</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-8">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
+            <li class="active"><a href="#">Стартова</a></li>
+            <li><a href="#">Лінк</a></li>
+            <li><a href="#">Лінк</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -432,7 +432,7 @@ body { padding-bottom: 70px; }
 
 
   <h2 id="navbar-inverted">Інвертована навігаційна панель</h2>
-  <p>Modify the look of the navbar by adding <code>.navbar-inverse</code>.</p>
+  <p>Модифікуйте вигляд навігаційної панелі додавши <code>.navbar-inverse</code>.</p>
   <div class="bs-example">
     <nav class="navbar navbar-inverse" role="navigation">
       <div class="container-fluid">
@@ -444,15 +444,15 @@ body { padding-bottom: 70px; }
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="#">Бренд</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
+            <li class="active"><a href="#">Стартова</a></li>
+            <li><a href="#">Лінк</a></li>
+            <li><a href="#">Лінк</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

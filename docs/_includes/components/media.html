@@ -1,17 +1,17 @@
 <div class="bs-docs-section">
   <h1 id="media" class="page-header">Медіа об'єкт</h1>
 
-  <p class="lead">Abstract object styles for building various types of components (like blog comments, Tweets, etc) that feature a left- or right-aligned image alongside textual content.</p>
+  <p class="lead">Стилізація абстрактного об'єкту, для створення різних типів компонентів (таких як коментарі для блогу, для твіттера, і т.д.), котрі зі своїм зображенням вирівняні по-лівому чи по-правому краю поруч з текстовим вмістом.</p>
 
   <h3 id="media-default">За промовчанням</h3>
-  <p>The default media displays a media object (images, video, audio) to the left or right of a content block.</p>
+  <p>За промовчанням, медіа-об'єкти (зображення, відео, аудіо) можна вирівнювати по лівому чи по-правому краю блоку контента.</p>
   <div class="bs-example">
     <div class="media">
       <a class="media-left" href="#">
         <img data-src="holder.js/64x64" alt="Generic placeholder image">
       </a>
       <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
+        <h4 class="media-heading">Заголовок медіа</h4>
         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
       </div>
     </div>
@@ -20,14 +20,14 @@
         <img data-src="holder.js/64x64" alt="Generic placeholder image">
       </a>
       <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
+        <h4 class="media-heading">Заголовок медіа</h4>
         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
         <div class="media">
           <a class="media-left" href="#">
             <img data-src="holder.js/64x64" alt="Generic placeholder image">
           </a>
           <div class="media-body">
-            <h4 class="media-heading">Nested media heading</h4>
+            <h4 class="media-heading">Вкладений заголовок медіа</h4>
             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
           </div>
         </div>
@@ -35,7 +35,7 @@
     </div>
     <div class="media">
       <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
+        <h4 class="media-heading">Заголовок медіа</h4>
         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
       </div>
       <a class="media-right" href="#">
@@ -50,7 +50,7 @@
         <img data-src="holder.js/64x64" alt="Generic placeholder image">
       </a>
       <div class="media-body">
-        <h4 class="media-heading">Deprecated pull-right pull-left example</h4>
+        <h4 class="media-heading">Застарілий приклад pull-right pull-left</h4>
         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
       </div>
     </div>
@@ -61,22 +61,22 @@
     <img src="..." alt="...">
   </a>
   <div class="media-body">
-    <h4 class="media-heading">Media heading</h4>
+    <h4 class="media-heading">Заголовок медіа</h4>
     ...
   </div>
 </div>
 {% endhighlight %}
 
-  <p>The classes <code>.pull-left</code> and <code>.pull-right</code> also exist and were previously used as part of the media component, but are deprecated for that use as of v3.3.0. They are approximately equivalent to <code>.media-left</code> and <code>.media-right</code>, except that <code>.media-right</code> should be placed after the <code>.media-body</code> in the html.</p>
-  <h3 id="media-alignment">Media alignment</h3>
-  <p>The images or other media can be aligned top, middle, or bottom. The default is top aligned.</p>
+  <p>Класи <code>.pull-left</code> та <code>.pull-right</code> також існують та використовувались раніше як частина компоненту медіа, але вони вже стали застарілими для такого використання з версії 3.3.0. Ці класи приблизно еквівалентні до <code>.media-left</code> та <code>.media-right</code>, за виключенням того, що <code>.media-right</code> потрібно розміщувати після <code>.media-body</code> в html.</p>
+  <h3 id="media-alignment">Вірівнювання медіа</h3>
+  <p>Зображення чи інші медіа можуть вирівнюватись догори, по-центру, чи донизу. За промовчанням вони вирівнюються догори.</p>
   <div class="bs-example">
     <div class="media">
       <a class="media-left" href="#">
         <img data-src="holder.js/64x64" alt="Generic placeholder image">
       </a>
       <div class="media-body">
-        <h4 class="media-heading">Top aligned media</h4>
+        <h4 class="media-heading">Медіа, яке вирівняно догори</h4>
         <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
         <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
       </div>
@@ -86,7 +86,7 @@
         <img data-src="holder.js/64x64" alt="Generic placeholder image">
       </a>
       <div class="media-body">
-        <h4 class="media-heading">Middle aligned media</h4>
+        <h4 class="media-heading">Медіа, яке вирівняно по-центру</h4>
         <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
         <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
       </div>
@@ -96,7 +96,7 @@
         <img data-src="holder.js/64x64" alt="Generic placeholder image">
       </a>
       <div class="media-body">
-        <h4 class="media-heading">Bottom aligned media</h4>
+        <h4 class="media-heading">Медіа, яке вирівняно донизу</h4>
         <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
         <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
       </div>
@@ -108,14 +108,14 @@
     <img data-src="..." alt="...">
   </a>
   <div class="media-body">
-    <h4 class="media-heading">Middle aligned media</h4>
+    <h4 class="media-heading">Медіа, яке вирівняно по-центру</h4>
     ...
   </div>
 </div>
 {% endhighlight %}
 
   <h3 id="media-list">Список медіа</h3>
-  <p>With a bit of extra markup, you can use media inside list (useful for comment threads or articles lists).</p>
+  <p>Додавши небагато розмітки, ви можете використовувати медіа в межах списків (корисно для низки коментарів або списку статей)</p>
   <div class="bs-example">
     <ul class="media-list">
       <li class="media">
@@ -123,7 +123,7 @@
           <img data-src="holder.js/64x64" alt="Generic placeholder image">
         </a>
         <div class="media-body">
-          <h4 class="media-heading">Media heading</h4>
+          <h4 class="media-heading">Заголовок медіа</h4>
           <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
           <!-- Nested media object -->
           <div class="media">
@@ -166,7 +166,7 @@
       <img src="..." alt="...">
     </a>
     <div class="media-body">
-      <h4 class="media-heading">Media heading</h4>
+      <h4 class="media-heading">Заголовок медіа</h4>
       ...
     </div>
   </li>
