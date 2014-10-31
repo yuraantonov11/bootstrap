@@ -1,7 +1,7 @@
 <div class="bs-docs-section">
-  <h1 id="popovers" class="page-header">Popovers <small>popover.js</small></h1>
+  <h1 id="popovers" class="page-header">Інформери (Popovers) <small>popover.js</small></h1>
 
-  <h2 id="popovers-examples">Examples</h2>
+  <h2 id="popovers-examples">Приклади</h2>
   <p>Add small overlays of content, like those on the iPad, to any element for housing secondary information.</p>
   <p>Popovers whose both title and content are zero-length are never displayed.</p>
 
@@ -127,20 +127,20 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 {% endhighlight %}
 
 
-  <h2 id="popovers-usage">Usage</h2>
+  <h2 id="popovers-usage">Використання</h2>
   <p>Enable popovers via JavaScript:</p>
   {% highlight js %}$('#example').popover(options){% endhighlight %}
 
-  <h3>Options</h3>
+  <h3>Параметри</h3>
   <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-animation=""</code>.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
-          <th style="width: 100px;">Name</th>
-          <th style="width: 100px;">Type</th>
-          <th style="width: 50px;">Default</th>
-          <th>Description</th>
+          <th style="width: 100px;">Назва</th>
+          <th style="width: 100px;">тип</th>
+          <th style="width: 50px;">за промовчанням</th>
+          <th>опис</th>
         </tr>
       </thead>
       <tbody>
@@ -241,7 +241,7 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
     <p>Options for individual popovers can alternatively be specified through the use of data attributes, as explained above.</p>
   </div>
 
-  <h3>Methods</h3>
+  <h3>Методи</h3>
   <h4>$().popover(options)</h4>
   <p>Initializes popovers for an element collection.</p>
 
@@ -260,19 +260,19 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
   <h4>.popover('destroy')</h4>
   <p>Hides and destroys an element's popover.</p>
   {% highlight js %}$('#element').popover('destroy'){% endhighlight %}
-  <h3>Events</h3>
+  <h3>Події</h3>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
-          <th style="width: 150px;">Event Type</th>
-          <th>Description</th>
+          <th style="width: 150px;">Тип події</th>
+          <th>опис</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>show.bs.popover</td>
-          <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+          <td>Ця подія спрацьовує відразу, коли викликається метод <code>show</code>.</td>
         </tr>
         <tr>
           <td>shown.bs.popover</td>
@@ -280,7 +280,7 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
         </tr>
         <tr>
           <td>hide.bs.popover</td>
-          <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+          <td>Ця подія спрацьовує відразу після виклику метода <code>hide</code>.</td>
         </tr>
         <tr>
           <td>hidden.bs.popover</td>

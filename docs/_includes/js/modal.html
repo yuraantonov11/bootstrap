@@ -1,40 +1,40 @@
 <div class="bs-docs-section">
-  <h1 id="modals" class="page-header">Modals <small>modal.js</small></h1>
-  <p>Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</p>
+  <h1 id="modals" class="page-header">Модалі <small>modal.js</small></h1>
+  <p>Модаль є раціоналізованим, але гнучким діалоговим вікном, з мінімальною, лише необхідною функціональністю та розумними налаштуваннями за промовчанням.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-stacked-modals">
-    <h4>Overlapping modals not supported</h4>
-    <p>Be sure not to open a modal while another is still visible. Showing more than one modal at a time requires custom code.</p>
+    <h4>Перекриття модалі не підтримується</h4>
+    <p>Переконайтесь, що ви не відкриваєте модалі в той час, коли інша модаль все ще видима. Відображення більше, ніж однієї модалі одночасно, вимагає користувальницького коду.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-modal-markup-placement">
-    <h4>Modal markup placement</h4>
-    <p>Always try to place a modal's HTML code in a top-level position in your document to avoid other components affecting the modal's appearance and/or functionality.</p>
+    <h4>Місце розміщення розмітки модалі</h4>
+    <p>Завжди намагайтесь розміщувати код HTML для модалі якомога вище у вашому документі, щоб уникати впливу інших компонентів на відображення чи/або функціональність модалі.</p>
   </div>
   <div class="bs-callout bs-callout-warning">
-    <h4>Mobile device caveats</h4>
-    <p>There are some caveats regarding using modals on mobile devices. <a href="../getting-started/#support-fixed-position-keyboards">See our browser support docs</a> for details.</p>
+    <h4>Застереження стосовно мобільних пристроїв</h4>
+    <p>Є певні застереження щодо використання модальних вікон на мобільних пристроях. <a href="../getting-started/#support-fixed-position-keyboards">Прогляньте наші документи стосовно підтримки браузерами</a>, для уточнень.</p>
   </div>
 
-  <p><strong class="text-danger">Due to how HTML5 defines its semantics, the <code>autofocus</code> HTML attribute has no effect in Bootstrap modals.</strong></p>
+  <p><strong class="text-danger">Зважаючи на те як HTML5 визначає семантику, HTML-атрибут <code>autofocus</code> не матиме ефекту в модалях Bootstrap.</strong></p>
 
-  <h2 id="modals-examples">Examples</h2>
+  <h2 id="modals-examples">Приклади</h2>
 
-  <h3>Static example</h3>
-  <p>A rendered modal with header, body, and set of actions in the footer.</p>
+  <h3>Статичні приклади</h3>
+  <p>Відобреження модального вікна із заголовком, основним вмістом, та переліком дій у нижньому колонтитулі.</p>
   <div class="bs-example bs-example-modal">
     <div class="modal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title">Modal title</h4>
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Закрити</span></button>
+            <h4 class="modal-title">Назва модалі</h4>
           </div>
           <div class="modal-body">
-            <p>One fine body&hellip;</p>
+            <p>Тут тіло модалі&hellip;</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+            <button type="button" class="btn btn-primary">Зберегти зміни</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
@@ -45,45 +45,45 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title">Modal title</h4>
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Закрити</span></button>
+        <h4 class="modal-title">Назва модалі</h4>
       </div>
       <div class="modal-body">
-        <p>One fine body&hellip;</p>
+        <p>Тут тіло модалі&hellip;</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+        <button type="button" class="btn btn-primary">Зберегти зміни</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 {% endhighlight %}
 
-  <h3>Live demo</h3>
-  <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
+  <h3>Живе демо</h3>
+  <p>Модальне вікно створене за допомогою JavaScript, задіється кліком кнопки, що внизу. Воно буде спадати вниз та зникатиме вгорі сторінки.</p>
   <!-- sample modal content -->
   <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
 
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Закрити</span></button>
+          <h4 class="modal-title" id="myModalLabel">Назва модалі</h4>
         </div>
         <div class="modal-body">
-          <h4>Text in a modal</h4>
+          <h4>Текст в модалі</h4>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
 
-          <h4>Popover in a modal</h4>
-          <p>This <a href="#" role="button" class="btn btn-default popover-test" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a> should trigger a popover on click.</p>
+          <h4>Інформер (popover) в модалі</h4>
+          <p>Ця <a href="#" role="button" class="btn btn-default popover-test" title="Назва" data-content="А тут має бути фантастичний вміст. Це є дуже привабливим, правда?">кнопка</a> повинна викликати інформаційну панель при кліку.</p>
 
-          <h4>Tooltips in a modal</h4>
-          <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> should have tooltips on hover.</p>
+          <h4>Підказки в модаліі</h4>
+          <p><a href="#" class="tooltip-test" title="Підказка">Цей</a> та <a href="#" class="tooltip-test" title="Підказка">цей лінк</a> повинні показувати підказки при наведенні.</p>
 
           <hr>
 
-          <h4>Overflowing text to show scroll behavior</h4>
+          <h4>Переповнення текстом, щоб показати поведінку з прокручуванням</h4>
           <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
           <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
           <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
@@ -95,8 +95,8 @@
           <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+          <button type="button" class="btn btn-primary">Зберегти зміни</button>
         </div>
 
       </div><!-- /.modal-content -->
@@ -105,13 +105,13 @@
 
   <div class="bs-example" style="padding-bottom: 24px;">
     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-      Launch demo modal
+      Запуск демонстрації модалі
     </button>
   </div><!-- /example -->
 {% highlight html %}
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
+  Запуск демонстрації модалі
 </button>
 
 <!-- Modal -->
@@ -119,15 +119,15 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Закрити</span></button>
+        <h4 class="modal-title" id="myModalLabel">Назва модалі</h4>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+        <button type="button" class="btn btn-primary">Зберегти зміни</button>
       </div>
     </div>
   </div>
@@ -135,25 +135,25 @@
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-warning">
-    <h4>Make modals accessible</h4>
-    <p>Be sure to add <code>role="dialog"</code> to <code>.modal</code>, <code>aria-labelledby="myModalLabel"</code> attribute to reference the modal title, and <code>aria-hidden="true"</code> to tell assistive technologies to skip the modal's DOM elements.</p>
-    <p>Additionally, you may give a description of your modal dialog with <code>aria-describedby</code> on <code>.modal</code>.</p>
+    <h4>Зробіть модалі доступними</h4>
+    <p>Переконайтесь, що додали <code>role="dialog"</code> до <code>.modal</code>, атрибут <code>aria-labelledby="myModalLabel"</code> для посилання на назву модалі, та <code>aria-hidden="true"</code> для сповіщення assistive technologies (допоміжних технологій), щоб пропускали DOM-елементи модальних вікон.</p>
+    <p>Крім цього, ви можете надати опис діалогової модалі за допомогою <code>aria-describedby</code> в <code>.modal</code>.</p>
   </div>
 
   <div class="bs-callout bs-callout-info">
-    <h4>Embedding YouTube videos</h4>
-    <p>Embedding YouTube videos in modals requires additional JavaScript not in Bootstrap to automatically stop playback and more. <a href="http://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">See this helpful Stack Overflow post</a> for more information.</p>
+    <h4>Вбудоване відео з YouTube</h4>
+    <p>Вбудовування відео з YouTube в модалях потребує додаткового коду JavaScript, що відсутній в Bootstrap, наприклад для автоматичної зупинки програвання та інше. <a href="http://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">Прогляньте це корисне повідомлення на Stack Overflow</a> для детальнішої інформації.</p>
   </div>
 
-  <h2 id="modals-sizes">Optional sizes</h2>
-  <p>Modals have two optional sizes, available via modifier classes to be placed on a <code>.modal-dialog</code>.</p>
+  <h2 id="modals-sizes">Опціональні розміри</h2>
+  <p>Модалі мають два опціональні розміри, доступні через модифікатор класів для розміщення в <code>.modal-dialog</code>.</p>
   <div class="bs-example">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Велика модаль</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Мала модаль</button>
   </div>
 {% highlight html %}
 <!-- Large modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Велика модаль</button>
 
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -164,7 +164,7 @@
 </div>
 
 <!-- Small modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Мала модаль</button>
 
 <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
@@ -181,8 +181,8 @@
       <div class="modal-content">
 
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Закрити</span></button>
+          <h4 class="modal-title" id="myLargeModalLabel">Велика модаль</h4>
         </div>
         <div class="modal-body">
           ...
@@ -195,8 +195,8 @@
       <div class="modal-content">
 
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="mySmallModalLabel">Small modal</h4>
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Закрити</span></button>
+          <h4 class="modal-title" id="mySmallModalLabel">Мала модаль</h4>
         </div>
         <div class="modal-body">
           ...
@@ -205,65 +205,65 @@
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
-  <h2 id="modals-remove-animation">Remove animation</h2>
-  <p>For modals that simply appear rather than fade in to view, remove the <code>.fade</code> class from your modal markup.</p>
+  <h2 id="modals-remove-animation">Видалення анімації</h2>
+  <p>В модалях, які просто з'являються, а не проявляються (fade) для показу, видаліть клас <code>.fade</code> з розмітки в модалі.</p>
 {% highlight html %}
 <div class="modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
   ...
 </div>
 {% endhighlight %}
 
-  <h2 id="modals-usage">Usage</h2>
-  <p>The modal plugin toggles your hidden content on demand, via data attributes or JavaScript. It also adds <code>.modal-open</code> to the <code>&lt;body&gt;</code> to override default scrolling behavior and generates a <code>.modal-backdrop</code> to provide a click area for dismissing shown modals when clicking outside the modal.</p>
+  <h2 id="modals-usage">Використання</h2>
+  <p>Плагін для модалі, при запиті, переключає видимість вашого прихованого вмісту через атрибути даних чи JavaScript. Він також додає <code>.modal-open</code> до <code>&lt;body&gt;</code> для перевизначення поведінки за промовчанням, стосовно прокручування сторінок, та генерує <code>.modal-backdrop</code>, щоб надати область за межами модалі, при клікі по якій, скасовується показ модалі.</p>
 
-  <h3>Via data attributes</h3>
-  <p>Activate a modal without writing JavaScript. Set <code>data-toggle="modal"</code> on a controller element, like a button, along with a <code>data-target="#foo"</code> or <code>href="#foo"</code> to target a specific modal to toggle.</p>
+  <h3>Через атрибути даних</h3>
+  <p>Активуйте модальні вікна без написання JavaScript. Встановіть <code>data-toggle="modal"</code> в контролері елемента, такого як кнопка, поруч з <code>data-target="#foo"</code> або <code>href="#foo"</code>, щоб націлити визначену модаль для переключення.</p>
 {% highlight html %}
-<button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
+<button type="button" data-toggle="modal" data-target="#myModal">Запустити модаль</button>
 {% endhighlight %}
 
-  <h3>Via JavaScript</h3>
-  <p>Call a modal with id <code>myModal</code> with a single line of JavaScript:</p>
+  <h3>Через JavaScript</h3>
+  <p>Викликайте модаль через id <code>myModal</code> одним рядком на JavaScript:</p>
   {% highlight js %}$('#myModal').modal(options){% endhighlight %}
 
-  <h3>Options</h3>
-  <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.</p>
+  <h3>Параметри</h3>
+  <p>Параметри можуть передаватись через атрибути даних чи JavaScript. У випадку передачі через атрибути даних, додайте приставку з назвою параметра до <code>data-</code>, як у прикладі: <code>data-backdrop=""</code>.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
        <tr>
-         <th style="width: 100px;">Name</th>
-         <th style="width: 50px;">type</th>
-         <th style="width: 50px;">default</th>
-         <th>description</th>
+         <th style="width: 100px;">Назва</th>
+         <th style="width: 50px;">тип</th>
+         <th style="width: 50px;">за промовчанням</th>
+         <th>опис</th>
        </tr>
       </thead>
       <tbody>
        <tr>
          <td>backdrop</td>
-         <td>boolean or the string <code>'static'</code></td>
+         <td>boolean або string <code>'static'</code></td>
          <td>true</td>
-         <td>Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn't close the modal on click.</td>
+         <td>Включає елемент modal-backdrop. Можна також вказати <code>static</code> для backdrop, котрий не закриває модаль при кліку.</td>
        </tr>
        <tr>
          <td>keyboard</td>
          <td>boolean</td>
          <td>true</td>
-         <td>Closes the modal when escape key is pressed</td>
+         <td>Зкриває модаль при кліку на клавіші escape.</td>
        </tr>
        <tr>
          <td>show</td>
          <td>boolean</td>
          <td>true</td>
-         <td>Shows the modal when initialized.</td>
+         <td>Показує модаль при ініціалізації.</td>
        </tr>
        <tr>
          <td>remote</td>
          <td>path</td>
          <td>false</td>
          <td>
-          <p><span class="text-danger">This option is deprecated since v3.2.1 and will be removed in v4.</span> We recommend instead using client-side templating or a data binding framework, or calling <a href="http://api.jquery.com/load/">jQuery.load</a> yourself.</p>
-          <p>If a remote URL is provided, <strong>content will be loaded one time</strong> via jQuery's <code>load</code> method and injected into the <code>.modal-content</code> div. If you're using the data-api, you may alternatively use the <code>href</code> attribute to specify the remote source. An example of this is shown below:</p>
+          <p><span class="text-danger">Цей параметр є застарівшим починаючи з v3.2.1 та буде видалятись у v4.</span> Замість нього ми рекомендуємо використовувати шаблони для сторони клієнта або фреймворки з прив'язкою до даних, або ж викликайте для себе <a href="http://api.jquery.com/load/">jQuery.load</a>.</p>
+          <p>Якщо надано віддалений URL, <strong>вміст буде завантажуватись</strong> через jQuery-метод <code>load</code> та вставлятись в div з класом <code>.modal-content</code>. Якщо ви використовуєте data-api, ви можете ще використовувати атрибут <code>href</code> для визначення віддаленого ресурсу. Приклад такого варіанту показаний нижче:</p>
 {% highlight html %}
 <a data-toggle="modal" href="remote.html" data-target="#modal">Click me</a>
 {% endhighlight %}
@@ -273,10 +273,10 @@
     </table>
   </div><!-- /.table-responsive -->
 
-  <h3>Methods</h3>
+  <h3>Методи</h3>
 
   <h4>.modal(options)</h4>
-  <p>Activates your content as a modal. Accepts an optional options <code>object</code>.</p>
+  <p>Активізує вміст як модальний. Приймає необов'язковий параметр з типом даних <code>object</code>.</p>
 {% highlight js %}
 $('#myModal').modal({
   keyboard: false
@@ -284,54 +284,54 @@ $('#myModal').modal({
 {% endhighlight %}
 
   <h4>.modal('toggle')</h4>
-  <p>Manually toggles a modal. <strong>Returns to the caller before the modal has actually been shown or hidden</strong> (i.e. before the <code>shown.bs.modal</code> or <code>hidden.bs.modal</code> event occurs).</p>
+  <p>Ручне переключення модалі. <strong>Повертається до ініціатора виклику перед тим, як модаль буде показано чи приховано</strong> (наприклад, перед викликом подій <code>shown.bs.modal</code> або <code>hidden.bs.modal</code>).</p>
   {% highlight js %}$('#myModal').modal('toggle'){% endhighlight %}
 
   <h4>.modal('show')</h4>
-  <p>Manually opens a modal. <strong>Returns to the caller before the modal has actually been shown</strong> (i.e. before the <code>shown.bs.modal</code> event occurs).</p>
+  <p>Ручне відкриття модалі. <strong>Повертається до ініціатора виклику перед тим, як модаль буде показано</strong> (наприклад, перед викликом події <code>shown.bs.modal</code>).</p>
   {% highlight js %}$('#myModal').modal('show'){% endhighlight %}
 
   <h4>.modal('hide')</h4>
-  <p>Manually hides a modal. <strong>Returns to the caller before the modal has actually been hidden</strong> (i.e. before the <code>hidden.bs.modal</code> event occurs).</p>
+  <p>Ручне закриття модалі. <strong>Повертається до ініціатора виклику перед тим, як модаль буде приховано</strong> (наприклад, перед викликом події <code>hidden.bs.modal</code>).</p>
   {% highlight js %}$('#myModal').modal('hide'){% endhighlight %}
 
-  <h3>Events</h3>
-  <p>Bootstrap's modal class exposes a few events for hooking into modal functionality.</p>
+  <h3>Події</h3>
+  <p>Клас для модалей в Bootstrap надає декілька подій, щоб забезпечити функціональність модалі.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
        <tr>
-         <th style="width: 150px;">Event Type</th>
-         <th>Description</th>
+         <th style="width: 150px;">Тип події</th>
+         <th>опис</th>
        </tr>
       </thead>
       <tbody>
        <tr>
          <td>show.bs.modal</td>
-         <td>This event fires immediately when the <code>show</code> instance method is called. If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
+         <td>Ця подія спрацьовує відразу, коли викликається метод <code>show</code>. Якщо виклик відбувається через клік, то елемент, на якому був цей клік, доступний як властивість події <code>relatedTarget</code>.</td>
        </tr>
        <tr>
          <td>shown.bs.modal</td>
-         <td>This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete). If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
+         <td>Ця подіє спрацьовує, коли модаль буде відображена для користувача (при цьому очікуватиметься завершення переходів CSS). Якщо виклик відбувається через клік, то елемент, на якому був цей клік, доступний як властивість події <code>relatedTarget</code>.</td>
        </tr>
        <tr>
          <td>hide.bs.modal</td>
-         <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+         <td>Ця подія спрацьовує відразу після виклику метода <code>hide</code>.</td>
        </tr>
        <tr>
          <td>hidden.bs.modal</td>
-         <td>This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+         <td>Ця подія спрацьовує, коли модаль завершить приховування від користувача (при цьому очікуватиметься завершення переходів CSS).</td>
        </tr>
        <tr>
          <td>loaded.bs.modal</td>
-         <td>This event is fired when the modal has loaded content using the <code>remote</code> option.</td>
+         <td>Ця подія спрацьовує, коли модаль завантажила контент використовуючи параметр <code>remote</code>.</td>
        </tr>
       </tbody>
     </table>
   </div><!-- /.table-responsive -->
 {% highlight js %}
 $('#myModal').on('hidden.bs.modal', function (e) {
-  // do something...
+  // Тут якийсь ваш код...
 })
 {% endhighlight %}
 </div>
