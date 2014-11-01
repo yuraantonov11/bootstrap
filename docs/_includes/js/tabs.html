@@ -2,13 +2,13 @@
   <h1 id="tabs" class="page-header">Перехід по вкладкам <small>tab.js</small></h1>
 
   <h2 id="tabs-examples">Приклад вкладки</h2>
-  <p>Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus.</p>
+  <p>Додайте швидку, динамічну функціональність для переходу по вкладкам однієї сторінки, у тому числі за допомогою спадного меню.</p>
   <div class="bs-example bs-example-tabs">
     <ul id="myTab" class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Home</a></li>
-      <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Profile</a></li>
+      <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Стартова</a></li>
+      <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Профіль</a></li>
       <li role="presentation" class="dropdown">
-        <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">Dropdown <span class="caret"></span></a>
+        <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">Спадне меню <span class="caret"></span></a>
         <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
           <li><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">@fat</a></li>
           <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">@mdo</a></li>
@@ -32,13 +32,13 @@
   </div><!-- /example -->
 
   <div class="bs-callout bs-callout-info">
-    <h4>Extends tabbed navigation</h4>
-    <p>This plugin extends the <a href="../components/#nav-tabs">tabbed navigation component</a> to add tabbable areas.</p>
+    <h4>Розширення навігаційних вкладок</h4>
+    <p>Цей плагін розширює <a href="../components/#nav-tabs">компонент навігаційних вкладок</a>, додаючи область переходів.</p>
   </div>
 
 
   <h2 id="tabs-usage">Використання</h2>
-  <p>Enable tabbable tabs via JavaScript (each tab needs to be activated individually):</p>
+  <p>Включення області переходів вкладок через JavaScript (кожна вкладка потребує індивідуальної активації):</p>
 
 {% highlight js %}
 $('#myTab a').click(function (e) {
@@ -47,27 +47,27 @@ $('#myTab a').click(function (e) {
 })
 {% endhighlight %}
 
-  <p>You can activate individual tabs in several ways:</p>
+  <p>Ви можете індивідуально активувати вкладки в декілька способів:</p>
 
 {% highlight js %}
-$('#myTab a[href="#profile"]').tab('show') // Select tab by name
-$('#myTab a:first').tab('show') // Select first tab
-$('#myTab a:last').tab('show') // Select last tab
-$('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
+$('#myTab a[href="#profile"]').tab('show') // Виберіть вкладку по назві
+$('#myTab a:first').tab('show') // Виберіть першу вкладку
+$('#myTab a:last').tab('show') // Виберіть останню вкладку
+$('#myTab li:eq(2) a').tab('show') // Виберіть третю вкладку (відлік від 0)
 {% endhighlight %}
 
-  <h3>Markup</h3>
-  <p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-toggle="tab"</code> or <code>data-toggle="pill"</code> on an element. Adding the <code>nav</code> and <code>nav-tabs</code> classes to the tab <code>ul</code> will apply the Bootstrap <a href="../components/#nav-tabs">tab styling</a>, while adding the <code>nav</code> and <code>nav-pills</code> classes will apply <a href="../components/#nav-pills">pill styling</a>.</p>
+  <h3>Розмітка</h3>
+  <p>Ви можете активувати вкладку чи навігаційну кнопку і без написання коду JavaScript, просто вказавши в елементі <code>data-toggle="tab"</code> або <code>data-toggle="pill"</code> on an element. Додавання класів <code>nav</code> та <code>nav-tabs</code> до вкладки <code>ul</code> буде застосовувати <a href="../components/#nav-tabs">стилізацію вкладок</a> Bootstrap, в той час як додавання класів <code>nav</code> та <code>nav-pills</code> буде застосовувати <a href="../components/#nav-pills">стилізацію навігаційних кнопок</a>.</p>
 {% highlight html %}
-<!-- Nav tabs -->
+<!-- Навігаційні вкладки -->
 <ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
-  <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
-  <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
-  <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Стартова</a></li>
+  <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Профіль</a></li>
+  <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">Повідомлення</a></li>
+  <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Налаштування</a></li>
 </ul>
 
-<!-- Tab panes -->
+<!-- Вкладки панелі -->
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="home">...</div>
   <div role="tabpanel" class="tab-pane" id="profile">...</div>
@@ -76,8 +76,8 @@ $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
 </div>
 {% endhighlight %}
 
-  <h3>Fade effect</h3>
-  <p>To make tabs fade in, add <code>.fade</code> to each <code>.tab-pane</code>. The first tab pane must also have <code>.in</code> to properly fade in initial content.</p>
+  <h3>Ефект згасання</h3>
+  <p>Щоб створити ефект плавного відображення вкладок, додайте <code>.fade</code> до кожного <code>.tab-pane</code>. Перша панель вкладки повинна також мати <code>.in</code> для правильного плавного відображення вмісту.</p>
 {% highlight html %}
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane fade in active" id="home">...</div>
@@ -90,14 +90,14 @@ $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
   <h3>Методи</h3>
   <h4>$().tab</h4>
   <p>
-    Activates a tab element and content container. Tab should have either a <code>data-target</code> or an <code>href</code> targeting a container node in the DOM.
+    Активуйте елемент вкладки та вміст контейнера. Вкладка повинна мати або <code>data-target</code>, або <code>href</code> націлюючи блок контейнера в DOM.
   </p>
 {% highlight html %}
 <ul class="nav nav-tabs" role="tablist" id="myTab">
-  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
-  <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
-  <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
-  <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Стартова</a></li>
+  <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Профіль</a></li>
+  <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">Повідомлення</a></li>
+  <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Налаштування</a></li>
 </ul>
 
 <div class="tab-content">
@@ -115,14 +115,14 @@ $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
 {% endhighlight %}
 
   <h3>Події</h3>
-  <p>When showing a new tab, the events fire in the following order:</p>
+  <p>Коли показується нова вкладка, події спрацьовують в наступному порядку:</p>
   <ol>
-    <li><code>hide.bs.tab</code> (on the current active tab)</li>
-    <li><code>show.bs.tab</code> (on the to-be-shown tab)</li>
-    <li><code>hidden.bs.tab</code> (on the previous active tab, the same one as for the <code>hide.bs.tab</code> event)</li>
-    <li><code>shown.bs.tab</code> (on the newly-active just-shown tab, the same one as for the <code>show.bs.tab</code> event)</li>
+    <li><code>hide.bs.tab</code> (в поточній активній вкладці)</li>
+    <li><code>show.bs.tab</code> (у вкладці, яка буде відображатись)</li>
+    <li><code>hidden.bs.tab</code> (у попередній активній вкладці, те ж саме, що і для події <code>hide.bs.tab</code>)</li>
+    <li><code>shown.bs.tab</code> (в новій активній вкладці, яка щойно була відображена, те ж саме, що і для події <code>show.bs.tab</code>)</li>
   </ol>
-  <p>If no tab was already active, then the <code>hide.bs.tab</code> and <code>hidden.bs.tab</code> events will not be fired.</p>
+  <p>Якщо ще не було активовано вкладку, то не будуть спрацьовувати події <code>hide.bs.tab</code> та <code>hidden.bs.tab</code>.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
@@ -134,19 +134,19 @@ $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
       <tbody>
        <tr>
          <td>show.bs.tab</td>
-         <td>This event fires on tab show, but before the new tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+         <td>Ця подія спрацьовує на відображення вкладки, але перед тим, як нова вкладка буде відображена. Використовуйте <code>event.target</code> та <code>event.relatedTarget</code> для націлювання відповідно – на активну вкладку та попередню активну вкладку (за наявності).</td>
       </tr>
       <tr>
          <td>shown.bs.tab</td>
-         <td>This event fires on tab show after a tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+         <td>Ця подія спрацьовує на відображення вкладки, після того, як вкладка буде відображена. Використовуйте <code>event.target</code> та <code>event.relatedTarget</code> для націлювання відповідно – на активну вкладку та попередню активну вкладку (за наявності).</td>
        </tr>
        <tr>
          <td>hide.bs.tab</td>
-         <td>This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use <code>event.target</code> and <code>event.relatedTarget</code> to target the current active tab and the new soon-to-be-active tab, respectively.</td>
+         <td>Ця подія спрацьовує при відображенні нової вкладки (і, отже, попередня активна вкладка буде приховуватись). Використовуйте <code>event.target</code> та <code>event.relatedTarget</code> для націлювання поточної активної вкладки та нової вкладки, яку скоро буде активовано, відповідно.</td>
        </tr>
        <tr>
          <td>hidden.bs.tab</td>
-         <td>This event fires after a new tab is shown (and thus the previous active tab is hidden). Use <code>event.target</code> and <code>event.relatedTarget</code> to target the previous active tab and the new active tab, respectively.</td>
+         <td>Ця подія спрацьовує після показу нової вкладки (і, отже, попередню активну вкладку вже приховано). Використовуйте <code>event.target</code> та <code>event.relatedTarget</code> для націлювання попередньої активної вкладки та нової активної вкладки, відповідно.</td>
        </tr>
       </tbody>
     </table>
