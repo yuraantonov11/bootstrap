@@ -80,7 +80,7 @@
 
   <!-- Body copy -->
   <h2 id="type-body-copy">Тіло документа</h2>
-  <p>В Bootstrap глобально встановлено розмір шрифта <code>font-size</code> за промовчанням в <strong>14px</strong>, а <code>line-height</code> встановлено в <strong>1.428</strong>. Це застосовується до <code>&lt;body&gt;</code> документа та всіх його параграфів. Окрім цього, параграф <code>&lt;p&gt;</code> формують відступаючи знизу на висоту рівну половині величини від line-height (10px за промовчанням).</p>
+  <p>В Bootstrap глобально встановлено розмір шрифта <code>font-size</code> за промовчанням <strong>14px</strong>, <code>line-height</code> встановлено <strong>1.428</strong>. Це застосовується до <code>&lt;body&gt;</code> документа та всіх його параграфів. Окрім цього, параграф <code>&lt;p&gt;</code> формують відступаючи знизу на висоту рівну половині величини від line-height (10px за промовчанням).</p>
   <div class="bs-example">
     <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
     <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
@@ -102,54 +102,54 @@
 
   <!-- Using Less -->
   <h3>Побудова з використанням Less</h3>
-  <p>Типографське масштабування базується на двох змінних LESS у файлі <strong>variables.less</strong>: <code>@font-size-base</code> та <code>@line-height-base</code>. Перша змінна задає базовий розмір шрифта, який використовується всюди, а друга – базову висоту лінії. Ми використовуємо ці змінні та нескладні математичні дії для створення margins, paddings, та line-heights всіх наших типів та іншого. Налаштуйте їх, щоб адаптувати Bootstrap.</p>
+  <p>Типографське масштабування базується на двох змінних LESS у файлі <strong>variables.less</strong>: <code>@font-size-base</code> та <code>@line-height-base</code>. Перша змінна задає базовий розмір шрифта, який використовується всюди, а друга – базову висоту лінії. Ми використовуємо ці змінні та нескладні математичні дії для створення margins, paddings, та line-heights всіх наших типів та іншого. Налаштуйте їх, щоб адаптувати Bootstrap під власні потреби.</p>
 
   <!-- Inline text elements -->
   <h2 id="type-inline-text">Вбудовані текстові елементи</h2>
-  <h3>Виділення текста</h3>
+  <h3>Виділений текст</h3>
   <p>Для підсвічування текста, взятого з іншого контекста, використовуйте <code>&lt;mark&gt;</code>.</p>
   <div class="bs-example">
-    <p>Можна використовувати маркувальний тег <mark>highlight</mark> для текста.</p>
+    <p>Можна використовувати тег mark щоб <mark>підсвітити</mark> текст.</p>
   </div>
 {% highlight html %}
-Можна використовувати маркувальний тег <mark>highlight</mark> для текста.
+<p>Можна використовувати тег mark щоб <mark>підсвітити</mark> текст.</p>
 {% endhighlight %}
 
 
   <h3>Видалений текст</h3>
   <p>Щоб показати блок текста, який позначено як видалений, використовуйте тег <code>&lt;del&gt;</code>.</p>
   <div class="bs-example">
-    <p><del>Цей рядок текста позначено як видалений текст.</del></p>
+    <p><del>Цей рядок з текстом позначено як видалений текст.</del></p>
   </div>
 {% highlight html %}
-<del>Цей рядок текста позначено як видалений текст.</del>
+<del>Цей рядок з текстом позначено як видалений текст.</del>
 {% endhighlight %}
 
   <h3>Закреслений текст</h3>
   <p>Щоб показати блок текста, який позначено як неактуальний, використовуйте тег <code>&lt;s&gt;</code>.</p>
   <div class="bs-example">
-    <p><s>Цей рядок текста позначено як неактуальний текст.</s></p>
+    <p><s>Цей рядок з текстом позначено як неактуальний текст.</s></p>
   </div>
 {% highlight html %}
-<s>Цей рядок текста позначено як неактуальний текст.</s>
+<s>Цей рядок з текстом позначено як неактуальний текст.</s>
 {% endhighlight %}
 
   <h3>Вставлений текст</h3>
   <p>Щоб показати блок текста, який позначено як додатковий, використовуйте тег <code>&lt;ins&gt;</code>.</p>
   <div class="bs-example">
-    <p><ins>Цей рядок текста позначено як додатковий текст.</ins></p>
+    <p><ins>Цей рядок з текстом позначено як додатковий текст.</ins></p>
   </div>
 {% highlight html %}
-<ins>Цей рядок текста позначено як додатковий текст.</ins>
+<ins>Цей рядок з текстом позначено як додатковий текст.</ins>
 {% endhighlight %}
 
   <h3>Підкреслений текст</h3>
   <p>Щоб підкреслити текст використовуйте тег <code>&lt;u&gt;</code>.</p>
   <div class="bs-example">
-    <p><u>Цей рядок текста показуватиметься як підкреслений текст</u></p>
+    <p><u>Цей рядок з текстом показуватиметься як підкреслений текст</u></p>
   </div>
 {% highlight html %}
-<u>Цей рядок текста показуватиметься як підкреслений текст</u>
+<u>Цей рядок з текстом показуватиметься як підкреслений текст</u>
 {% endhighlight %}
 
   <p>Використовуйте HTML-теги за промовчанням для візуального виділення, поєднуючи їх з легкими стилями.</p>
@@ -158,10 +158,10 @@
   <p>Щоб зменшити акцентування рядка або блока текста, використовуйте тег <code>&lt;small&gt;</code>, який встановлює розмір текста у 85% від батьківського стилю. Елементи в заголовку мають свій власний шрифт <code>font-size</code> щоб вкладати елементи <code>&lt;small&gt;</code>.</p>
   <p>Як альтернативу, ви можете використовувати вбудований елемент з класом <code>.small</code> замість <code>&lt;small&gt;</code>.</p>
   <div class="bs-example">
-    <p><small>Цей рядок текста показуватиметься як дрібний текст.</small></p>
+    <p><small>Цей рядок з текстом показуватиметься як дрібний текст.</small></p>
   </div>
 {% highlight html %}
-<small>Цей рядок текста показуватиметься як дрібний текст.</small>
+<small>Цей рядок з текстом показуватиметься як дрібний текст.</small>
 {% endhighlight %}
 
 

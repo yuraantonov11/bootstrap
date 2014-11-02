@@ -2,40 +2,40 @@
   <h1 id="popovers" class="page-header">Інформери (Popovers) <small>popover.js</small></h1>
 
   <h2 id="popovers-examples">Приклади</h2>
-  <p>Add small overlays of content, like those on the iPad, to any element for housing secondary information.</p>
-  <p>Popovers whose both title and content are zero-length are never displayed.</p>
+  <p>Додайте невеличкі накладки вмісту, на зразок тих, які показуються в iPad, до будь-яких елементів, для розміщення додаткової інформації.</p>
+  <p>Інформери, які мають нульову довжину назви (title) та вмісту ніколи не показуються.</p>
 
   <div class="bs-callout bs-callout-danger">
-    <h4>Plugin dependency</h4>
-    <p>Popovers require the <a href="#tooltips">tooltip plugin</a> to be included in your version of Bootstrap.</p>
+    <h4>Залежність від плагінів</h4>
+    <p>Інформери потребують підключення <a href="#tooltips">плагіну підказок</a> у вашій версії Bootstrap.</p>
   </div>
   <div class="bs-callout bs-callout-danger">
-    <h4>Opt-in functionality</h4>
-    <p>For performance reasons, the Tooltip and Popover data-apis are opt-in, meaning <strong>you must initialize them yourself</strong>.</p>
+    <h4>Вибіркова функціональність</h4>
+    <p>Для покращення продуктивності, доступ до даних Підказок та Інформерів є вибірковим, тобто <strong>ви повинні ініціалізувати їх власноруч</strong>.</p>
   </div>
   <div class="bs-callout bs-callout-warning">
-    <h4>Popovers in button groups and input groups require special setting</h4>
-    <p>When using popovers on elements within a <code>.btn-group</code> or an <code>.input-group</code>, you'll have to specify the option <code>container: 'body'</code> (documented below) to avoid unwanted side effects (such as the element growing wider and/or losing its rounded corners when the popover is triggered).</p>
+    <h4>Інформери в групах кнопок та групах input потребують спеціальних налаштувань</h4>
+    <p>При використанні інформерів в межах елементів <code>.btn-group</code> або в <code>.input-group</code>, ви повинні вказувати параметри <code>container: 'body'</code> (документація нижче), щоб уникнути небажаних побічних ефектів (наприклад, коли елемент стає ширшим та/або коли втрачається закругленння кутів, при виклику інформерів).</p>
   </div>
   <div class="bs-callout bs-callout-warning">
-    <h4>Don't try to show popovers on hidden elements</h4>
-    <p>Invoking <code>$(...).popover('show')</code> when the target element is <code>display: none;</code> will cause the popover to be incorrectly positioned.</p>
+    <h4>Не намагайтесь показувати інформери на прихованих елементах</h4>
+    <p>Виклик <code>$(...).popover('show')</code> тоді, коли цільовий елемент приховано, тобто коли <code>display: none;</code>, буде спричиняти неправильне позиціонування.</p>
   </div>
   <div class="bs-callout bs-callout-info">
-    <h4>Popovers on disabled elements require wrapper elements</h4>
-    <p>To add a popover to a <code>disabled</code> or <code>.disabled</code> element, put the element inside of a <code>&lt;div&gt;</code> and apply the popover to that <code>&lt;div&gt;</code> instead.</p>
+    <h4>Інформери на заблокованих елементах потребують обгортання</h4>
+    <p>Щоб додати підказку до елемента <code>disabled</code> або <code>.disabled</code>, вставте елемент в межі <code>&lt;div&gt;</code> та застосуйте підказку вже до цього <code>&lt;div&gt;</code>.</p>
   </div>
   <div class="bs-callout bs-callout-info">
-    <h4>Multiple-line links</h4>
-    <p>Sometimes you want to add a popover to a hyperlink that wraps multiple lines. The default behavior of the popover plugin is to center it horizontally and vertically. Add <code>white-space: nowrap;</code> to your anchors to avoid this.</p>
+    <h4>Багаторядкові лінки</h4>
+    <p>Інколи вам хочеться додавати підказки до гіперпосилань, які переносяться на декілька рядків. За промовчанням, плагін буде центрувати їх горизонтально та вертикально. Щоб цього уникнути, додайте атрибут <code>white-space: nowrap;</code> до ваших лінків.</p>
   </div>
 
-  <h3>Static popover</h3>
-  <p>Four options are available: top, right, bottom, and left aligned.</p>
+  <h3>Статичні інформери</h3>
+  <p>Доступні чотири варіанти інформерів: вгорі, праворуч, внизу, та ліворуч.</p>
   <div class="bs-example bs-example-popover">
     <div class="popover top">
       <div class="arrow"></div>
-      <h3 class="popover-title">Popover top</h3>
+      <h3 class="popover-title">Інформер вгорі</h3>
       <div class="popover-content">
         <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
       </div>
@@ -43,7 +43,7 @@
 
     <div class="popover right">
       <div class="arrow"></div>
-      <h3 class="popover-title">Popover right</h3>
+      <h3 class="popover-title">Інформер праворуч</h3>
       <div class="popover-content">
         <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
       </div>
@@ -51,7 +51,7 @@
 
     <div class="popover bottom">
       <div class="arrow"></div>
-      <h3 class="popover-title">Popover bottom</h3>
+      <h3 class="popover-title">Інформер внизу</h3>
 
       <div class="popover-content">
         <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
@@ -60,7 +60,7 @@
 
     <div class="popover left">
       <div class="arrow"></div>
-      <h3 class="popover-title">Popover left</h3>
+      <h3 class="popover-title">Інформер ліворуч</h3>
       <div class="popover-content">
         <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
       </div>
@@ -69,70 +69,70 @@
     <div class="clearfix"></div>
   </div>
 
-  <h3>Live demo</h3>
+  <h3>Живе демо</h3>
   <div class="bs-example" style="padding-bottom: 24px;">
-    <button type="button" class="btn btn-lg btn-danger bs-docs-popover" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+    <button type="button" class="btn btn-lg btn-danger bs-docs-popover" data-toggle="popover" title="Назва інформера" data-content="А тут якийсь фантастичний вміст. Це є дуже привабливим, правда ж?">Клікніть щоб переключити інформер</button>
   </div>
 {% highlight html %}
-<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Назва інформера" data-content="А тут якийсь фантастичний вміст. Це є дуже привабливим, правда ж?">Клікніть щоб переключити інформер</button>
 {% endhighlight %}
 
-  <h4>Four directions</h4>
+  <h4>Чотири напрямки</h4>
   <div class="bs-example popover-demo">
     <div class="bs-example-popovers">
       <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-        Popover on left
+        Інформер ліворуч
       </button>
       <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-        Popover on top
+        Інформер вгорі
       </button>
       <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-        Popover on bottom
+        Інформер внизу
       </button>
       <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-        Popover on right
+        Інформер праворуч
       </button>
     </div>
   </div><!-- /example -->
 {% highlight html %}
 <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Popover on left
+  Інформер ліворуч
 </button>
 
 <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Popover on top
+  Інформер вгорі
 </button>
 
 <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
 sagittis lacus vel augue laoreet rutrum faucibus.">
-  Popover on bottom
+  Інформер внизу
 </button>
 
 <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-  Popover on right
+  Інформер праворуч
 </button>
 {% endhighlight %}
 
-  <h4>Dismiss on next click</h4>
-  <p>Use the <code>focus</code> trigger to dismiss popovers on the next click that the user makes.</p>
+  <h4>Закриття інформера при кліку за його межами</h4>
+  <p>Використовуйте чинник <code>focus</code> щоб закрити інформер при кліку за його межами.</p>
   <div class="bs-callout bs-callout-danger">
-    <h4>Specific markup required for dismiss-on-next-click</h4>
-    <p>For proper cross-browser and cross-platform behavior, you must use the <code>&lt;a&gt;</code> tag, <i>not</i> the <code>&lt;button&gt;</code> tag, and you also must include a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#tabindex"><code>tabindex</code></a> attribute.</p>
+    <h4>Необхідна спеціальна розмітка для закриття інформера при кліку за його межами</h4>
+    <p>Для правильної крос-браузерної та крос-платформеної поведінки, ви мусите використовувати тег <code>&lt;a&gt;</code>, а <i>не</i> тег <code>&lt;button&gt;</code>, окрім цього потрібно включати атрибут <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#tabindex"><code>tabindex</code></a>.</p>
   </div>
   <div class="bs-example" style="padding-bottom: 24px;">
-    <a href="#" tabindex="0" class="btn btn-lg btn-danger bs-docs-popover" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+    <a href="#" tabindex="0" class="btn btn-lg btn-danger bs-docs-popover" role="button" data-toggle="popover" data-trigger="focus" title="Інформер із закриттям при втраті фокуса" data-content="А тут якийсь фантастичний вміст. Це є дуже привабливим, правда ж?">Інформер із закриттям при втраті фокуса</a>
   </div>
 {% highlight html %}
-<a href="#" tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+<a href="#" tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Інформер із закриттям при втраті фокуса" data-content="А тут якийсь фантастичний вміст. Це є дуже привабливим, правда ж?">Інформер із закриттям при втраті фокуса</a>
 {% endhighlight %}
 
 
   <h2 id="popovers-usage">Використання</h2>
-  <p>Enable popovers via JavaScript:</p>
-  {% highlight js %}$('#example').popover(options){% endhighlight %}
+  <p>Включіть інформери через JavaScript:</p>
+  {% highlight js %}$('#example').popover(параметри){% endhighlight %}
 
   <h3>Параметри</h3>
-  <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-animation=""</code>.</p>
+  <p>Параметри можуть передаватись через атрибути даних або JavaScript. Для атрибутів даних, додайте приставку з назвою атрибута до <code>data-</code>, як у прикладі: <code>data-animation=""</code>.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
@@ -148,14 +148,14 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
           <td>animation</td>
           <td>boolean</td>
           <td>true</td>
-          <td>Apply a CSS fade transition to the popover</td>
+          <td>застосовує CSS для плавного переходу до інформера</td>
         </tr>
         <tr>
           <td>container</td>
           <td>string | false</td>
           <td>false</td>
           <td>
-            <p>Appends the popover to a specific element. Example: <code>container: 'body'</code>. This option is particularly useful in that it allows you to position the popover in the flow of the document near the triggering element - which will prevent the popover from floating away from the triggering element during a window resize.</p>
+            <p>Зазначається елемент, до якого буде додано інформер. Наприклад: <code>container: 'body'</code>. Цей параметр особливо корисний тим, що дозволяє позиціонувати інформер у потоці документа біля викликаючого елемента - тим самим запобігаючи вспливанню біля викликаючого елемента, під час зміни розміру вікна.</p>
           </td>
         </tr>
         <tr>
@@ -163,8 +163,8 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
           <td>string | function</td>
           <td>''</td>
           <td>
-            <p>Default content value if <code>data-content</code> attribute isn't present.</p>
-            <p>If a function is given, it will be called with its <code>this</code> reference set to the element that the popover is attached to.</p>
+            <p>значення вмісту за промовчанням, якщо атрибут <code>data-content</code> не представлено.</p>
+            <p>Якщо передається функція, вона буде викликатись з її посиланням <code>this</code> встановленим для елемента, до якого прикріплено інформер.</p>
           </td>
         </tr>
         <tr>
@@ -172,42 +172,43 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
           <td>number | object</td>
           <td>0</td>
           <td>
-           <p>Delay showing and hiding the popover (ms) - does not apply to manual trigger type</p>
-           <p>If a number is supplied, delay is applied to both hide/show</p>
-           <p>Object structure is: <code>delay: { "show": 500, "hide": 100 }</code></p>
+           <p>Затримка показу та відображення інформерів (ms) – не застосовується для ручного типу виклику.</p>
+           <p>Якщо зазначено число, затримка застосовуватиметься і до приховування, і до відображення.</p>
+           <p>Об'єкт має таку структуру: <code>delay: { "show": 500, "hide": 100 }</code></p>
           </td>
         </tr>
         <tr>
           <td>html</td>
           <td>boolean</td>
           <td>false</td>
-          <td>Insert HTML into the popover. If false, jQuery's <code>text</code> method will be used to insert content into the DOM. Use text if you're worried about XSS attacks.</td>
+          <td>Вставляє HTML в інформер. При значенні false, буде використовуватись метод jQuery <code>text</code> для вставки вмісту в DOM. Використовуйте текст, якщо побоютесь XSS атаки.</td>
         </tr>
         <tr>
           <td>placement</td>
           <td>string | function</td>
           <td>'right'</td>
           <td>
-            <p>How to position the popover - top | bottom | left | right | auto.<br>When "auto" is specified, it will dynamically reorient the popover. For example, if placement is "auto left", the popover will display to the left when possible, otherwise it will display right.</p>
-            <p>When a function is used to determine the placement, it is called with the popover DOM node as its first argument and the triggering element DOM node as its second. The <code>this</code> context is set to the popover instance.</p>
+            <p>Як позиціонувати інформер - top | bottom | left | right | auto.
+При вказуванні "auto", інформер буде динамічно переорієнтовуватись. Нариклад, якщо позиціонування зазначено як "auto left", інформер буде показуватись ліворуч, якщо це можливо, і праворуч – у противному разі.</p>
+            <p>Коли через цей параметр передається саме функція, то в якості першого аргумента їй передається DOM-node інформера (тобто фрагмент HTML), а в якості другого - елемент, на якому було викликано цей інформер. Встановлюється контекст <code>this</code> для об'єкта інформера.</p>
           </td>
         </tr>
         <tr>
           <td>selector</td>
           <td>string</td>
           <td>false</td>
-          <td>If a selector is provided, popover objects will be delegated to the specified targets. In practice, this is used to enable dynamic HTML content to have popovers added. See <a href="https://github.com/twbs/bootstrap/issues/4215">this</a> and <a href="http://jsbin.com/zopod/1/edit">an informative example</a>.</td>
+          <td>Якщо селектор надано, об'єкт інформера буде делеговано для зазначеного цільового елемента. На практиці, це використовується щоб дозволити динамічно додавати HTML-вміст для інформерів. Прогляньте <a href="https://github.com/twbs/bootstrap/issues/4215">це</a> та <a href="http://jsbin.com/zopod/1/edit">цей приклад</a>.</td>
         </tr>
         <tr>
           <td>template</td>
           <td>string</td>
           <td><code>'&lt;div class="popover" role="tooltip"&gt;&lt;div class="arrow"&gt;&lt;/div&gt;&lt;h3 class="popover-title"&gt;&lt;/h3&gt;&lt;div class="popover-content"&gt;&lt;/div&gt;&lt;/div&gt;'</code></td>
           <td>
-            <p>Base HTML to use when creating the popover.</p>
-            <p>The popover's <code>title</code> will be injected into the <code>.popover-title</code>.</p>
-            <p>The popover's <code>content</code> will be injected into the <code>.popover-content</code>.</p>
-            <p><code>.arrow</code> will become the popover's arrow.</p>
-            <p>The outermost wrapper element should have the <code>.popover</code> class.</p>
+            <p>База HTML, що використовується коли створюється інформер.</p>
+            <p>Назва інформера, тобто <code>title</code> буде вставлятись в <code>.popover-title</code>.</p>
+            <p>Вміст інформера, тобто <code>content</code> буде вставлятись в <code>.popover-content</code>.</p>
+            <p><code>.arrow</code> стане стрілкою інформері.</p>
+            <p>Найбільш зовнішня обгортка елемента повинна мати клас <code>.popover</code>.</p>
           </td>
         </tr>
         <tr>
@@ -215,50 +216,50 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
           <td>string | function</td>
           <td>''</td>
           <td>
-            <p>Default title value if <code>title</code> attribute isn't present.</p>
-            <p>If a function is given, it will be called with its <code>this</code> reference set to the element that the popover is attached to.</p>
+            <p>Це значення використовується за промовчанням, якщо атрибут <code>title</code> не представлено.</p>
+            <p>Якщо передається функція, вона буде викликатись з її посиланням <code>this</code> встановленим для елемента, до якого прикріплено інформер.</p>
           </td>
         </tr>
         <tr>
           <td>trigger</td>
           <td>string</td>
           <td>'click'</td>
-          <td>How popover is triggered - click | hover | focus | manual. You may pass multiple triggers; separate them with a space.</td>
+          <td>Чинник, через який інформер спрацьовує - click | hover | focus | manual. Ви можете передавати декілька чинників; розділіть їх пробілом.</td>
         </tr>
         <tr>
           <td>viewport</td>
           <td>string | object</td>
           <td>{ selector: 'body', padding: 0 }</td>
           <td>
-            <p>Keeps the popover within the bounds of this element. Example: <code>viewport: '#viewport'</code> or <code>{ "selector": "#viewport", "padding": 0 }</code></p>
+            <p>Утримує інформер в межах цього елемента. Наприклад:  <code>viewport: '#viewport'</code> або <code>{ "selector": "#viewport", "padding": 0 }</code></p>
           </td>
        </tr>
       </tbody>
     </table>
   </div><!-- /.table-responsive -->
   <div class="bs-callout bs-callout-info">
-    <h4>Data attributes for individual popovers</h4>
-    <p>Options for individual popovers can alternatively be specified through the use of data attributes, as explained above.</p>
+    <h4>Атрибути даних для індивідуальних інформерів</h4>
+    <p>Параметри для індивідуальних інформерів ще можете зазначати через атрибути даних, як пояснено вище.</p>
   </div>
 
   <h3>Методи</h3>
-  <h4>$().popover(options)</h4>
-  <p>Initializes popovers for an element collection.</p>
+  <h4>$().popover(параметри)</h4>
+  <p>Закріплює обробник інформера за набором елементів.</p>
 
   <h4>.popover('show')</h4>
-  <p>Reveals an element's popover. Popovers whose both title and content are zero-length are never displayed.</p>
+  <p>Показує інформер елемента. Інформери з нульовою довжиною назви, ніколи не показуються.</p>
   {% highlight js %}$('#element').popover('show'){% endhighlight %}
 
   <h4>.popover('hide')</h4>
-  <p>Hides an element's popover.</p>
+  <p>Приховує інформер елемента.</p>
   {% highlight js %}$('#element').popover('hide'){% endhighlight %}
 
   <h4>.popover('toggle')</h4>
-  <p>Toggles an element's popover.</p>
+  <p>Переключає інформер елемента.</p>
   {% highlight js %}$('#element').popover('toggle'){% endhighlight %}
 
   <h4>.popover('destroy')</h4>
-  <p>Hides and destroys an element's popover.</p>
+  <p>Приховує та видаляє інформер елемента.</p>
   {% highlight js %}$('#element').popover('destroy'){% endhighlight %}
   <h3>Події</h3>
   <div class="table-responsive">
@@ -276,7 +277,7 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
         </tr>
         <tr>
           <td>shown.bs.popover</td>
-          <td>This event is fired when the popover has been made visible to the user (will wait for CSS transitions to complete).</td>
+          <td>Ця подіє спрацьовує, коли popover буде відображена для користувача (при цьому очікуватиметься завершення переходів CSS)..</td>
         </tr>
         <tr>
           <td>hide.bs.popover</td>
@@ -284,14 +285,14 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
         </tr>
         <tr>
           <td>hidden.bs.popover</td>
-          <td>This event is fired when the popover has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+          <td>Ця подія спрацьовує, коли popover завершить приховування від користувача (при цьому очікуватиметься завершення переходів CSS)..</td>
         </tr>
       </tbody>
     </table>
   </div><!-- /.table-responsive -->
 {% highlight js %}
 $('#myPopover').on('hidden.bs.popover', function () {
-  // do something…
+  // напишіть тут щось…
 })
 {% endhighlight %}
 </div>

@@ -1,7 +1,7 @@
 <div class="bs-docs-section">
   <h1 id="carousel" class="page-header">Карусель <small>carousel.js</small></h1>
 
-  <p>A slideshow component for cycling through elemnts, like a carousel. <strong>Nested carousels are not supported.</strong></p>
+  <p>Компонент для показу слайдів в циклі елементів, схожий на карусель. <strong>Вкладені каруселі не підтримуються.</strong></p>
 
   <h2 id="carousel-examples">Приклади</h2>
   <div class="bs-example">
@@ -13,22 +13,22 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img data-src="holder.js/900x500/auto/#777:#555/text:First slide" alt="First slide">
+          <img data-src="holder.js/900x500/auto/#777:#555/text:Перший слайд" alt="Перший слайд">
         </div>
         <div class="item">
-          <img data-src="holder.js/900x500/auto/#666:#444/text:Second slide" alt="Second slide">
+          <img data-src="holder.js/900x500/auto/#666:#444/text:Другий слайд" alt="Другий слайд">
         </div>
         <div class="item">
-          <img data-src="holder.js/900x500/auto/#555:#333/text:Third slide" alt="Third slide">
+          <img data-src="holder.js/900x500/auto/#555:#333/text:Третій слайд" alt="Третій слайд">
         </div>
       </div>
       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Previous</span>
+        <span class="sr-only">Попередній</span>
       </a>
       <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Next</span>
+        <span class="sr-only">Наступний</span>
       </a>
     </div>
   </div><!-- /example -->
@@ -41,7 +41,7 @@
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
   </ol>
 
-  <!-- Wrapper for slides -->
+  <!-- Обгортка для слайдів -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <img src="..." alt="...">
@@ -58,25 +58,25 @@
     ...
   </div>
 
-  <!-- Controls -->
+  <!-- Управління -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
+    <span class="sr-only">Попередній</span>
   </a>
   <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
+    <span class="sr-only">Наступний</span>
   </a>
 </div>
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-warning" id="callout-carousel-transitions">
-    <h4>Transition animations not supported in Internet Explorer 8 &amp; 9</h4>
-    <p>Bootstrap exclusively uses CSS3 for its animations, but Internet Explorer 8 &amp; 9 don't support the necessary CSS properties. Thus, there are no slide transition animations when using these browsers. We have intentionally decided not to include jQuery-based fallbacks for the transitions.</p>
+    <h4>Анімація переходів не підтримується в Internet Explorer 8 та 9</h4>
+    <p>Bootstrap для цієї анімації використовує виключно CSS3, але Internet Explorer 8 та 9 не підтримують необхідних властивостей CSS. Таким чином, у цих браузерах немає плавних переходів анімації. Ми свідомо вирішили не включати базованих на jQuery fallbacks для переходів.</p>
   </div>
 
-  <h3>Optional captions</h3>
-  <p>Add captions to your slides easily with the <code>.carousel-caption</code> element within any <code>.item</code>. Place just about any optional HTML within there and it will be automatically aligned and formatted.</p>
+  <h3>Додатковий підпис</h3>
+  <p>Додавати підпис до ваших слайдів стає легкою справою завдяки елемента <code>.carousel-caption</code> будь-де в середені <code>.item</code>. Це місце майже для будь-якого додаткового HTML, причому вміст буде автоматично вирівняно та форматовано.</p>
   <div class="bs-example">
     <div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -86,34 +86,34 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img data-src="holder.js/900x500/auto/#777:#777" alt="First slide image">
+          <img data-src="holder.js/900x500/auto/#777:#777" alt="Перший слайд image">
           <div class="carousel-caption">
-            <h3>First slide label</h3>
+            <h3>Перший ярлик слайда</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </div>
         </div>
         <div class="item">
-          <img data-src="holder.js/900x500/auto/#666:#666" alt="Second slide image">
+          <img data-src="holder.js/900x500/auto/#666:#666" alt="Другий слайд image">
           <div class="carousel-caption">
-            <h3>Second slide label</h3>
+            <h3>Другий ярлик слайда</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
         <div class="item">
-          <img data-src="holder.js/900x500/auto/#555:#5555" alt="Third slide image">
+          <img data-src="holder.js/900x500/auto/#555:#5555" alt="Третій слайд image">
           <div class="carousel-caption">
-            <h3>Third slide label</h3>
+            <h3>Третій ярлик слайда</h3>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
           </div>
         </div>
       </div>
       <a class="left carousel-control" href="#carousel-example-captions" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Previous</span>
+        <span class="sr-only">Попередній</span>
       </a>
       <a class="right carousel-control" href="#carousel-example-captions" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Next</span>
+        <span class="sr-only">Наступний</span>
       </a>
     </div>
   </div><!-- /example -->
@@ -128,27 +128,27 @@
 {% endhighlight %}
 
   <div class="bs-callout bs-callout-danger">
-    <h4>Accessibility issue</h4>
-    <p>The carousel component is generally not compliant with accessibility standards. If you need to be compliant, please consider other options for presenting your content.</p>
+    <h4>Проблема доступності</h4>
+    <p>Компонент каруселі в основному не сумісний зі стандартами доступності. Якщо вам потрібна сумісність, розгляньте будь-ласка інші параметри для представлення вашого вмісту.</p>
   </div>
 
   <h2 id="carousel-usage">Використання</h2>
 
-  <h3>Multiple carousels</h3>
-  <p>Carousels require the use of an <code>id</code> on the outermost container (the <code>.carousel</code>) for carousel controls to function properly. When adding multiple carousels, or when changing a carousel's <code>id</code>, be sure to update the relevant controls.</p>
+  <h3>Кілька каруселей</h3>
+  <p>Каруселі вимагають використання <code>id</code> на найбільш зовнішньому контейнері (елемента з класом <code>.carousel</code>) для їх правильної функціональності. При додаванні декількох каруселей, або при зміні <code>id</code> каруселі, переконайтесь, що оновили відповідні елементи управління.</p>
 
   <h3>Через атрибути даних</h3>
-  <p>Use data attributes to easily control the position of the carousel. <code>data-slide</code> accepts the keywords <code>prev</code> or <code>next</code>, which alters the slide position relative to its current position. Alternatively, use <code>data-slide-to</code> to pass a raw slide index to the carousel <code>data-slide-to="2"</code>, which shifts the slide position to a particular index beginning with <code>0</code>.</p>
-  <p>The <code>data-ride="carousel"</code> attribute is used to mark a carousel as animating starting at page load. <strong class="text-danger">It cannot be used in combination with (redundant and unnecessary) explicit JavaScript initialization of the same carousel.</strong></p>
+  <p>Використовуйте атрибути даних, щоб легко контролювати позиціонування каруселі. <code>data-slide</code> приймає ключові слова <code>prev</code> або <code>next</code>, котрі змінюють позицію слайду відносно його поточної позиції. Також ви можете використовувати <code>data-slide-to</code> ля передачі вихідного індексу слайду для каруселі <code>data-slide-to="2"</code>, котрий зміщує позицію слайду до певного індексу починаючи від <code>0</code>.</p>
+  <p>Атрибут <code>data-ride="carousel"</code> використовується для позначення каруселі як анімації, на початку завантаження сторінки. <strong class="text-danger">Його не можна використовувати в комбінації з (надлишковою та непотрібною) явною ініціалізацією JavaScript такої ж каруселі.</strong></p>
 
   <h3>Через JavaScript</h3>
-  <p>Call carousel manually with:</p>
+  <p>Викликайте карусель вручну через:</p>
 {% highlight js %}
 $('.carousel').carousel()
 {% endhighlight %}
 
   <h3>Параметри</h3>
-  <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-interval=""</code>.</p>
+  <p>Параметри можуть передаватись через атрибути даних або JavaScript. Для атрибутів даних, додайте приставку назви параметра до <code>data-</code>, як у прикладі: <code>data-interval=""</code>.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
@@ -164,25 +164,25 @@ $('.carousel').carousel()
          <td>interval</td>
          <td>number</td>
          <td>5000</td>
-         <td>The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.</td>
+         <td>Кількість мілісекунд для затримки між автоматичним зацикленням елементів. Якщо в якості параметра передано false, карусель не буде автоматично зациклюватись.</td>
        </tr>
        <tr>
          <td>pause</td>
          <td>string</td>
          <td>"hover"</td>
-         <td>Pauses the cycling of the carousel on mouseenter and resumes the cycling of the carousel on mouseleave.</td>
+         <td>Пауза в прокручуванні каруселі при наведенні курсору (mouseenter) та продовження прокрутки, коли курсор миші забирають (mouseleave) з каруселі.</td>
        </tr>
        <tr>
          <td>wrap</td>
          <td>boolean</td>
          <td>true</td>
-         <td>Whether the carousel should cycle continuously or have hard stops.</td>
+         <td>Чи повинна карусель зациклено прокручуватись, чи повинна жорстко зупинитись.</td>
        </tr>
        <tr>
          <td>keyboard</td>
          <td>boolean</td>
          <td>true</td>
-         <td>Whether the carousel should react to keyboard events.</td>
+         <td>Чи повинна карусель реагувати на події викликані клавіатурою.</td>
        </tr>
       </tbody>
     </table>
@@ -191,7 +191,7 @@ $('.carousel').carousel()
   <h3>Методи</h3>
 
   <h4>.carousel(options)</h4>
-  <p>Initializes the carousel with an optional options <code>object</code> and starts cycling through items.</p>
+  <p>Ініціалізує карусель з необов'язковим параметром <code>object</code> та починає цикл прокручувань елементів.</p>
 {% highlight js %}
 $('.carousel').carousel({
   interval: 2000
@@ -199,27 +199,27 @@ $('.carousel').carousel({
 {% endhighlight %}
 
   <h4>.carousel('cycle')</h4>
-  <p>Cycles through the carousel items from left to right.</p>
+  <p>Прокручування елементів каруселі зліва на право.</p>
 
   <h4>.carousel('pause')</h4>
-  <p>Stops the carousel from cycling through items.</p>
+  <p>Припинення прокручування елементів каруселі.</p>
 
 
   <h4>.carousel(number)</h4>
-  <p>Cycles the carousel to a particular frame (0 based, similar to an array).</p>
+  <p>Прокручування каруселі до певного кадру (починаючи з 0, подібно до масиву).</p>
 
   <h4>.carousel('prev')</h4>
-  <p>Cycles to the previous item.</p>
+  <p>Перехід до попереднього елемента.</p>
 
   <h4>.carousel('next')</h4>
-  <p>Cycles to the next item.</p>
+  <p>Перехід до наступного елемента.</p>
 
   <h3>Події</h3>
-  <p>Bootstrap's carousel class exposes two events for hooking into carousel functionality.</p>
-  <p>Both events have the following additional properties:</p>
+  <p>Клас Bootstrap для каруселі пропонує дві події для вставки в функціональність каруселі.</p>
+  <p>Обідві події мають наступні додаткові властивості:</p>
   <ul>
-    <li><code>direction</code>: The direction in which the carousel is sliding (either <code>"left"</code> or <code>"right"</code>).</li>
-    <li><code>relatedTarget</code>: The DOM element that is being slid into place as the active item.</li>
+    <li><code>direction</code>: Напрямок, в якому карусель показує слайди (може бути або <code>"left"</code>, або <code>"right"</code>).</li>
+    <li><code>relatedTarget</code>: Елемент DOM, який став на місце активного пункту слайда.</li>
   </ul>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
@@ -232,18 +232,18 @@ $('.carousel').carousel({
       <tbody>
        <tr>
          <td>slide.bs.carousel</td>
-         <td>This event fires immediately when the <code>slide</code> instance method is invoked.</td>
+         <td>Ця подія спрацьовує під час виклику методу <code>slide</code>.</td>
        </tr>
        <tr>
          <td>slid.bs.carousel</td>
-         <td>This event is fired when the carousel has completed its slide transition.</td>
+         <td>Ця подія спрацьовує, коли карусель завершить перехід до слайду.</td>
        </tr>
       </tbody>
     </table>
   </div><!-- /.table-responsive -->
 {% highlight js %}
 $('#myCarousel').on('slide.bs.carousel', function () {
-  // do something…
+  // напишіть щось тут…
 })
 {% endhighlight %}
 </div>
