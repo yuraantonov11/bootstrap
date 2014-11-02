@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Customize and download
+title: Підбір та завантаження
 slug: customize
-lead: Customize Bootstrap's components, Less variables, and jQuery plugins to get your very own version.
+lead: Виберіть під свої потреби компоненти Bootstrap, змінні LESS, та плагіни jQuery, щоб отримати власну версію збірки.
 ---
 
 
@@ -28,181 +28,181 @@ lead: Customize Bootstrap's components, Less variables, and jQuery plugins to ge
 <div class="bs-docs-section bs-customizer-import">
   <div id="import-drop-target" class="bs-dropzone">
     <h2>✍</h2>
-    <p class="lead">Have an existing configuration? Upload your <code>config.json</code> to import it.</p>
-    <p>Drag and drop here, or <label id="import-manual-trigger" class="btn-link">manually upload<input type="file" id="import-file-select" class="hidden"></label>.</p>
+    <p class="lead">Вже маєте конфігурацію? Імпортуйте ваш <code>config.json</code>.</p>
+    <p>Перетягніть файл сюди, або <label id="import-manual-trigger" class="btn-link">завантажте вручну<input type="file" id="import-file-select" class="hidden"></label>.</p>
     <hr>
-    <p><strong>Don't have one?</strong> That's okay—just start customizing the fields below.</p>
+    <p><strong>Не маєте такого?</strong> Нічого страшного — просто починайте підбирати потрібні пункти нижче.</p>
   </div>
 </div><!-- /import -->
 
 <form class="bs-customizer" role="form">
   <div class="bs-docs-section" id="less-section">
-    <button class="btn btn-default toggle" type="button">Toggle all</button>
-    <h1 id="less" class="page-header">Less files</h1>
+    <button class="btn btn-default toggle" type="button">Переключити всі</button>
+    <h1 id="less" class="page-header">Файли Less</h1>
 
-    <p class="lead">Choose which Less files to compile into your custom build of Bootstrap. Not sure which files to use? Read through the <a href="../css/">CSS</a> and <a href="../components/">Components</a> pages in the docs.</p>
+    <p class="lead">Виберіть котрі з файлів LESS будуть включені у вашу власну збірку Bootstrap. Не впевнені, які файли використовувати? Ознайомтесь з документацією стосовно <a href="../css/">CSS</a> та <a href="../components/">Компонентів</a>.</p>
 
     <div class="row">
       <div class="col-xs-6 col-sm-4">
-        <h3>Common CSS</h3>
+        <h3>Загальні CSS</h3>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="print.less">
-            Print media styles
+            Стилі для друку
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="type.less">
-            Typography
+            Типографія
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="code.less">
-            Code
+            Код
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="grid.less">
-            Grid system
+            Система сітки
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="tables.less">
-            Tables
+            Таблиці
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="forms.less" data-dependents="navbar.less,input-groups.less">
-            Forms
+            Форми
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="buttons.less" data-dependents="button-groups.less">
-            Buttons
+            Кнопки
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="responsive-utilities.less">
-            Responsive utilities
+            Утиліти чутливості
           </label>
         </div>
       </div><!-- .col-xs-6 .col-sm-4 -->
 
       <div class="col-xs-6 col-sm-4">
-        <h3>Components</h3>
+        <h3>Компоненти</h3>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="glyphicons.less">
-            Glyphicons
+            Glyphicons (Іконки)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="button-groups.less" data-dependencies="buttons.less">
-            Button groups
+            Button groups (Групи кнопок)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="input-groups.less" data-dependencies="forms.less">
-            Input groups
+            Input groups (Група input)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="navs.less" data-dependents="navbar.less">
-            Navs
+            Navs (Навігаційні елементи)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="navbar.less" data-dependencies="forms.less,navs.less">
-            Navbar
+            Navbar (Навігаційна панель)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="breadcrumbs.less">
-            Breadcrumbs
+            Breadcrumbs (Навігаційний маршрут)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="pagination.less">
-            Pagination
+            Pagination (Посторінкова навігація)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="pager.less">
-            Pager
+            Pager (Пролистувач)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="labels.less">
-            Labels
+            Labels (Ярлики)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="badges.less">
-            Badges
+            Badges (Значки)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="jumbotron.less">
-            Jumbotron
+            Jumbotron (Широкий екран)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="thumbnails.less">
-            Thumbnails
+            Thumbnails (Ескізи)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="alerts.less">
-            Alerts
+            Alerts (Зауваження)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="progress-bars.less">
-            Progress bars
+            Progress bars (Шкала прогресу)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="media.less">
-            Media items
+            Media items (Медіа елементи)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="list-group.less">
-            List groups
+            List groups (Групи списків)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="panels.less">
-            Panels
+            Panels (Панелі)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="responsive-embed.less">
-            Responsive embed
+            Responsive embed (Вбудована чутливість)
           </label>
         </div>
         <div class="checkbox">
@@ -214,47 +214,47 @@ lead: Customize Bootstrap's components, Less variables, and jQuery plugins to ge
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="close.less">
-            Close icon
+            Close icon (Іконки закриття)
           </label>
         </div>
       </div><!-- .col-xs-6 .col-sm-4 -->
 
       <div class="col-xs-6 col-sm-4">
-        <h3>JavaScript components</h3>
+        <h3>Компоненти JavaScript</h3>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="component-animations.less">
-            Component animations (for JS)
+            Компоненти анімації (для JS)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="dropdowns.less">
-            Dropdowns
+            Dropdowns (Спадне меню)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="tooltip.less">
-            Tooltips
+            Tooltips (Підказки)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="popovers.less">
-            Popovers
+            Popovers (Інформери)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="modals.less">
-            Modals
+            Modals (Модалі)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="carousel.less">
-            Carousel
+            Carousel (Карусель)
           </label>
         </div>
       </div><!-- .col-xs-6 .col-sm-4 -->
@@ -262,59 +262,59 @@ lead: Customize Bootstrap's components, Less variables, and jQuery plugins to ge
   </div>
 
   <div class="bs-docs-section" id="plugin-section">
-    <button class="btn btn-default toggle" type="button">Toggle all</button>
-    <h1 id="plugins" class="page-header">jQuery plugins</h1>
+    <button class="btn btn-default toggle" type="button">Переключити всі</button>
+    <h1 id="plugins" class="page-header">Плагіни jQuery</h1>
 
-    <p class="lead">Choose which jQuery plugins should be included in your custom JavaScript files. Unsure what to include? Read the <a href="../javascript/">JavaScript</a> page in the docs.</p>
+    <p class="lead">Виберіть котрі з плагінів jQuery повинні включатись у вашу власну збірку файлів JavaScript. Не впевнені що саме включати? Прочитай документацію стосовно <a href="../javascript/">JavaScript</a>.</p>
     <div class="row">
       <div class="col-lg-6">
-        <h4>Linked to components</h4>
+        <h4>Пов'язане з компонентами</h4>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="alert.js">
-            Alert dismissal
+            Alert dismissal (Закриття зауважень)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="button.js">
-            Advanced buttons
+            Advanced buttons (Розширені кнопки)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="carousel.js">
-            Carousel functionality
+            Carousel functionality (Функціональність каруселі)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="dropdown.js">
-            Dropdowns
+            Dropdowns (Спадне меню)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="modal.js">
-            Modals
+            Modals (Модалі)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="tooltip.js">
-            Tooltips
+            Tooltips (Підказки)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="popover.js" data-dependencies="tooltip.js">
-            Popovers <small>(requires Tooltips)</small>
+            Popovers <small>(requires Tooltips)</small> Інформери <small>(потребують Підказок)</small>
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="tab.js">
-            Togglable tabs
+            Togglable tabs (Перехід по вкладкам)
           </label>
         </div>
       </div>
@@ -329,49 +329,49 @@ lead: Customize Bootstrap's components, Less variables, and jQuery plugins to ge
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="collapse.js">
-            Collapse
+            Collapse (Згортання)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="scrollspy.js">
-            Scrollspy
+            Scrollspy (Спостерігач прокрутки)
           </label>
         </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" checked value="transition.js">
-            Transitions <small>(required for any kind of animation)</small>
+            Transitions <small>(необхідне для будь-якої анімації)</small>
           </label>
         </div>
       </div>
     </div>
 
     <div class="bs-callout bs-callout-info">
-      <h4>Produces two files</h4>
-      <p>All checked plugins will be compiled into a readable <code>bootstrap.js</code> and a minified <code>bootstrap.min.js</code>. We recommend you use the minified version in production.</p>
+      <h4>Генерується два файли</h4>
+      <p>Всі відмічені плагіни будуть зібрані в читабельний <code>bootstrap.js</code> та мінімізований <code>bootstrap.min.js</code>. Ми рекомендуємо використовувати мінімізовану версію для робочих (production) версій.</p>
     </div>
 
     <div class="bs-callout bs-callout-danger">
-      <h4>jQuery required</h4>
-      <p>All plugins require the latest version of <a href="http://jquery.com/" target="_blank">jQuery</a> to be included.</p>
+      <h4>Необхідність в jQuery</h4>
+      <p>Всі плагіни потребують підключення останньої версії <a href="http://jquery.com/" target="_blank">jQuery</a>.</p>
     </div>
   </div>
 
   <div class="bs-docs-section" id="less-variables-section">
-    <button class="btn btn-default toggle" type="button">Reset to defaults</button>
-    <h1 id="less-variables" class="page-header">Less variables</h1>
+    <button class="btn btn-default toggle" type="button">Скинути до значень за промовчанням</button>
+    <h1 id="less-variables" class="page-header">Змінні Less</h1>
 
-    <p class="lead">Customize Less variables to define colors, sizes and more inside your custom CSS stylesheets.</p>
+    <p class="lead">Налаштуйте змінні LESS для визначення кольору, розміру та іншого у вашій власній збірці стилів CSS.</p>
     {% include customizer-variables.html %}
   </div>
 
   <div class="bs-docs-section">
-    <h1 id="download" class="page-header">Download</h1>
+    <h1 id="download" class="page-header">Завантаження</h1>
 
-    <p class="lead">Hooray! Your custom version of Bootstrap is now ready to be compiled. Just click the button below to finish the process.</p>
+    <p class="lead">Ура! Ваша власна версія Bootstrap готова до збірки. Просто клікніть кнопку внизу, щоб завершити процес.</p>
     <div class="bs-customize-download">
-      <button type="submit" id="btn-compile" disabled class="btn btn-block btn-lg btn-outline" onclick="ga('send', 'event', 'Customize', 'Download', 'Customize and Download');">Compile and Download</button>
+      <button type="submit" id="btn-compile" disabled class="btn btn-block btn-lg btn-outline" onclick="ga('send', 'event', 'Customize', 'Download', 'Customize and Download');">Зібрати та Завантажити</button>
     </div>
   </div><!-- /download -->
 </form>
