@@ -2,25 +2,25 @@
   <h1 id="affix" class="page-header">Affix <small>affix.js</small></h1>
 
   <h2 id="affix-examples">Приклад</h2>
-  <p>The subnavigation on the right is a live demo of the affix plugin.</p>
+  <p>Субнавігація ліворуч є живим прикладом роботи плагіну affix.</p>
 
   <hr class="bs-docs-separator">
 
   <h2 id="affix-usage">Використання</h2>
-  <p>Use the affix plugin via data attributes or manually with your own JavaScript. <strong class="text-danger">In both situations, you must provide CSS for the positioning and width of your affixed content.</strong></p>
+  <p>Використовуйте плагін affix за допомогою атрибутів даних, або напишіть свій власний JavaScript. <strong class="text-danger">В обох випадках ви повинні надати CSS для позиціонування вмісту.</strong></p>
 
-  <h3>Positioning via CSS</h3>
-  <p>The affix plugin toggles between three classes, each representing a particular state: <code>.affix</code>, <code>.affix-top</code>, and <code>.affix-bottom</code>. You must provide the styles for these classes yourself (independent of this plugin) to handle the actual positions.</p>
-  <p>Here's how the affix plugin works:</p>
+  <h3>Позиціонування через CSS</h3>
+  <p>Плагін affix переключається між трьома класами, кожен з яких відповідає певному стану: <code>.affix</code>, <code>.affix-top</code>, та <code>.affix-bottom</code>. Ви повинні власноруч створити стилі для цих класів (незалежно від цього плагіну), для обробки поточної позиції.</p>
+  <p>Ось як працює плагін affix:</p>
   <ol>
-    <li>To start, the plugin adds <code>.affix-top</code> to indicate the element is in its top-most position. At this point no CSS positioning is required.</li>
-    <li>Scrolling past the element you want affixed should trigger the actual affixing. This is where <code>.affix</code> replaces <code>.affix-top</code> and sets <code>position: fixed;</code> (provided by Bootstrap's CSS).</li>
-    <li>If a bottom offset is defined, scrolling past it should replace <code>.affix</code> with <code>.affix-bottom</code>. Since offsets are optional, setting one requires you to set the appropriate CSS. In this case, add <code>position: absolute;</code> when necessary. The plugin uses the data attribute or JavaScript option to determine where to position the element from there.</li>
+    <li>Спочатку, плагін додає <code>.affix-top</code> для позначення елемента, що знаходиться найвище. На даний момент позиціонування через CSS не потрібне.</li>
+    <li>Прокручування повз елемент, котрий ви хочете закріпити, повинно актуалізувати закріплення. Це той момент, коли <code>.affix</code> замінює <code>.affix-top</code> та встановлює <code>position: fixed;</code> (що йде в CSS Bootstrap).</li>
+    <li>Якщо нижнє зміщення визначене, прокручування вниз має замінити <code>.affix</code> на <code>.affix-bottom</code>. Оскільки зміщення є необов'язковим, вам необхідно встановити відповідні CSS. У даному випадку, додайте <code>position: absolute;</code>, коли це необхідно. Плагін використовує атрибути даних або параметри JavaScript для визначення позиції елемента.</li>
   </ol>
-  <p>Follow the above steps to set your CSS for either of the usage options below.</p>
+  <p>Дотримуйтесь вищезазначених кроків, щоб надалі встановити CSS для будь-якого використання опцій.</p>
 
   <h3>Через атрибути даних</h3>
-  <p>To easily add affix behavior to any element, just add <code>data-spy="affix"</code> to the element you want to spy on. Use offsets to define when to toggle the pinning of an element.</p>
+  <p>Можна легко надати поведінку affix будь-якому елементу, просто додавши <code>data-spy="affix"</code> до елементу, за яким ви хочете слідкувати. Використовуйте зміщення для визначення, коли слід вимикати плагін для прикріпленого елемента.</p>
 
 {% highlight html %}
 <div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
@@ -29,7 +29,7 @@
 {% endhighlight %}
 
   <h3>Через JavaScript</h3>
-  <p>Call the affix plugin via JavaScript:</p>
+  <p>Виклик плагіну affix через JavaScript:</p>
 {% highlight js %}
 $('#myAffix').affix({
   offset: {
@@ -43,7 +43,7 @@ $('#myAffix').affix({
 
 
   <h3>Параметри</h3>
-  <p>Параметри можуть передаватись через атрибути даних або JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-offset-top="200"</code>.</p>
+  <p>Параметри можуть передаватись через атрибути даних або JavaScript. Для атрибутів даних, додайте приставку з назвою параметра до <code>data-</code>, як у прикладі: <code>data-offset-top="200"</code>.</p>
 
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
@@ -60,13 +60,13 @@ $('#myAffix').affix({
          <td>offset</td>
          <td>number | function | object</td>
          <td>10</td>
-         <td>Pixels to offset from screen when calculating position of scroll. If a single number is provided, the offset will be applied in both top and bottom directions. To provide a unique, bottom and top offset just provide an object <code>offset: { top: 10 }</code> or <code>offset: { top: 10, bottom: 5 }</code>. Use a function when you need to dynamically calculate an offset.</td>
+         <td>Пікселі для зсуву екрана, при обрахунку позиції прокрутки. Якщо надано одиничне число, зсув буде застосовуватись і вгорі, і внизу. Щоб надати унікальності зсуву знизу та згори, просто надайте такий об'єкт <code>offset: { top: 10 }</code> або такий <code>offset: { top: 10, bottom: 5 }</code>. Використовуйте функцію, коли вам потрібно динамічно обраховувати зсув.</td>
        </tr>
        <tr>
          <td>target</td>
          <td>selector | node | jQuery element</td>
          <td>the <code>window</code> object</td>
-         <td>Specifies the target element of the affix.</td>
+         <td>Визначає цільовий affix-елемент.</td>
        </tr>
 
       </tbody>
@@ -75,7 +75,7 @@ $('#myAffix').affix({
 
 
   <h3>Події</h3>
-  <p>Bootstrap's affix plugin exposes a few events for hooking into affix functionality.</p>
+  <p>Плагін Bootstrap affix пропонує кілька подій для вставки affix-функціональності.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
@@ -87,27 +87,27 @@ $('#myAffix').affix({
       <tbody>
         <tr>
           <td>affix.bs.affix</td>
-          <td>This event fires immediately before the element has been affixed.</td>
+          <td>Ця подія спрацьовує перед тим, як елемент буде приєднано (affixed).</td>
         </tr>
         <tr>
           <td>affixed.bs.affix</td>
-          <td>This event is fired after the element has been affixed.</td>
+          <td>Ця подія спрацьовує після того, як елемент буде приєднано (affixed)</td>
         </tr>
         <tr>
           <td>affix-top.bs.affix</td>
-          <td>This event fires immediately before the element has been affixed-top.</td>
+          <td>Ця подія спрацьовує перед тим, як елемент буде зафіксовано вгорі (affixed-top).</td>
         </tr>
         <tr>
           <td>affixed-top.bs.affix</td>
-          <td>This event is fired after the element has been affixed-top.</td>
+          <td>Ця подія спрацьовує після того, як елемент буде зафіксовано вгорі (affixed-top).</td>
         </tr>
        <tr>
         <td>affix-bottom.bs.affix</td>
-          <td>This event fires immediately before the element has been affixed-bottom.</td>
+          <td>Ця подія спрацьовує перед тим, як елемент буде зафіксовано внизу (affixed-bottom).</td>
         </tr>
         <tr>
           <td>affixed-bottom.bs.affix</td>
-          <td>This event is fired after the element has been affixed-bottom.</td>
+          <td>Ця подія спрацьовує після того, як елемент буде зафіксовано внизу (affixed-bottom).</td>
         </tr>
       </tbody>
     </table>
