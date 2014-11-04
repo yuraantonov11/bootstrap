@@ -203,8 +203,8 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
     <li>Підберіть відповідні медіа-запити для зміни розміру сітки, коли потрібно роздруковувати сторінку.</li>
   </ul>
 
-  <h3 id="support-android-stock-browser">Браузер за промовчанням в Android</h3>
-  <p>Прямо з коробки, Android 4.1 (та навіть з деякими оновленнями) має застосунок з назвою Browser (а не Chrome) в якості браузера за промовчанням. Нажаль, він має безліч помилок та невідповідностей стосовно CSS.</p>
+  <h3 id="support-android-stock-browser">Початковий браузер в Android</h3>
+  <p>Прямо з коробки, Android 4.1 (та навіть з деякими оновленнями) має застосунок з назвою Browser (а не Chrome) в якості початкового браузера. Нажаль, він має безліч помилок та невідповідностей стосовно CSS.</p>
   <h4>Меню select</h4>
   <p>Згаданий вище браузер в Android, для елемента <code>&lt;select&gt;</code>, не відображає відповідних пунктів, якщо застосовуються CSS-властивості <code>border-radius</code> та/або <code>border</code>. (Див. <a href="http://stackoverflow.com/questions/14744437/html-select-box-not-showing-drop-down-arrow-on-android-version-4-0-when-set-with">це питання на StackOverflow</a> для уточнень.) Використовуйте наданий нижче код, щоб видалити відповідні CSS-властивості та показувати <code>&lt;select&gt;</code> як елемент без стилів. Перевірка <code>user agent</code> дозволяє уникати застосування цього коду до браузерів Chrome, Safari, та Mozilla.</p>
 {% highlight html %}
