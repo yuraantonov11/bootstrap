@@ -142,17 +142,17 @@
 
   <div class="bs-callout bs-callout-info">
     <h4>Вбудоване відео з YouTube</h4>
-    <p>Вбудовування відео з YouTube в модалях потребує додаткового коду JavaScript, що відсутній в Bootstrap, наприклад для автоматичної зупинки програвання та інше. <a href="http://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">Прогляньте це корисне повідомлення на Stack Overflow</a> для детальнішої інформації.</p>
+    <p>Вбудовування відео з YouTube в модалях потребує додаткового коду JavaScript, який не надається Bootstrap, наприклад для автоматичної зупинки програвання та інше. <a href="http://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">Прогляньте це корисне повідомлення на Stack Overflow</a> для детальнішої інформації.</p>
   </div>
 
   <h2 id="modals-sizes">Опціональні розміри</h2>
-  <p>Модалі мають два опціональні розміри, доступні через модифікатор класів для розміщення в <code>.modal-dialog</code>.</p>
+  <p>Модалі мають на вибір два розміри, що доступні через модифікатор класів для розміщення в <code>.modal-dialog</code>.</p>
   <div class="bs-example">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Велика модаль</button>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Мала модаль</button>
   </div>
 {% highlight html %}
-<!-- Large modal -->
+<!-- Широка модаль -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Велика модаль</button>
 
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -163,7 +163,7 @@
   </div>
 </div>
 
-<!-- Small modal -->
+<!-- Вузька модаль -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Мала модаль</button>
 
 <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -206,7 +206,7 @@
   </div><!-- /.modal -->
 
   <h2 id="modals-remove-animation">Видалення анімації</h2>
-  <p>В модалях, які просто з'являються, а не проявляються (fade) для показу, видаліть клас <code>.fade</code> з розмітки в модалі.</p>
+  <p>Щоб модаль просто з'являлась, а не проявлялась при показі, видаліть клас <code>.fade</code> з її розмітки.</p>
 {% highlight html %}
 <div class="modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
   ...
@@ -217,14 +217,14 @@
   <p>Плагін для модалі, при запиті, переключає видимість вашого прихованого вмісту через атрибути даних чи JavaScript. Він також додає <code>.modal-open</code> до <code>&lt;body&gt;</code> для перевизначення початкової поведінки, стосовно прокручування сторінок, та генерує <code>.modal-backdrop</code>, щоб надати область за межами модалі, при клікі по якій, скасовується показ модалі.</p>
 
   <h3>Через атрибути даних</h3>
-  <p>Активуйте модальні вікна без написання JavaScript. Встановіть <code>data-toggle="modal"</code> в контролері елемента, такого як кнопка, поруч з <code>data-target="#foo"</code> або <code>href="#foo"</code>, щоб націлити визначену модаль для переключення.</p>
+  <p>Активуйте модальні вікна без написання JavaScript. Встановіть <code>data-toggle="modal"</code> в контролері елемента, наприклад в кнопці, поруч з <code>data-target="#foo"</code> або <code>href="#foo"</code>, щоб націлити визначену модаль для переключення.</p>
 {% highlight html %}
 <button type="button" data-toggle="modal" data-target="#myModal">Запустити модаль</button>
 {% endhighlight %}
 
   <h3>Через JavaScript</h3>
-  <p>Викликайте модаль через id <code>myModal</code> одним рядком на JavaScript:</p>
-  {% highlight js %}$('#myModal').modal(options){% endhighlight %}
+  <p>На JavaScript викликайте модаль через id <code>myModal</code> одним рядком:</p>
+  {% highlight js %}$('#myModal').modal(параметри){% endhighlight %}
 
   <h3>Параметри</h3>
   <p>Параметри можуть передаватись через атрибути даних чи JavaScript. У випадку передачі через атрибути даних, додайте приставку з назвою параметра до <code>data-</code>, як у прикладі: <code>data-backdrop=""</code>.</p>
@@ -249,7 +249,7 @@
          <td>keyboard</td>
          <td>boolean</td>
          <td>true</td>
-         <td>Зкриває модаль при кліку на клавіші escape.</td>
+         <td>Зкриває модаль при натисканні на клавіатурі escape.</td>
        </tr>
        <tr>
          <td>show</td>
@@ -262,8 +262,8 @@
          <td>path</td>
          <td>false</td>
          <td>
-          <p><span class="text-danger">Цей параметр є застарівшим починаючи з v3.2.1 та буде видалятись у v4.</span> Замість нього ми рекомендуємо використовувати шаблони для сторони клієнта або фреймворки з прив'язкою до даних, або ж викликайте для себе <a href="http://api.jquery.com/load/">jQuery.load</a>.</p>
-          <p>Якщо надано віддалений URL, <strong>вміст буде завантажуватись</strong> через jQuery-метод <code>load</code> та вставлятись в div з класом <code>.modal-content</code>. Якщо ви використовуєте data-api, ви можете ще використовувати атрибут <code>href</code> для визначення віддаленого ресурсу. Приклад такого варіанту показаний нижче:</p>
+          <p><span class="text-danger">Цей параметр є застарівшим починаючи з v3.2.1 та буде видалятись у v4.</span> Замість нього ми рекомендуємо використовувати шаблони на стороні клієнта або фреймворки з прив'язкою до даних, або ж викликайте <a href="http://api.jquery.com/load/">jQuery.load</a>.</p>
+          <p>Якщо надано віддалений URL, <strong>вміст буде завантажуватись</strong> через метод <code>load</code> jQuery та вставлятись в div з класом <code>.modal-content</code>. Якщо ви використовуєте data-api, ви можете ще використовувати атрибут <code>href</code> для визначення віддаленого ресурсу. Приклад такого варіанта:</p>
 {% highlight html %}
 <a data-toggle="modal" href="remote.html" data-target="#modal">Click me</a>
 {% endhighlight %}
@@ -275,8 +275,8 @@
 
   <h3>Методи</h3>
 
-  <h4>.modal(options)</h4>
-  <p>Активізує вміст як модальний. Приймає необов'язковий параметр з типом даних <code>object</code>.</p>
+  <h4>.modal(параметри)</h4>
+  <p>Активізує наданий вміст як модальний. Приймає необов'язковий параметр з типом даних <code>object</code>.</p>
 {% highlight js %}
 $('#myModal').modal({
   keyboard: false
@@ -312,7 +312,7 @@ $('#myModal').modal({
        </tr>
        <tr>
          <td>shown.bs.modal</td>
-         <td>Ця подіє спрацьовує, коли модаль буде відображена для користувача (при цьому очікуватиметься завершення переходів CSS). Якщо виклик відбувається через клік, то елемент, на якому був цей клік, доступний як властивість події <code>relatedTarget</code>.</td>
+         <td>Ця подія спрацьовує, коли модаль буде відображено для користувача (при цьому очікуватиметься завершення переходів CSS). Якщо виклик відбувається через клік, то елемент, на якому був цей клік, доступний як властивість події <code>relatedTarget</code>.</td>
        </tr>
        <tr>
          <td>hide.bs.modal</td>
