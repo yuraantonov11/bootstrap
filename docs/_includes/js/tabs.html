@@ -57,7 +57,7 @@ $('#myTab li:eq(2) a').tab('show') // Виберіть третю вкладку
 {% endhighlight %}
 
   <h3>Розмітка</h3>
-  <p>Ви можете активувати вкладку чи навігаційну кнопку і без написання коду JavaScript, просто вказавши в елементі <code>data-toggle="tab"</code> або <code>data-toggle="pill"</code> on an element. Додавання класів <code>nav</code> та <code>nav-tabs</code> до вкладки <code>ul</code> буде застосовувати <a href="../components/#nav-tabs">стилізацію вкладок</a> Bootstrap, в той час як додавання класів <code>nav</code> та <code>nav-pills</code> буде застосовувати <a href="../components/#nav-pills">стилізацію навігаційних кнопок</a>.</p>
+  <p>Ви можете активувати вкладку чи навігаційну кнопку і без написання коду JavaScript, просто вказавши в елементі <code>data-toggle="tab"</code> або <code>data-toggle="pill"</code>. Додавання класів <code>nav</code> та <code>nav-tabs</code> до вкладки <code>ul</code> буде застосовувати <a href="../components/#nav-tabs">стилізацію вкладок</a> Bootstrap, в той час як додавання класів <code>nav</code> та <code>nav-pills</code> буде застосовувати <a href="../components/#nav-pills">стилізацію навігаційних кнопок</a>.</p>
 {% highlight html %}
 <!-- Навігаційні вкладки -->
 <ul class="nav nav-tabs" role="tablist">
@@ -76,7 +76,7 @@ $('#myTab li:eq(2) a').tab('show') // Виберіть третю вкладку
 </div>
 {% endhighlight %}
 
-  <h3>Ефект згасання</h3>
+  <h3>Ефект плавного переходу</h3>
   <p>Щоб створити ефект плавного відображення вкладок, додайте <code>.fade</code> до кожного <code>.tab-pane</code>. Перша панель вкладки повинна також мати <code>.in</code> для правильного плавного відображення вмісту.</p>
 {% highlight html %}
 <div class="tab-content">
@@ -122,7 +122,7 @@ $('#myTab li:eq(2) a').tab('show') // Виберіть третю вкладку
     <li><code>hidden.bs.tab</code> (у попередній активній вкладці, те ж саме, що і для події <code>hide.bs.tab</code>)</li>
     <li><code>shown.bs.tab</code> (в новій активній вкладці, яка щойно була відображена, те ж саме, що і для події <code>show.bs.tab</code>)</li>
   </ol>
-  <p>Якщо ще не було активовано вкладку, то не будуть спрацьовувати події <code>hide.bs.tab</code> та <code>hidden.bs.tab</code>.</p>
+  <p>Якщо ще не було активовано вкладку, то події <code>hide.bs.tab</code> та <code>hidden.bs.tab</code> не будуть спрацьовувати.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
@@ -153,8 +153,8 @@ $('#myTab li:eq(2) a').tab('show') // Виберіть третю вкладку
   </div><!-- /.table-responsive -->
 {% highlight js %}
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-  e.target // newly activated tab
-  e.relatedTarget // previous active tab
+  e.target // щойно активована вкладка
+  e.relatedTarget // попередня активна вкладка
 })
 {% endhighlight %}
 </div>
