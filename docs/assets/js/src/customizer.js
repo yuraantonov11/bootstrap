@@ -81,8 +81,8 @@ window.onload = function () { // wait for load in a dumb way because B-0
       var gistUrl = result.html_url;
       var origin = window.location.protocol + '//' + window.location.host
       var customizerUrl = origin + window.location.pathname + '?id=' + result.id
-      showSuccess('<strong>Success!</strong> Your configuration has been saved to <a href="' + gistUrl + '">' + gistUrl + '</a> ' +
-        'and can be revisited here at <a href="' + customizerUrl + '">' + customizerUrl + '</a> for further customization.')
+      showSuccess('<strong>Успішно!</strong> Вашу конфігурацію було збережено за адресою <a href="' + gistUrl + '">' + gistUrl + '</a>,<br>' +
+        'продовжити дане налаштування можете за адресою <a href="' + customizerUrl + '">' + customizerUrl + '</a>.')
       history.replaceState(false, document.title, customizerUrl)
       callback(gistUrl, customizerUrl)
     })
@@ -359,32 +359,26 @@ window.onload = function () { // wait for load in a dumb way because B-0
 
     var file = (e.originalEvent.hasOwnProperty('dataTransfer')) ? e.originalEvent.dataTransfer.files[0] : e.originalEvent.target.files[0]
 
-    if (!file.type.match('application/json')) {
-      return showAlert('danger', '<strong>Ruh roh.</strong> We can only read <code>.json</code> files. Please try again.', importDropTarget)
-    }
-
     var reader = new FileReader()
 
-    reader.onload = (function () {
-      return function (e) {
-        var text = e.target.result
+    reader.onload = function (e) {
+      var text = e.target.result
 
-        try {
-          var json = JSON.parse(text)
+      try {
+        var json = JSON.parse(text)
 
-          if (typeof json != 'object') {
-            throw new Error('JSON data from config file is not an object.')
-          }
-
-          updateCustomizerFromJson(json)
-          showAlert('success', '<strong>Woohoo!</strong> Your configuration was successfully uploaded. Tweak your settings, then hit Download.', importDropTarget)
-        } catch (err) {
-          return showAlert('danger', '<strong>Shucks.</strong> We can only read valid <code>.json</code> files. Please try again.', importDropTarget)
+        if (!$.isPlainObject(json)) {
+          throw new Error('JSON data from config file is not an object.')
         }
-      }
-    })(file)
 
-    reader.readAsText(file)
+        updateCustomizerFromJson(json)
+        showAlert('success', '<strong>Успішно!</strong> Вашу конфігурацію успішно завантажено. Підберіть собі потрібні компоненти та Завантажуйте знову.', importDropTarget)
+      } catch (err) {
+        return showAlert('danger', '<strong>Shucks.</strong> We can only read valid <code>.json</code> files. Please try again.', importDropTarget)
+      }
+    }
+
+    reader.readAsText(file, 'utf-8')
   }
 
   function handleConfigDragOver(e) {
