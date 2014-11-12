@@ -43,25 +43,19 @@
 {% if site.github %}
   <script src="../assets/js/docs.min.js"></script>
 {% else %}
-  <script src="../assets/js/vendor/holder.js"></script>
-  <script src="../assets/js/vendor/ZeroClipboard.min.js"></script>
-  <script src="../assets/js/src/application.js"></script>
+  {% for file in site.data.configBridge.paths.docsJs %}
+  <script src="{{ file }}"></script>
+  {% endfor %}
 {% endif %}
 
 {% if page.slug == "customize" %}
+  <script>var __configBridge = {{ site.data.configBridge.config | jsonify }}</script>
   {% if site.github %}
     <script src="../assets/js/customize.min.js"></script>
   {% else %}
-    {% comment %}
-      This list is repeated in our Gruntfile—update both when making changes.
-    {% endcomment %}
-    <script src="../assets/js/vendor/less.min.js"></script>
-    <script src="../assets/js/vendor/jszip.min.js"></script>
-    <script src="../assets/js/vendor/uglify.min.js"></script>
-    <script src="../assets/js/vendor/Blob.js"></script>
-    <script src="../assets/js/vendor/FileSaver.js"></script>
-    <script src="../assets/js/raw-files.min.js"></script>
-    <script src="../assets/js/src/customizer.js"></script>
+    {% for file in site.data.configBridge.paths.customizerJs %}
+    <script src="{{ file }}"></script>
+    {% endfor %}
   {% endif %}
 {% endif %}
 
@@ -87,10 +81,14 @@
 <!-- Analytics
 ================================================== -->
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-55971630-1', 'auto');
-  ga('send', 'pageview');
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
 </script>
