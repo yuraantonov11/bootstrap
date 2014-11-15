@@ -57,7 +57,7 @@ var TypoFound =
 							str: str
 							,url: window.location.href
 						}
-						,function(){alert(TYPO_FOUND_CONF.THX_MESSAGE)} // on success
+						,function(){$('#thanks').modal();} // on success
 					);
 				}
 				return false;
