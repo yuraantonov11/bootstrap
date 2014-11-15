@@ -3,7 +3,7 @@
 
   <h2 id="tabs-examples">Приклад вкладки</h2>
   <p>Додайте динамічну функціональність для переходу по вкладкам однієї сторінки, у тому числі за допомогою спадного меню.</p>
-  <div class="bs-example bs-example-tabs">
+  <div class="bs-example bs-example-tabs" role="tabpanel">
     <ul id="myTab" class="nav nav-tabs" role="tablist">
       <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Стартова</a></li>
       <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Профіль</a></li>
@@ -59,20 +59,24 @@ $('#myTab li:eq(2) a').tab('show') // Виберіть третю вкладку
   <h3>Розмітка</h3>
   <p>Ви можете активувати вкладку чи навігаційну кнопку і без написання коду JavaScript, просто вказавши в елементі <code>data-toggle="tab"</code> або <code>data-toggle="pill"</code>. Додавання класів <code>nav</code> та <code>nav-tabs</code> до вкладки <code>ul</code> буде застосовувати <a href="../components/#nav-tabs">стилізацію вкладок</a> Bootstrap, в той час як додавання класів <code>nav</code> та <code>nav-pills</code> буде застосовувати <a href="../components/#nav-pills">стилізацію навігаційних кнопок</a>.</p>
 {% highlight html %}
-<!-- Навігаційні вкладки -->
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Стартова</a></li>
-  <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Профіль</a></li>
-  <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">Повідомлення</a></li>
-  <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Налаштування</a></li>
-</ul>
+<div role="tabpanel">
+
+  <!-- Навігаційні елементи вкладок -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+  </ul>
 
 <!-- Вкладки панелі -->
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="home">...</div>
-  <div role="tabpanel" class="tab-pane" id="profile">...</div>
-  <div role="tabpanel" class="tab-pane" id="messages">...</div>
-  <div role="tabpanel" class="tab-pane" id="settings">...</div>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">...</div>
+    <div role="tabpanel" class="tab-pane" id="profile">...</div>
+    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+  </div>
+
 </div>
 {% endhighlight %}
 
@@ -87,17 +91,17 @@ $('#myTab li:eq(2) a').tab('show') // Виберіть третю вкладку
 </div>
 {% endhighlight %}
 
-  <h3>Методи</h3>
+  <h3 id="tabs-methods">Методи</h3>
   <h4>$().tab</h4>
   <p>
     Активуйте елемент вкладки та вміст контейнера. Вкладка повинна мати або <code>data-target</code>, або <code>href</code> націлюючи блок контейнера в DOM.
   </p>
 {% highlight html %}
 <ul class="nav nav-tabs" role="tablist" id="myTab">
-  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Стартова</a></li>
-  <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Профіль</a></li>
-  <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">Повідомлення</a></li>
-  <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Налаштування</a></li>
+  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+  <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+  <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+  <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
 </ul>
 
 <div class="tab-content">
@@ -114,7 +118,7 @@ $('#myTab li:eq(2) a').tab('show') // Виберіть третю вкладку
 </script>
 {% endhighlight %}
 
-  <h3>Події</h3>
+  <h3 id="tabs-events">Події</h3>
   <p>Коли показується нова вкладка, події спрацьовують в наступному порядку:</p>
   <ol>
     <li><code>hide.bs.tab</code> (в поточній активній вкладці)</li>

@@ -35,6 +35,10 @@
 
   <h2 id="buttons-single-toggle">Одиничне переключення</h2>
   <p>Додайте <code>data-toggle="button"</code> щоб активувати переключення на одиничній кнопці.</p>
+  <div class="bs-callout bs-callout-warning">
+    <h4>Наперед переключені кнопки потребують <code>.active</code> та <code>aria-pressed="true"</code></h4>
+    <p>Для вигляду кнопки як наче її вже натиснули, потрібно використовувати клас <code>.active</code> та атрибут <code>aria-pressed="true"</code> для <code>button</code>.</p>
+  </div>
   <div class="bs-example">
     <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
       Одиничне переключення
@@ -45,10 +49,6 @@
   Одиничне переключення
 </button>
 {% endhighlight %}
-  <div class="bs-callout bs-callout-warning">
-    <h4>Наперед переключені кнопки потребують <code>.active</code> та <code>aria-pressed="true"</code></h4>
-    <p>Для вигляду кнопки як наче її вже натиснули, потрібно використовувати клас <code>.active</code> та атрибут <code>aria-pressed="true"</code> для <code>button</code>.</p>
-  </div>
 
   <h2 id="buttons-checkbox-radio">Галочки / Перемикачі</h2>
   <p>Додайте <code>data-toggle="buttons"</code> до <code>.btn-group</code>, що вміщують галочки (checkbox) або перемикачі (radio) щоб додати можливість переключати їх з відповідними стилями.</p>

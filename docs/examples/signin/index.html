@@ -33,8 +33,10 @@
 
       <form class="form-signin" role="form">
         <h2 class="form-signin-heading">Вхід</h2>
-        <input type="email" class="form-control" placeholder="Імейл" required autofocus>
-        <input type="password" class="form-control" placeholder="Пароль" required>
+        <label for="inputEmail" class="sr-only">Імейл</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Імейл" required autofocus>
+        <label for="inputPassword" class="sr-only">Пароль</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Запам'ятати мене

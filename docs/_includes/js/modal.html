@@ -153,7 +153,7 @@
   </div>
 {% highlight html %}
 <!-- Широка модаль -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Велика модаль</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Широка модаль</button>
 
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -164,7 +164,7 @@
 </div>
 
 <!-- Вузька модаль -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Мала модаль</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Вузька модаль</button>
 
 <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
@@ -213,6 +213,86 @@
 </div>
 {% endhighlight %}
 
+  <h2 id="modals-related-target">Варіанти вмісту модалі в залежності від кнопки</h2>
+  <p>Маєте багато кнопок, які викликають одну модаль, але трохи з різним вмістом? Використовуйте <code>event.relatedTarget</code> та <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes">HTML-атрибути <code>data-*</code></a> (можливо <a href="http://api.jquery.com/data/">через jQuery</a>) щоб змінювати вміст модалі в залежності від того, яку кнопку було натиснуто. Див. інформацію стосовно Подій Модалі для уточнень про <code>relatedTarget</code></p>
+  <div class="bs-example" style="padding-bottom: 24px;">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Відкриття модалі для @mdo</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Відкриття модалі для @fat</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@twbootstrap">Відкриття модалі для @twbootstrap</button>
+    ...більше кнопок...
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Закрити</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">Нове повідомлення</h4>
+          </div>
+          <div class="modal-body">
+            <form role="form">
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Отримувач:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="control-label">Повідомлення:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+            <button type="button" class="btn btn-primary">Відправити повідомлення</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.modal -->
+  </div><!-- /.bs-example -->
+{% highlight html %}
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Відкриття модалі для @mdo</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Відкриття модалі для @fat</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@twbootstrap">Відкриття модалі для @twbootstrap</button>
+...більше кнопок...
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Закрити</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Нове повідомлення</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Отримувач:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Повідомлення:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+        <button type="button" class="btn btn-primary">Відправити повідомлення</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+{% highlight js %}
+$('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Кнопка, що викликає модаль
+  var recipient = button.data('whatever') // Витягування інфи з атрибутів data-*
+  // Якщо необхідно, ви можете створювати тут AJAX-запит (а потім здійснювати оновлення в callback).
+  // Оновлення вмісту модалі. Ми будемо використовувати тут jQuery, але ви можете використовувати бібліотеку data binding або інші методи.
+  var modal = $(this)
+  modal.find('.modal-title').text('Нове повідомлення для ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
+{% endhighlight %}
+
   <h2 id="modals-usage">Використання</h2>
   <p>Плагін для модалі, при запиті, переключає видимість вашого прихованого вмісту через атрибути даних чи JavaScript. Він також додає <code>.modal-open</code> до <code>&lt;body&gt;</code> для перевизначення початкової поведінки, стосовно прокручування сторінок, та генерує <code>.modal-backdrop</code>, щоб надати область за межами модалі, при клікі по якій, скасовується показ модалі.</p>
 
@@ -226,7 +306,7 @@
   <p>На JavaScript викликайте модаль через id <code>myModal</code> одним рядком:</p>
   {% highlight js %}$('#myModal').modal(параметри){% endhighlight %}
 
-  <h3>Параметри</h3>
+  <h3 id="modals-options">Параметри</h3>
   <p>Параметри можуть передаватись через атрибути даних чи JavaScript. У випадку передачі через атрибути даних, додайте приставку з назвою параметра до <code>data-</code>, як у прикладі: <code>data-backdrop=""</code>.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
@@ -262,7 +342,7 @@
          <td>path</td>
          <td>false</td>
          <td>
-          <p><span class="text-danger">Цей параметр є застарівшим починаючи з v3.2.1 та буде видалятись у v4.</span> Замість нього ми рекомендуємо використовувати шаблони на стороні клієнта або фреймворки з прив'язкою до даних, або ж викликайте <a href="http://api.jquery.com/load/">jQuery.load</a>.</p>
+          <p><strong class="text-danger">Цей параметр є застарівшим починаючи з v3.3.0 та буде видалятись у v4.</strong> Замість нього ми рекомендуємо використовувати шаблони на стороні клієнта або фреймворки з прив'язкою до даних, або ж викликайте <a href="http://api.jquery.com/load/">jQuery.load</a>.</p>
           <p>Якщо надано віддалений URL, <strong>вміст буде завантажуватись</strong> через метод <code>load</code> jQuery та вставлятись в div з класом <code>.modal-content</code>. Якщо ви використовуєте data-api, ви можете ще використовувати атрибут <code>href</code> для визначення віддаленого ресурсу. Приклад такого варіанта:</p>
 {% highlight html %}
 <a data-toggle="modal" href="remote.html" data-target="#modal">Click me</a>
@@ -273,7 +353,7 @@
     </table>
   </div><!-- /.table-responsive -->
 
-  <h3>Методи</h3>
+  <h3 id="modals-methods">Методи</h3>
 
   <h4>.modal(параметри)</h4>
   <p>Активізує наданий вміст як модальний. Приймає необов'язковий параметр з типом даних <code>object</code>.</p>
@@ -295,7 +375,7 @@ $('#myModal').modal({
   <p>Ручне закриття модалі. <strong>Повертається до ініціатора виклику перед тим, як модаль буде приховано</strong> (наприклад, перед викликом події <code>hidden.bs.modal</code>).</p>
   {% highlight js %}$('#myModal').modal('hide'){% endhighlight %}
 
-  <h3>Події</h3>
+  <h3 id="modals-events">Події</h3>
   <p>Клас для модалей в Bootstrap надає декілька подій, щоб забезпечити функціональність модалі.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
