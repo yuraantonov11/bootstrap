@@ -15,8 +15,9 @@
     </ol>
   </div>
   <div class="bs-callout bs-callout-danger">
-    <h4>Необхідність в JavaScript</h4>
+    <h4>Необхідність в плагіні JavaScript</h4>
     <p>Якщо JavaScript заблокована, а оглядове вікно є досить вузьким, щоб навігаційна панель згорнулась, то вже не буде можливості розгорнути цю навігаційну панель та продивитись її вміст в <code>.navbar-collapse</code>.</p>
+	<p>The responsive navbar requires the <a href="../javascript/#collapse">collapse plugin</a> to be included in your version of Bootstrap.</p>
   </div>
   <div class="bs-callout bs-callout-info">
     <h4>Зміна контрольних точок в мобільній навпанелі</h4>
@@ -40,10 +41,10 @@
         <!-- Зібрано навігаційні лінки, форми, та інший вміст для переключення -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Лінк</a></li>
+            <li class="active"><a href="#">Лінк <span class="sr-only">(поточний)</span></a></li>
             <li><a href="#">Лінк</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Спадне меню <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Спадне меню <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Дія</a></li>
                 <li><a href="#">Інша дія</a></li>
@@ -64,7 +65,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Лінк</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Спадне меню <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Спадне меню <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Дія</a></li>
                 <li><a href="#">Інша дія</a></li>
@@ -95,10 +96,10 @@
     <!-- Зібрано навігаційні лінки, форми, та інший вміст для переключення -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Лінк</a></li>
+        <li class="active"><a href="#">Лінк <span class="sr-only">(поточний)</span></a></li>
         <li><a href="#">Лінк</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Спадне меню <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Спадне меню <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Дія</a></li>
             <li><a href="#">Інша дія</a></li>
@@ -119,7 +120,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Лінк</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Спадне меню <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Спадне меню <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Дія</a></li>
             <li><a href="#">Інша дія</a></li>
@@ -133,16 +134,6 @@
   </div><!-- /.container-fluid -->
 </nav>
 {% endhighlight %}
-
-  <div class="bs-callout bs-callout-danger">
-    <h4>Залежність від плагіну</h4>
-    <p>Чутлива навігаційна панель потребує, щоб у вашій версії Bootstrap було підключено <a href="../javascript/#collapse">плагін для переключення</a>.</p>
-  </div>
-
-  <div class="bs-callout bs-callout-warning">
-    <h4>Доступність навігаційних панелей</h4>
-    <p>Переконайтесь що додали <code>role="navigation"</code> до кожної навігаційної панелі щоб спростити їх доступність.</p>
-  </div>
 
 
   <h2 id="navbar-brand-image">Зображення бренду</h2>

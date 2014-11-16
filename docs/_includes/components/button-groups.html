@@ -11,14 +11,14 @@
   <h3 id="btn-groups-single">Базовий приклад</h3>
   <p>Обгорніть серію кнопок з <code>.btn</code> в <code>.btn-group</code>.</p>
   <div class="bs-example">
-    <div class="btn-group" style="margin: 9px 0 5px;">
+    <div class="btn-group" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-default">Ліва</button>
       <button type="button" class="btn btn-default">Середня</button>
       <button type="button" class="btn btn-default">Права</button>
     </div>
   </div>
 {% highlight html %}
-<div class="btn-group">
+<div class="btn-group" role="group" aria-label="...">
   <button type="button" class="btn btn-default">Ліва</button>
   <button type="button" class="btn btn-default">Середня</button>
   <button type="button" class="btn btn-default">Права</button>
@@ -28,79 +28,74 @@
   <h3 id="btn-groups-toolbar">Кнопка панелі інструментів</h3>
   <p>Об'єднайте набір <code>&lt;div class="btn-group"&gt;</code> всередині <code>&lt;div class="btn-toolbar"&gt;</code> для більш складних компонентів.</p>
   <div class="bs-example">
-    <div class="btn-toolbar" role="toolbar" style="margin: 0;">
-      <div class="btn-group">
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group" role="group" aria-label="First group">
         <button type="button" class="btn btn-default">1</button>
         <button type="button" class="btn btn-default">2</button>
         <button type="button" class="btn btn-default">3</button>
         <button type="button" class="btn btn-default">4</button>
       </div>
-      <div class="btn-group">
+      <div class="btn-group" role="group" aria-label="Second group">
         <button type="button" class="btn btn-default">5</button>
         <button type="button" class="btn btn-default">6</button>
         <button type="button" class="btn btn-default">7</button>
       </div>
-      <div class="btn-group">
+      <div class="btn-group" role="group" aria-label="Third group">
         <button type="button" class="btn btn-default">8</button>
       </div>
     </div>
   </div>
 {% highlight html %}
-<div class="btn-toolbar" role="toolbar">
-  <div class="btn-group">...</div>
-  <div class="btn-group">...</div>
-  <div class="btn-group">...</div>
+<div class="btn-toolbar" role="toolbar" aria-label="...">
+  <div class="btn-group" role="group" aria-label="...">...</div>
+  <div class="btn-group" role="group" aria-label="...">...</div>
+  <div class="btn-group" role="group" aria-label="...">...</div>
 </div>
 {% endhighlight %}
 
   <h3 id="btn-groups-sizing">Калібрування</h3>
   <p>Замість того, щоб застосовувати класи зміни розмірів до кожної кнопки в групі, просто додайте <code>.btn-group-*</code> до <code>.btn-group</code>.</p>
   <div class="bs-example">
-    <div class="btn-toolbar" role="toolbar">
-      <div class="btn-group btn-group-lg">
-        <button type="button" class="btn btn-default">Ліва</button>
-        <button type="button" class="btn btn-default">Середня</button>
-        <button type="button" class="btn btn-default">Права</button>
-      </div>
+    <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+      <button type="button" class="btn btn-default">Ліва</button>
+      <button type="button" class="btn btn-default">Середня</button>
+      <button type="button" class="btn btn-default">Права</button>
     </div>
-    <div class="btn-toolbar" role="toolbar">
-      <div class="btn-group">
-        <button type="button" class="btn btn-default">Ліва</button>
-        <button type="button" class="btn btn-default">Середня</button>
-        <button type="button" class="btn btn-default">Права</button>
-      </div>
+    <br>
+    <div class="btn-group" role="group" aria-label="Default button group">
+      <button type="button" class="btn btn-default">Ліва</button>
+      <button type="button" class="btn btn-default">Середня</button>
+      <button type="button" class="btn btn-default">Права</button>
     </div>
-    <div class="btn-toolbar" role="toolbar">
-      <div class="btn-group btn-group-sm">
-        <button type="button" class="btn btn-default">Ліва</button>
-        <button type="button" class="btn btn-default">Середня</button>
-        <button type="button" class="btn btn-default">Права</button>
-      </div>
+    <br>
+    <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+      <button type="button" class="btn btn-default">Ліва</button>
+      <button type="button" class="btn btn-default">Середня</button>
+      <button type="button" class="btn btn-default">Права</button>
     </div>
-    <div class="btn-toolbar" role="toolbar">
-      <div class="btn-group btn-group-xs">
-        <button type="button" class="btn btn-default">Ліва</button>
-        <button type="button" class="btn btn-default">Середня</button>
-        <button type="button" class="btn btn-default">Права</button>
-      </div>
+    <br>
+    <div class="btn-group btn-group-xs" role="group" aria-label="Extra-small button group">
+      <button type="button" class="btn btn-default">Ліва</button>
+      <button type="button" class="btn btn-default">Середня</button>
+      <button type="button" class="btn btn-default">Права</button>
     </div>
   </div>
 {% highlight html %}
-<div class="btn-group btn-group-lg">...</div>
-<div class="btn-group">...</div>
-<div class="btn-group btn-group-sm">...</div>
-<div class="btn-group btn-group-xs">...</div>
+<div class="btn-group btn-group-lg" role="group" aria-label="...">...</div>
+<div class="btn-group" role="group" aria-label="...">...</div>
+<div class="btn-group btn-group-sm" role="group" aria-label="...">...</div>
+<div class="btn-group btn-group-xs" role="group" aria-label="...">...</div>
 {% endhighlight %}
 
   <h3 id="btn-groups-nested">Вкладеність</h3>
   <p>Розмістіть <code>.btn-group</code> всередині іншої <code>.btn-group</code>, якщо ви хочете поєднати спадне меню з серією кнопок.</p>
   <div class="bs-example">
-    <div class="btn-group">
+    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
       <button type="button" class="btn btn-default">1</button>
       <button type="button" class="btn btn-default">2</button>
 
-      <div class="btn-group">
-        <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      <div class="btn-group" role="group">
+        <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
           Спадне меню
           <span class="caret"></span>
         </button>
@@ -112,12 +107,12 @@
     </div>
   </div>
 {% highlight html %}
-<div class="btn-group">
+<div class="btn-group" role="group" aria-label="...">
   <button type="button" class="btn btn-default">1</button>
   <button type="button" class="btn btn-default">2</button>
 
-  <div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
       Спадне меню
       <span class="caret"></span>
     </button>
@@ -132,11 +127,11 @@
   <h3 id="btn-groups-vertical">Вертикальні варіації</h3>
   <p>Зробіть набір кнопок, складених вертикально, а не горизонтально. <strong class="text-danger">Розщеплені кнопки спадного меню тут не підтримуються.</strong></p>
   <div class="bs-example">
-    <div class="btn-group-vertical">
+    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
       <button type="button" class="btn btn-default">Кнопка</button>
       <button type="button" class="btn btn-default">Кнопка</button>
-      <div class="btn-group">
-        <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      <div class="btn-group" role="group">
+        <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
           Спадне меню
           <span class="caret"></span>
         </button>
@@ -147,8 +142,8 @@
       </div>
       <button type="button" class="btn btn-default">Кнопка</button>
       <button type="button" class="btn btn-default">Кнопка</button>
-      <div class="btn-group">
-        <button id="btnGroupVerticalDrop2" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      <div class="btn-group" role="group">
+        <button id="btnGroupVerticalDrop2" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
           Спадне меню
           <span class="caret"></span>
         </button>
@@ -157,8 +152,8 @@
           <li><a href="#">Лінк в спадному меню</a></li>
         </ul>
       </div>
-      <div class="btn-group">
-        <button id="btnGroupVerticalDrop3" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      <div class="btn-group" role="group">
+        <button id="btnGroupVerticalDrop3" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
           Спадне меню
           <span class="caret"></span>
         </button>
@@ -167,8 +162,8 @@
           <li><a href="#">Лінк в спадному меню</a></li>
         </ul>
       </div>
-      <div class="btn-group">
-        <button id="btnGroupVerticalDrop4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      <div class="btn-group" role="group">
+        <button id="btnGroupVerticalDrop4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
           Спадне меню
           <span class="caret"></span>
         </button>
@@ -180,7 +175,7 @@
     </div>
   </div>
 {% highlight html %}
-<div class="btn-group-vertical">
+<div class="btn-group-vertical" role="group" aria-label="...">
   ...
 </div>
 {% endhighlight %}
@@ -201,17 +196,17 @@
   <h4>З елементом <code>&lt;a&gt;</code></h4>
   <p>Просто обгорніть серію <code>.btn</code> в <code>.btn-group.btn-group-justified</code>.</p>
   <div class="bs-example">
-    <div class="btn-group btn-group-justified">
+    <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
        <a href="#" class="btn btn-default" role="button">Ліва</a>
       <a href="#" class="btn btn-default" role="button">Середня</a>
       <a href="#" class="btn btn-default" role="button">Права</a>
     </div>
     <br>
-    <div class="btn-group btn-group-justified">
+    <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group with nested dropdown">
       <a href="#" class="btn btn-default" role="button">Ліва</a>
       <a href="#" class="btn btn-default" role="button">Середня</a>
-      <div class="btn-group">
-        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      <div class="btn-group" role="group">
+        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
           Спадне меню <span class="caret"></span>
         </a>
         <ul class="dropdown-menu" role="menu">
@@ -225,7 +220,7 @@
     </div>
   </div>
 {% highlight html %}
-<div class="btn-group btn-group-justified">
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
   ...
 </div>
 {% endhighlight %}
@@ -233,27 +228,27 @@
   <h4>З елементом <code>&lt;button&gt;</code></h4>
   <p>Щоб використовувати групи кнопок вирівняних по-ширині з елементами <code>&lt;button&gt;</code>, <strong class="text-danger">потрібно обгорнути кожну кнопку в групу кнопок</strong>. Більшість браузерів не правильно застосовують наші CSS до елементів <code>&lt;button&gt;</code> для вирівнювання їх по-ширині, але оскільки ми підтримуємо групи кнопок, то ж необхідні такі обхідні шляхи.</p>
   <div class="bs-example">
-    <div class="btn-group btn-group-justified">
-      <div class="btn-group">
+    <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+      <div class="btn-group" role="group">
         <button type="button" class="btn btn-default">Ліва</button>
       </div>
-      <div class="btn-group">
+      <div class="btn-group" role="group">
         <button type="button" class="btn btn-default">Середня</button>
       </div>
-      <div class="btn-group">
+      <div class="btn-group" role="group">
         <button type="button" class="btn btn-default">Права</button>
       </div>
     </div>
   </div>
 {% highlight html %}
-<div class="btn-group btn-group-justified">
-  <div class="btn-group">
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group" role="group">
     <button type="button" class="btn btn-default">Ліва</button>
   </div>
-  <div class="btn-group">
+  <div class="btn-group" role="group">
     <button type="button" class="btn btn-default">Середня</button>
   </div>
-  <div class="btn-group">
+  <div class="btn-group" role="group">
     <button type="button" class="btn btn-default">Права</button>
   </div>
 </div>

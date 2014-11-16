@@ -1,7 +1,6 @@
 <div class="bs-docs-section">
   <h1 id="popovers" class="page-header">Інформери (Popovers) <small>popover.js</small></h1>
 
-  <h2 id="popovers-examples">Приклади</h2>
   <p>Додайте невеличкі накладки вмісту, на зразок тих, які показуються в iPad, до будь-яких елементів, для розміщення додаткової інформації.</p>
   <p>Інформери, які мають нульову довжину назви (title) та вмісту ніколи не показуються.</p>
 
@@ -30,6 +29,7 @@
     <p>Інколи вам хочеться додавати підказки до гіперпосилань, які переносяться на декілька рядків. Початково, плагін буде центрувати їх горизонтально та вертикально. Щоб цього уникнути, додайте атрибут <code>white-space: nowrap;</code> до ваших лінків.</p>
   </div>
 
+  <h2 id="popovers-examples">Приклади</h2>
   <h3>Статичні інформери</h3>
   <p>Доступні чотири варіанти інформерів: вгорі, праворуч, внизу, та ліворуч.</p>
   <div class="bs-example bs-example-popover">
@@ -131,7 +131,7 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
   <p>Включіть інформери через JavaScript:</p>
   {% highlight js %}$('#example').popover(параметри){% endhighlight %}
 
-  <h3>Параметри</h3>
+  <h3 id="popovers-options">Параметри</h3>
   <p>Параметри можуть передаватись через атрибути даних або JavaScript. Для атрибутів даних, додайте приставку з назвою атрибута до <code>data-</code>, як у прикладі: <code>data-animation=""</code>.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
@@ -261,7 +261,7 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
   <h4>.popover('destroy')</h4>
   <p>Приховує та видаляє інформер елемента.</p>
   {% highlight js %}$('#element').popover('destroy'){% endhighlight %}
-  <h3>Події</h3>
+  <h3 id="popovers-events">Події</h3>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>

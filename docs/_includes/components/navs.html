@@ -6,35 +6,32 @@
   <h2 id="nav-tabs">Вкладки</h2>
   <p>Зауважте, що клас <code>.nav-tabs</code> потребує базового класу <code>.nav</code>.</p>
   <div class="bs-example">
-    <ul class="nav nav-tabs" role="tablist">
+    <ul class="nav nav-tabs">
       <li role="presentation" class="active"><a href="#">Стартова</a></li>
       <li role="presentation"><a href="#">Профіль</a></li>
       <li role="presentation"><a href="#">Повідомлення</a></li>
     </ul>
   </div>
 {% highlight html %}
-<ul class="nav nav-tabs" role="tablist">
+<ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#">Стартова</a></li>
   <li role="presentation"><a href="#">Профіль</a></li>
   <li role="presentation"><a href="#">Повідомлення</a></li>
 </ul>
 {% endhighlight %}
-  <div class="bs-callout bs-callout-info">
-    <h4>Необхідність в JavaScript-плагіні</h4>
-    <p>Для переключення між різними вкладками, вам потрібно використовувати <a href="../javascript/#tabs">JavaScript-плагін для вкладок</a>.</p>
-  </div>
+
 
   <h2 id="nav-pills">Навігаційні кнопки</h2>
   <p>Візьміть той же HTML, але використовуйте <code>.nav-pills</code> замість <code>.nav-tabs</code>:</p>
   <div class="bs-example">
-    <ul class="nav nav-pills" role="tablist">
+    <ul class="nav nav-pills">
       <li role="presentation" class="active"><a href="#">Стартова</a></li>
       <li role="presentation"><a href="#">Профіль</a></li>
       <li role="presentation"><a href="#">Повідомлення</a></li>
     </ul>
   </div>
 {% highlight html %}
-<ul class="nav nav-pills" role="tablist">
+<ul class="nav nav-pills">
   <li role="presentation" class="active"><a href="#">Стартова</a></li>
   <li role="presentation"><a href="#">Профіль</a></li>
   <li role="presentation"><a href="#">Повідомлення</a></li>
@@ -42,14 +39,14 @@
 {% endhighlight %}
   <p>Навігаційні кнопки також доступні у вертикальній збірці. Просто додайте <code>.nav-stacked</code>.</p>
   <div class="bs-example">
-    <ul class="nav nav-pills nav-stacked" role="tablist" style="max-width: 300px;">
+    <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
       <li role="presentation" class="active"><a href="#">Стартова</a></li>
       <li role="presentation"><a href="#">Профіль</a></li>
       <li role="presentation"><a href="#">Повідомлення</a></li>
     </ul>
   </div>
 {% highlight html %}
-<ul class="nav nav-pills nav-stacked" role="tablist">
+<ul class="nav nav-pills nav-stacked">
   ...
 </ul>
 {% endhighlight %}
@@ -63,23 +60,23 @@
     <p>Станом на v8.0, Safari відображає помилку, при якій зміна розміру браузера тягне за собою помилкове відображення навігаційного меню вирівняного по-ширині, хоча після оновлення сторінки помилка зникає. Ця помилка також відображається в <a href="../examples/justified-nav/">прикладі шаблону</a> з таким меню.</p>
   </div>
   <div class="bs-example">
-    <ul class="nav nav-tabs nav-justified" role="tablist">
+    <ul class="nav nav-tabs nav-justified">
       <li role="presentation" class="active"><a href="#">Стартова</a></li>
       <li role="presentation"><a href="#">Профіль</a></li>
       <li role="presentation"><a href="#">Повідомлення</a></li>
     </ul>
     <br>
-    <ul class="nav nav-pills nav-justified" role="tablist">
+    <ul class="nav nav-pills nav-justified">
       <li role="presentation" class="active"><a href="#">Стартова</a></li>
       <li role="presentation"><a href="#">Профіль</a></li>
       <li role="presentation"><a href="#">Повідомлення</a></li>
     </ul>
   </div>
 {% highlight html %}
-<ul class="nav nav-tabs nav-justified" role="tablist">
+<ul class="nav nav-tabs nav-justified">
   ...
 </ul>
-<ul class="nav nav-pills nav-justified" role="tablist">
+<ul class="nav nav-pills nav-justified">
   ...
 </ul>
 {% endhighlight %}
@@ -94,14 +91,14 @@
   </div>
 
   <div class="bs-example">
-    <ul class="nav nav-pills" role="tablist">
+    <ul class="nav nav-pills">
       <li role="presentation"><a href="#">Функціональний лінк</a></li>
       <li role="presentation"><a href="#">Функціональний лінк</a></li>
       <li role="presentation" class="disabled"><a href="#">Заблокований лінк</a></li>
     </ul>
   </div>
 {% highlight html %}
-<ul class="nav nav-pills" role="tablist">
+<ul class="nav nav-pills">
   ...
   <li role="presentation" class="disabled"><a href="#">Заблокований лінк</a></li>
   ...
@@ -118,7 +115,7 @@
       <li role="presentation" class="active"><a href="#">Стартова</a></li>
       <li role="presentation"><a href="#">Допомога</a></li>
       <li role="presentation" class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
           Спадне меню <span class="caret"></span>
         </a>
         <ul class="dropdown-menu" role="menu">
@@ -132,10 +129,10 @@
     </ul>
   </div>
 {% highlight html %}
-<ul class="nav nav-tabs" role="tablist">
+<ul class="nav nav-tabs">
   ...
   <li role="presentation" class="dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
       Спадне меню <span class="caret"></span>
     </a>
     <ul class="dropdown-menu" role="menu">
@@ -148,11 +145,11 @@
 
   <h3>Навігаційні кнопки зі спадним меню</h3>
   <div class="bs-example">
-    <ul class="nav nav-pills" role="tablist">
+    <ul class="nav nav-pills">
       <li role="presentation" class="active"><a href="#">Стартова</a></li>
       <li role="presentation"><a href="#">Допомога</a></li>
       <li role="presentation" class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
           Спадне меню <span class="caret"></span>
         </a>
         <ul class="dropdown-menu" role="menu">
@@ -166,10 +163,10 @@
     </ul>
   </div><!-- /example -->
 {% highlight html %}
-<ul class="nav nav-pills" role="tablist">
+<ul class="nav nav-pills">
   ...
   <li role="presentation" class="dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
       Спадне меню <span class="caret"></span>
     </a>
     <ul class="dropdown-menu" role="menu">

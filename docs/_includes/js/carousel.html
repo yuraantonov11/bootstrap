@@ -1,7 +1,7 @@
 <div class="bs-docs-section">
   <h1 id="carousel" class="page-header">Карусель <small>carousel.js</small></h1>
 
-  <p>Компонент для показу слайдів в циклі елементів, схожий на карусель. <strong>Вкладені каруселі не підтримуються.</strong></p>
+  <p>Компонент для показу слайдів в циклі, схожий на карусель. <strong>Вкладені каруселі не підтримуються.</strong></p>
 
   <h2 id="carousel-examples">Приклади</h2>
   <div class="bs-example">
@@ -23,11 +23,11 @@
         </div>
       </div>
       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Попередній</span>
       </a>
       <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Наступний</span>
       </a>
     </div>
@@ -60,15 +60,20 @@
 
   <!-- Управління -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Попередній</span>
   </a>
   <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Наступний</span>
   </a>
 </div>
 {% endhighlight %}
+
+  <div class="bs-callout bs-callout-danger">
+    <h4>Проблема доступності</h4>
+    <p>Компонент каруселі в основному не сумісний зі стандартами доступності. Якщо вам потрібна сумісність, розгляньте будь-ласка інші параметри для представлення вашого вмісту.</p>
+  </div>
 
   <div class="bs-callout bs-callout-warning" id="callout-carousel-transitions">
     <h4>Анімація переходів не підтримується в Internet Explorer 8 та 9</h4>
@@ -108,11 +113,11 @@
         </div>
       </div>
       <a class="left carousel-control" href="#carousel-example-captions" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Попередній</span>
       </a>
       <a class="right carousel-control" href="#carousel-example-captions" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Наступний</span>
       </a>
     </div>
@@ -127,18 +132,13 @@
 </div>
 {% endhighlight %}
 
-  <div class="bs-callout bs-callout-danger">
-    <h4>Проблема доступності</h4>
-    <p>Компонент каруселі в основному не сумісний зі стандартами доступності. Якщо вам потрібна сумісність, розгляньте будь-ласка інші параметри для представлення вашого вмісту.</p>
-  </div>
-
   <h2 id="carousel-usage">Використання</h2>
 
   <h3>Кілька каруселей</h3>
   <p>Каруселі вимагають використання <code>id</code> на найбільш зовнішньому контейнері (елемента з класом <code>.carousel</code>) для їх правильної функціональності. При додаванні декількох каруселей, або при зміні <code>id</code> каруселі, переконайтесь, що оновили відповідні елементи управління.</p>
 
   <h3>Через атрибути даних</h3>
-  <p>Використовуйте атрибути даних, щоб легко контролювати позиціонування каруселі. <code>data-slide</code> приймає ключові слова <code>prev</code> або <code>next</code>, котрі змінюють позицію слайду відносно його поточної позиції. Також ви можете використовувати <code>data-slide-to</code> ля передачі вихідного індексу слайду для каруселі <code>data-slide-to="2"</code>, котрий зміщує позицію слайду до певного індексу починаючи від <code>0</code>.</p>
+  <p>Використовуйте атрибути даних, щоб легко контролювати позиціонування каруселі. <code>data-slide</code> приймає ключові слова <code>prev</code> або <code>next</code>, котрі змінюють позицію слайду відносно його поточної позиції. Також можна використовувати <code>data-slide-to</code> щоб передати індекс слайда до каруселі <code>data-slide-to="2"</code>, котра буде зміщувати позицію слайда до певного індекса починаючи від <code>0</code>.</p>
   <p>Атрибут <code>data-ride="carousel"</code> використовується для позначення каруселі як анімації, на початку завантаження сторінки. <strong class="text-danger">Його не можна використовувати в комбінації з (надлишковою та непотрібною) явною ініціалізацією JavaScript такої ж каруселі.</strong></p>
 
   <h3>Через JavaScript</h3>
@@ -147,7 +147,7 @@
 $('.carousel').carousel()
 {% endhighlight %}
 
-  <h3>Параметри</h3>
+  <h3 id="carousel-options">Параметри</h3>
   <p>Параметри можуть передаватись через атрибути даних або JavaScript. Для атрибутів даних, додайте приставку назви параметра до <code>data-</code>, як у прикладі: <code>data-interval=""</code>.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
@@ -176,7 +176,7 @@ $('.carousel').carousel()
          <td>wrap</td>
          <td>boolean</td>
          <td>true</td>
-         <td>Чи повинна карусель зациклено прокручуватись, чи повинна жорстко зупинитись.</td>
+         <td>Чи повинна карусель зациклено прокручуватись, чи повинна зупинитись після показу всіх елементів.</td>
        </tr>
        <tr>
          <td>keyboard</td>
@@ -214,7 +214,7 @@ $('.carousel').carousel({
   <h4>.carousel('next')</h4>
   <p>Перехід до наступного елемента.</p>
 
-  <h3>Події</h3>
+  <h3 id="carousel-events">Події</h3>
   <p>Клас Bootstrap для каруселі пропонує дві події для вставки в функціональність каруселі.</p>
   <p>Обідві події мають наступні додаткові властивості:</p>
   <ul>
