@@ -5,9 +5,9 @@
 [![devDependency Status](https://david-dm.org/twbs/bootstrap/dev-status.svg)](https://david-dm.org/twbs/bootstrap#info=devDependencies)
 [![Selenium Test Status](https://saucelabs.com/browser-matrix/bootstrap.svg)](https://saucelabs.com/u/bootstrap)
 
-Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thornton](https://twitter.com/fat), and maintained by the [core team](https://github.com/twbs?tab=members) with the massive support and involvement of the community.
+Bootstrap це простий, інтуїтивно зрозумілий і потужний інтерфейс, який є  основою для швидшкої і легкої веб-розробки, створений [Mark Otto](https://twitter.com/mdo) та [Jacob Thornton](https://twitter.com/fat), і підтримується [core team](https://github.com/twbs?tab=members) через масивну підтримку і залучення громади.
 
-To get started, check out <http://getbootstrap.com>!
+Щоб почати, ознайомтесь <http://getbootstrap.com>!
 
 ## Table of contents
 
